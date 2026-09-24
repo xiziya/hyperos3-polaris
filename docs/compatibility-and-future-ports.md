@@ -42,6 +42,14 @@ ADB 收集器只读、有超时和日志条数上限，保留权限不足错误�
 
 ## 已调查但尚未解决的兼容层
 
+### ROM 节点对齐与 SDK35 硬件服务
+
+节点核对针对 HyperOS ROM 本体：确认 SDE 的 `panel0-backlight`、polaris 两种面板的 4095 最大亮度、KGSL、内建 WLAN/ICNSS 与固件 symlink。Wi-Fi 的 fwpath 参数有具体 DAC 缺口，已准备 wifi:wifi 0660 init overlay；post-boot 的 IRQ 7/493 固定绑核已在生成副本中移除，保留 perf-ready 信号。没有把 donor 的驱动/校准/温控直接带入。
+
+旧 OS4 vendor 的十个 APEX 最低要求 SDK36，而本项目是 SDK35。第一个替代实现为实际编译成功的 A15 ILights V2 服务：静态链接必要 C++ 实现，只通过目标平台 C Binder API 交互，并按真实 max_brightness 换算。源码、NDK 和输入均锁定 hash，512 个亮度输入测试通过；init、VINTF、file_contexts 作为成组候选保留，尚未集成镜像或真机验证。见 [硬件节点记录](hardware-nodes.md) 与 [灯光构建说明](lights-hal.md)。
+
+今后迁移 OS4 时必须重新做 APEX minSdk 和 ELF 导入检查。不能用修改 SDK 数字或补空符号替代 ABI 适配；本次已发现旧 Wi-Fi/Keystore 接口库依赖 A15 没有的 Binder 符号。候选库清单检查还不能证明 namespace、SELinux 或服务注册通过。
+
 本次目标固定为中国版 HyperOS 3 / **Android 15**；Android 17 旧包仅为参考。新增 `audit_sepolicy.py` 发现 system/system_ext/product 三处均缺少 vendor 要求的 `202504.cil`，旧 precompiled policy 的三组来源 hash 均不匹配，报告为阻断，未用 permissive 或伪造版本绕过。候选 OrangeFox 的主/备用分区配置、自动切换逻辑、文件系统支持和解密需一起适配，详见 [recovery.md](recovery.md)。
 
 | 层 | 现有证据 | 下一步验证/实现 |

@@ -21,6 +21,9 @@ COMMANDS = {
     'services.txt': 'getprop | grep -E "init.svc.*(ril|qcril|ims|rmt|netmgr|wifi|wpa|thermal|power|perfd)"; service list',
     'power.txt': 'dumpsys battery; dumpsys thermalservice; cat /sys/power/mem_sleep 2>/dev/null; for p in /sys/devices/system/cpu/cpufreq/policy*; do echo "$p"; cat "$p/scaling_governor" "$p/scaling_min_freq" "$p/scaling_max_freq"; done',
     'selinux.txt': 'getenforce',
+    'hardware-nodes.txt': 'ls -lZ /dev/wlan /dev/kgsl-3d0 /dev/dri/card0 /dev/input/event* /sys/class/backlight/panel0-backlight/brightness /sys/module/wlan/parameters/fwpath 2>/dev/null; cat /sys/class/backlight/panel0-backlight/max_brightness /sys/class/backlight/panel0-backlight/brightness /sys/module/wlan/parameters/fwpath 2>/dev/null; cat /proc/interrupts; cat /proc/bus/input/devices',
+    'wifi-paths.txt': 'ls -lZ /vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini /vendor/firmware/wlan/qca_cld/wlan_mac.bin /mnt/vendor/persist/wlan_mac.bin /sys/class/net/wlan0 /sys/class/net/p2p0 2>/dev/null; getprop init.svc.vendor.wifi_hal_legacy; getprop init.svc.wpa_supplicant; getprop vendor.post_boot.parsed',
+    'lights-paths.txt': 'for p in /sys/class/backlight/panel0-backlight /sys/class/leds/white; do readlink -f "$p"; ls -ldZ "$p" "$p/"; ls -lZ "$p/brightness" "$p/max_brightness" "$p/blink" 2>/dev/null; done; dumpsys android.hardware.light.ILights/default',
 }
 
 

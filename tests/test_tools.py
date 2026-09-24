@@ -20,9 +20,21 @@ inspect_package = module('inspect_package')
 kernel = module('check_kernel_config')
 recovery = module('inspect_recovery')
 sepolicy = module('audit_sepolicy')
+vendor_overlay = module('prepare_vendor_overlay')
 
 
 class SafetyTests(unittest.TestCase):
+    def test_vendor_irq_fix_preserves_perf_init_and_rejects_other_input(self):
+        source = '\n'.join((*vendor_overlay.IRQ_WRITES, '# Tell the perf HAL',
+                            'setprop vendor.post_boot.parsed 1', ''))
+        patched = vendor_overlay.patch_post_boot(source)
+        self.assertNotIn('/proc/irq/', patched)
+        self.assertIn('setprop vendor.post_boot.parsed 1', patched)
+        with self.assertRaises(ValueError):
+            vendor_overlay.patch_post_boot(source.replace('/irq/493/', '/irq/494/'))
+        with self.assertRaises(ValueError):
+            vendor_overlay.patch_post_boot(patched)
+
     def test_recovery_truncated_archive_rejected(self):
         name = b'etc/recovery.fstab\0'
         fields = [0, 0o100644, 0, 0, 1, 0, 128, 0, 0, 0, 0, len(name), 0]

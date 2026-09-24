@@ -13,3 +13,5 @@
 适配目标包括双卡/基带/IMEI读取、Wi-Fi、数据网络、功耗与温控、小米账号和云服务。它们均须实际测试，代码检查不代表硬件通过。不会改写 IMEI、使用他机校准数据或把未测试 ROM 标为稳定。
 
 开发记录见 [bringup](docs/bringup.md)，已实现的修改与未来 OS4 迁移方法见 [兼容性记录](docs/compatibility-and-future-ports.md)，旧包橙狐的调查见 [recovery](docs/recovery.md)。来源见 `config/sources.json`；本地镜像、设备日志和 EFS 备份禁止提交。仓库只分发自写工具和许可允许的源代码，厂商二进制保持本地。
+
+ROM 本体适配见 [显示/Wi-Fi 等硬件节点](docs/hardware-nodes.md)；已真实编译的 Android 15 [Lights HAL 候选](docs/lights-hal.md)仍需策略、镜像集成与真机验证。

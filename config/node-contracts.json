@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "target": "polaris HyperOS 3 China Android 15",
+  "kernel_commit": "1f326a9202472e8228c2a08ebfd4fdb83da52675",
+  "post_boot_source_sha256": "6634d16a87266adb3271c1ff5ca8a388be1329fc3104b1deba3ae2f8af28e246",
+  "runtime_verified": false,
+  "contracts": [
+    {"subsystem": "display", "path": "/sys/class/backlight/panel0-backlight/brightness", "kernel_source": "techpack/display/msm/sde/sde_connector.c:173", "kernel_behavior": "panel%u-backlight registered from DSI connector; max_brightness from panel DTS", "max_brightness": 4095, "consumer": "polaris Lights HAL", "status": "API35 ILights V2 candidate built; 512 brightness inputs checked; image integration, realpath labels and runtime unverified"},
+    {"subsystem": "display", "path": "/dev/dri/card0", "kernel_source": "techpack/display/Makefile; techpack/display/config/konadisp.conf", "kernel_behavior": "SDM845 includes konadisp.conf enabling DRM_MSM/SDE independently of main .config DRM_MSM line", "consumer": "SDM845/QCOM display composer/allocator", "status": "compiled SDE objects confirmed; runtime device/minor and ioctl ABI untested"},
+    {"subsystem": "gpu", "path": "/dev/kgsl-3d0", "kernel_source": "drivers/gpu/msm/adreno.h:17; drivers/gpu/msm/adreno.c:923", "consumer": "SDM845 Adreno graphics libraries", "status": "QCOM_KGSL=y and device name confirmed; EGL/ioctl ABI untested"},
+    {"subsystem": "wifi", "path": "/dev/wlan", "kernel_source": "drivers/staging/qcacld-3.0/core/hdd/src/wlan_hdd_main.c:15724", "consumer": "libwifi-hal.so", "permissions": "existing vendor ueventd: 0660 wifi wifi", "status": "producer and consumer match; not runtime verified"},
+    {"subsystem": "wifi", "path": "/sys/module/wlan/parameters/fwpath", "kernel_source": "drivers/staging/qcacld-3.0/core/hdd/src/wlan_hdd_main.c:18144", "consumer": "libwifi-hal.so under wifi UID", "permissions": "kernel defaults to 0644; staged init sets 0660 wifi wifi", "selinux": "Android 15 platform genfscon sysfs_wlan_fwpath; hal_wifi write/open already present", "status": "permission correction staged; runtime label/AVC untested"},
+    {"subsystem": "wifi", "path": "/vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini", "kernel_source": "drivers/staging/qcacld-3.0/core/hdd/inc/wlan_hdd_misc.h:45; Kbuild:2410", "expected_symlink": "/vendor/etc/wifi/WCNSS_qcom_cfg.ini", "status": "existing vendor link and MSM_PLATFORM request agree"},
+    {"subsystem": "wifi", "path": "/vendor/firmware/wlan/qca_cld/wlan_mac.bin", "kernel_source": "drivers/staging/qcacld-3.0/core/hdd/inc/wlan_hdd_misc.h:46", "expected_symlink": "/mnt/vendor/persist/wlan_mac.bin", "status": "existing link matches request; calibration contents are never copied from donor or published"},
+    {"subsystem": "irq", "paths_removed": ["/proc/irq/7/smp_affinity_list", "/proc/irq/493/smp_affinity_list"], "consumer": "legacy init.qcom.post_boot.sh", "status": "remove fixed-number tuning; retain kernel defaults and perf-ready property"},
+    {"subsystem": "thermal", "path": "/sys/class/thermal/thermal_message", "kernel_source": "drivers/thermal/thermal_core.c:1777", "consumer": "polaris thermal services", "status": "producer present; DT sensor mapping and SDK35 thermal service still required"}
+  ]
+}

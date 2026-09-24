@@ -1,0 +1,677 @@
+{
+  "schema": 1,
+  "library_counts": {
+    "vendor": 561,
+    "bionic": 5,
+    "system": 808,
+    "system_ext": 582
+  },
+  "binaries": [
+    {
+      "binary": "android.hardware.wifi-service",
+      "sha256": "bc159eafb43e41285b6e87c22d052a8bff4ca730e20072a43522d322af4cc878",
+      "elf_class": 64,
+      "machine": "EM_AARCH64",
+      "direct_needed": [
+        "libbase.so",
+        "libbinder_ndk.so",
+        "libcutils.so",
+        "liblog.so",
+        "libnl.so",
+        "libutils.so",
+        "libwifi-hal.so",
+        "libwifi-system-iface.so",
+        "libxml2.so",
+        "android.hardware.wifi-V3-ndk.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "candidate_dependency_count": 28,
+      "missing_in_inventory": [],
+      "root_undefined_in_inventory": [],
+      "dependent_undefined_in_inventory": {
+        "vendor/android.hardware.wifi-V3-ndk.so": [
+          "AIBinder_Class_setTransactionCodeToFunctionNameMap"
+        ],
+        "vendor/android.system.keystore2-V1-ndk.so": [
+          "AIBinder_Class_setTransactionCodeToFunctionNameMap"
+        ]
+      },
+      "multiple_candidates": {
+        "libbase.so": [
+          "vendor/libbase.so",
+          "system/libbase.so"
+        ],
+        "libcutils.so": [
+          "vendor/libcutils.so",
+          "system/libcutils.so"
+        ],
+        "libnl.so": [
+          "vendor/libnl.so",
+          "system/libnl.so"
+        ],
+        "libutils.so": [
+          "vendor/libutils.so",
+          "system/libutils.so"
+        ],
+        "libwifi-system-iface.so": [
+          "vendor/libwifi-system-iface.so",
+          "system/libwifi-system-iface.so"
+        ],
+        "libxml2.so": [
+          "vendor/libxml2.so",
+          "system/libxml2.so"
+        ],
+        "libc++.so": [
+          "vendor/libc++.so",
+          "system/libc++.so"
+        ],
+        "libcrypto.so": [
+          "vendor/libcrypto.so",
+          "system/libcrypto.so"
+        ],
+        "libssl.so": [
+          "vendor/libssl.so",
+          "system/libssl.so"
+        ],
+        "android.hardware.security.secureclock-V1-ndk.so": [
+          "vendor/android.hardware.security.secureclock-V1-ndk.so",
+          "system/android.hardware.security.secureclock-V1-ndk.so"
+        ],
+        "libbinder.so": [
+          "vendor/libbinder.so",
+          "system/libbinder.so"
+        ]
+      },
+      "linker_namespace_verified": false,
+      "symbol_versions_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "binary": "vendor.qti.hardware.display.composer-service",
+      "sha256": "996eb6575c08cddd598cb769a44cca76a00461c6877ce4f7174609db2de4f0cd",
+      "elf_class": 64,
+      "machine": "EM_AARCH64",
+      "direct_needed": [
+        "libbinder.so",
+        "libhardware.so",
+        "libhistogram.so",
+        "libutils.so",
+        "libcutils.so",
+        "libsync.so",
+        "liblog.so",
+        "libhidlbase.so",
+        "libfmq.so",
+        "libhardware_legacy.so",
+        "libsdmcore.so",
+        "libqservice.so",
+        "libqdutils.so",
+        "libqdMetaData.so",
+        "libdisplaydebug.so",
+        "libsdmutils.so",
+        "libui.so",
+        "libgrallocutils.so",
+        "libgpu_tonemapper.so",
+        "libEGL.so",
+        "libGLESv2.so",
+        "libGLESv3.so",
+        "vendor.qti.hardware.display.composer@3.0.so",
+        "android.hardware.graphics.composer@2.1.so",
+        "android.hardware.graphics.composer@2.2.so",
+        "android.hardware.graphics.composer@2.3.so",
+        "android.hardware.graphics.composer@2.4.so",
+        "android.hardware.graphics.mapper@2.0.so",
+        "android.hardware.graphics.mapper@2.1.so",
+        "android.hardware.graphics.mapper@3.0.so",
+        "android.hardware.graphics.allocator@2.0.so",
+        "android.hardware.graphics.allocator@3.0.so",
+        "libdisplayconfig.qti.so",
+        "libdrm.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "candidate_dependency_count": 71,
+      "missing_in_inventory": [],
+      "root_undefined_in_inventory": [],
+      "dependent_undefined_in_inventory": {
+        "system/libgraphicsenv.so": [
+          "_ZN7android4base4JoinINSt3__16vectorINS2_12basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEENS7_IS9_EEEEcEES9_RKT_T0_"
+        ]
+      },
+      "multiple_candidates": {
+        "libbinder.so": [
+          "vendor/libbinder.so",
+          "system/libbinder.so"
+        ],
+        "libhardware.so": [
+          "vendor/libhardware.so",
+          "system/libhardware.so"
+        ],
+        "libutils.so": [
+          "vendor/libutils.so",
+          "system/libutils.so"
+        ],
+        "libcutils.so": [
+          "vendor/libcutils.so",
+          "system/libcutils.so"
+        ],
+        "libhidlbase.so": [
+          "vendor/libhidlbase.so",
+          "system/libhidlbase.so"
+        ],
+        "libfmq.so": [
+          "vendor/libfmq.so",
+          "system/libfmq.so"
+        ],
+        "libhardware_legacy.so": [
+          "vendor/libhardware_legacy.so",
+          "system/libhardware_legacy.so"
+        ],
+        "libui.so": [
+          "vendor/libui.so",
+          "system/libui.so"
+        ],
+        "vendor.qti.hardware.display.composer@3.0.so": [
+          "vendor/vendor.qti.hardware.display.composer@3.0.so",
+          "system_ext/vendor.qti.hardware.display.composer@3.0.so"
+        ],
+        "android.hardware.graphics.composer@2.1.so": [
+          "vendor/android.hardware.graphics.composer@2.1.so",
+          "system_ext/android.hardware.graphics.composer@2.1.so"
+        ],
+        "android.hardware.graphics.composer@2.2.so": [
+          "vendor/android.hardware.graphics.composer@2.2.so",
+          "system_ext/android.hardware.graphics.composer@2.2.so"
+        ],
+        "android.hardware.graphics.composer@2.3.so": [
+          "vendor/android.hardware.graphics.composer@2.3.so",
+          "system_ext/android.hardware.graphics.composer@2.3.so"
+        ],
+        "android.hardware.graphics.composer@2.4.so": [
+          "vendor/android.hardware.graphics.composer@2.4.so",
+          "system_ext/android.hardware.graphics.composer@2.4.so"
+        ],
+        "android.hardware.graphics.mapper@2.0.so": [
+          "vendor/android.hardware.graphics.mapper@2.0.so",
+          "system/android.hardware.graphics.mapper@2.0.so"
+        ],
+        "android.hardware.graphics.mapper@2.1.so": [
+          "vendor/android.hardware.graphics.mapper@2.1.so",
+          "system/android.hardware.graphics.mapper@2.1.so"
+        ],
+        "android.hardware.graphics.mapper@3.0.so": [
+          "vendor/android.hardware.graphics.mapper@3.0.so",
+          "system/android.hardware.graphics.mapper@3.0.so"
+        ],
+        "android.hardware.graphics.allocator@2.0.so": [
+          "vendor/android.hardware.graphics.allocator@2.0.so",
+          "system/android.hardware.graphics.allocator@2.0.so"
+        ],
+        "android.hardware.graphics.allocator@3.0.so": [
+          "vendor/android.hardware.graphics.allocator@3.0.so",
+          "system/android.hardware.graphics.allocator@3.0.so"
+        ],
+        "libdrm.so": [
+          "vendor/libdrm.so",
+          "system/libdrm.so"
+        ],
+        "libc++.so": [
+          "vendor/libc++.so",
+          "system/libc++.so"
+        ],
+        "vendor.display.config@2.0.so": [
+          "vendor/vendor.display.config@2.0.so",
+          "system_ext/vendor.display.config@2.0.so"
+        ],
+        "android.hardware.graphics.common@1.0.so": [
+          "vendor/android.hardware.graphics.common@1.0.so",
+          "system/android.hardware.graphics.common@1.0.so"
+        ],
+        "android.hardware.graphics.common@1.1.so": [
+          "vendor/android.hardware.graphics.common@1.1.so",
+          "system/android.hardware.graphics.common@1.1.so"
+        ],
+        "android.hardware.graphics.common@1.2.so": [
+          "vendor/android.hardware.graphics.common@1.2.so",
+          "system/android.hardware.graphics.common@1.2.so"
+        ],
+        "libbase.so": [
+          "vendor/libbase.so",
+          "system/libbase.so"
+        ],
+        "libz.so": [
+          "vendor/libz.so",
+          "system/libz.so"
+        ],
+        "android.hardware.graphics.mapper@4.0.so": [
+          "vendor/android.hardware.graphics.mapper@4.0.so",
+          "system/android.hardware.graphics.mapper@4.0.so"
+        ],
+        "android.hardware.graphics.allocator@4.0.so": [
+          "vendor/android.hardware.graphics.allocator@4.0.so",
+          "system/android.hardware.graphics.allocator@4.0.so"
+        ],
+        "libgralloctypes.so": [
+          "vendor/libgralloctypes.so",
+          "system/libgralloctypes.so"
+        ],
+        "android.hardware.graphics.allocator-V2-ndk.so": [
+          "vendor/android.hardware.graphics.allocator-V2-ndk.so",
+          "system/android.hardware.graphics.allocator-V2-ndk.so"
+        ],
+        "android.hardware.common-V2-ndk.so": [
+          "vendor/android.hardware.common-V2-ndk.so",
+          "system/android.hardware.common-V2-ndk.so"
+        ],
+        "libaconfig_storage_read_api_cc.so": [
+          "vendor/libaconfig_storage_read_api_cc.so",
+          "system/libaconfig_storage_read_api_cc.so"
+        ],
+        "server_configurable_flags.so": [
+          "vendor/server_configurable_flags.so",
+          "system/server_configurable_flags.so"
+        ],
+        "android.system.suspend-V1-ndk.so": [
+          "vendor/android.system.suspend-V1-ndk.so",
+          "system/android.system.suspend-V1-ndk.so"
+        ]
+      },
+      "linker_namespace_verified": false,
+      "symbol_versions_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "binary": "vendor.qti.hardware.display.allocator-service",
+      "sha256": "de71ecc62dfd302ee0a406ab8ad0c9b6759d39d4882b4e527074a64c202f2edb",
+      "elf_class": 64,
+      "machine": "EM_AARCH64",
+      "direct_needed": [
+        "liblog.so",
+        "libcutils.so",
+        "libutils.so",
+        "libhidlbase.so",
+        "libqdMetaData.so",
+        "libgrallocutils.so",
+        "libgralloccore.so",
+        "libgralloctypes.so",
+        "vendor.qti.hardware.display.allocator@3.0.so",
+        "vendor.qti.hardware.display.allocator@4.0.so",
+        "vendor.qti.hardware.display.mapper@3.0.so",
+        "vendor.qti.hardware.display.mapper@4.0.so",
+        "android.hardware.graphics.mapper@4.0.so",
+        "android.hardware.graphics.mapper@3.0.so",
+        "android.hardware.graphics.mapper@2.1.so",
+        "android.hardware.graphics.allocator@4.0.so",
+        "android.hardware.graphics.allocator@3.0.so",
+        "vendor.qti.hardware.display.mapperextensions@1.0.so",
+        "vendor.qti.hardware.display.mapperextensions@1.1.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "candidate_dependency_count": 39,
+      "missing_in_inventory": [],
+      "root_undefined_in_inventory": [],
+      "dependent_undefined_in_inventory": {},
+      "multiple_candidates": {
+        "libcutils.so": [
+          "vendor/libcutils.so",
+          "system/libcutils.so"
+        ],
+        "libutils.so": [
+          "vendor/libutils.so",
+          "system/libutils.so"
+        ],
+        "libhidlbase.so": [
+          "vendor/libhidlbase.so",
+          "system/libhidlbase.so"
+        ],
+        "libgralloctypes.so": [
+          "vendor/libgralloctypes.so",
+          "system/libgralloctypes.so"
+        ],
+        "android.hardware.graphics.mapper@4.0.so": [
+          "vendor/android.hardware.graphics.mapper@4.0.so",
+          "system/android.hardware.graphics.mapper@4.0.so"
+        ],
+        "android.hardware.graphics.mapper@3.0.so": [
+          "vendor/android.hardware.graphics.mapper@3.0.so",
+          "system/android.hardware.graphics.mapper@3.0.so"
+        ],
+        "android.hardware.graphics.mapper@2.1.so": [
+          "vendor/android.hardware.graphics.mapper@2.1.so",
+          "system/android.hardware.graphics.mapper@2.1.so"
+        ],
+        "android.hardware.graphics.allocator@4.0.so": [
+          "vendor/android.hardware.graphics.allocator@4.0.so",
+          "system/android.hardware.graphics.allocator@4.0.so"
+        ],
+        "android.hardware.graphics.allocator@3.0.so": [
+          "vendor/android.hardware.graphics.allocator@3.0.so",
+          "system/android.hardware.graphics.allocator@3.0.so"
+        ],
+        "libc++.so": [
+          "vendor/libc++.so",
+          "system/libc++.so"
+        ],
+        "android.hardware.graphics.common@1.0.so": [
+          "vendor/android.hardware.graphics.common@1.0.so",
+          "system/android.hardware.graphics.common@1.0.so"
+        ],
+        "android.hardware.graphics.common@1.1.so": [
+          "vendor/android.hardware.graphics.common@1.1.so",
+          "system/android.hardware.graphics.common@1.1.so"
+        ],
+        "android.hardware.graphics.common@1.2.so": [
+          "vendor/android.hardware.graphics.common@1.2.so",
+          "system/android.hardware.graphics.common@1.2.so"
+        ],
+        "android.hardware.graphics.mapper@2.0.so": [
+          "vendor/android.hardware.graphics.mapper@2.0.so",
+          "system/android.hardware.graphics.mapper@2.0.so"
+        ],
+        "android.hardware.common-V2-ndk.so": [
+          "vendor/android.hardware.common-V2-ndk.so",
+          "system/android.hardware.common-V2-ndk.so"
+        ],
+        "libbinder.so": [
+          "vendor/libbinder.so",
+          "system/libbinder.so"
+        ],
+        "libion.so": [
+          "vendor/libion.so",
+          "system/libion.so"
+        ],
+        "libhardware.so": [
+          "vendor/libhardware.so",
+          "system/libhardware.so"
+        ],
+        "libbase.so": [
+          "vendor/libbase.so",
+          "system/libbase.so"
+        ]
+      },
+      "linker_namespace_verified": false,
+      "symbol_versions_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "binary": "qcrild",
+      "sha256": "0f1084bfad65f45a52cf473f057ac9d3a307abd40656a24256c7b2b4b2e6c1b5",
+      "elf_class": 64,
+      "machine": "EM_AARCH64",
+      "direct_needed": [
+        "libcutils.so",
+        "liblog.so",
+        "libril-qc-hal-qmi.so",
+        "libhardware_legacy.so",
+        "libutils.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "candidate_dependency_count": 100,
+      "missing_in_inventory": [],
+      "root_undefined_in_inventory": [],
+      "dependent_undefined_in_inventory": {},
+      "multiple_candidates": {
+        "libcutils.so": [
+          "vendor/libcutils.so",
+          "system/libcutils.so"
+        ],
+        "libhardware_legacy.so": [
+          "vendor/libhardware_legacy.so",
+          "system/libhardware_legacy.so"
+        ],
+        "libutils.so": [
+          "vendor/libutils.so",
+          "system/libutils.so"
+        ],
+        "libc++.so": [
+          "vendor/libc++.so",
+          "system/libc++.so"
+        ],
+        "libaconfig_storage_read_api_cc.so": [
+          "vendor/libaconfig_storage_read_api_cc.so",
+          "system/libaconfig_storage_read_api_cc.so"
+        ],
+        "libbase.so": [
+          "vendor/libbase.so",
+          "system/libbase.so"
+        ],
+        "libhidlbase.so": [
+          "vendor/libhidlbase.so",
+          "system/libhidlbase.so"
+        ],
+        "server_configurable_flags.so": [
+          "vendor/server_configurable_flags.so",
+          "system/server_configurable_flags.so"
+        ],
+        "android.system.suspend-V1-ndk.so": [
+          "vendor/android.system.suspend-V1-ndk.so",
+          "system/android.system.suspend-V1-ndk.so"
+        ],
+        "libbinder.so": [
+          "vendor/libbinder.so",
+          "system/libbinder.so"
+        ],
+        "vendor.qti.hardware.radio.ims@1.0.so": [
+          "vendor/vendor.qti.hardware.radio.ims@1.0.so",
+          "system_ext/vendor.qti.hardware.radio.ims@1.0.so"
+        ],
+        "vendor.qti.hardware.radio.ims@1.1.so": [
+          "vendor/vendor.qti.hardware.radio.ims@1.1.so",
+          "system_ext/vendor.qti.hardware.radio.ims@1.1.so"
+        ],
+        "vendor.qti.hardware.radio.ims@1.2.so": [
+          "vendor/vendor.qti.hardware.radio.ims@1.2.so",
+          "system_ext/vendor.qti.hardware.radio.ims@1.2.so"
+        ],
+        "vendor.qti.hardware.radio.ims@1.3.so": [
+          "vendor/vendor.qti.hardware.radio.ims@1.3.so",
+          "system_ext/vendor.qti.hardware.radio.ims@1.3.so"
+        ],
+        "vendor.qti.hardware.radio.ims@1.4.so": [
+          "vendor/vendor.qti.hardware.radio.ims@1.4.so",
+          "system_ext/vendor.qti.hardware.radio.ims@1.4.so"
+        ],
+        "vendor.qti.hardware.radio.ims@1.5.so": [
+          "vendor/vendor.qti.hardware.radio.ims@1.5.so",
+          "system_ext/vendor.qti.hardware.radio.ims@1.5.so"
+        ],
+        "vendor.qti.hardware.radio.ims@1.6.so": [
+          "vendor/vendor.qti.hardware.radio.ims@1.6.so",
+          "system_ext/vendor.qti.hardware.radio.ims@1.6.so"
+        ],
+        "vendor.qti.hardware.radio.ims@1.7.so": [
+          "vendor/vendor.qti.hardware.radio.ims@1.7.so",
+          "system_ext/vendor.qti.hardware.radio.ims@1.7.so"
+        ],
+        "vendor.qti.hardware.radio.am@1.0.so": [
+          "vendor/vendor.qti.hardware.radio.am@1.0.so",
+          "system_ext/vendor.qti.hardware.radio.am@1.0.so"
+        ],
+        "vendor.qti.hardware.radio.uim@1.0.so": [
+          "vendor/vendor.qti.hardware.radio.uim@1.0.so",
+          "system_ext/vendor.qti.hardware.radio.uim@1.0.so"
+        ],
+        "vendor.qti.hardware.radio.uim@1.1.so": [
+          "vendor/vendor.qti.hardware.radio.uim@1.1.so",
+          "system_ext/vendor.qti.hardware.radio.uim@1.1.so"
+        ],
+        "vendor.qti.hardware.radio.uim@1.2.so": [
+          "vendor/vendor.qti.hardware.radio.uim@1.2.so",
+          "system_ext/vendor.qti.hardware.radio.uim@1.2.so"
+        ],
+        "vendor.qti.hardware.radio.uim_remote_server@1.0.so": [
+          "vendor/vendor.qti.hardware.radio.uim_remote_server@1.0.so",
+          "system_ext/vendor.qti.hardware.radio.uim_remote_server@1.0.so"
+        ],
+        "vendor.qti.hardware.radio.uim_remote_client@1.0.so": [
+          "vendor/vendor.qti.hardware.radio.uim_remote_client@1.0.so",
+          "system_ext/vendor.qti.hardware.radio.uim_remote_client@1.0.so"
+        ],
+        "vendor.qti.hardware.radio.uim_remote_client@1.1.so": [
+          "vendor/vendor.qti.hardware.radio.uim_remote_client@1.1.so",
+          "system_ext/vendor.qti.hardware.radio.uim_remote_client@1.1.so"
+        ],
+        "vendor.qti.hardware.radio.uim_remote_client@1.2.so": [
+          "vendor/vendor.qti.hardware.radio.uim_remote_client@1.2.so",
+          "system_ext/vendor.qti.hardware.radio.uim_remote_client@1.2.so"
+        ],
+        "vendor.qti.hardware.radio.lpa@1.0.so": [
+          "vendor/vendor.qti.hardware.radio.lpa@1.0.so",
+          "system_ext/vendor.qti.hardware.radio.lpa@1.0.so"
+        ],
+        "vendor.qti.hardware.radio.lpa@1.1.so": [
+          "vendor/vendor.qti.hardware.radio.lpa@1.1.so",
+          "system_ext/vendor.qti.hardware.radio.lpa@1.1.so"
+        ],
+        "vendor.qti.hardware.radio.qtiradio@1.0.so": [
+          "vendor/vendor.qti.hardware.radio.qtiradio@1.0.so",
+          "system_ext/vendor.qti.hardware.radio.qtiradio@1.0.so"
+        ],
+        "vendor.qti.hardware.radio.qtiradio@2.0.so": [
+          "vendor/vendor.qti.hardware.radio.qtiradio@2.0.so",
+          "system_ext/vendor.qti.hardware.radio.qtiradio@2.0.so"
+        ],
+        "vendor.qti.hardware.radio.qtiradio@2.1.so": [
+          "vendor/vendor.qti.hardware.radio.qtiradio@2.1.so",
+          "system_ext/vendor.qti.hardware.radio.qtiradio@2.1.so"
+        ],
+        "vendor.qti.hardware.radio.qtiradio@2.2.so": [
+          "vendor/vendor.qti.hardware.radio.qtiradio@2.2.so",
+          "system_ext/vendor.qti.hardware.radio.qtiradio@2.2.so"
+        ],
+        "vendor.qti.hardware.radio.qtiradio@2.3.so": [
+          "vendor/vendor.qti.hardware.radio.qtiradio@2.3.so",
+          "system_ext/vendor.qti.hardware.radio.qtiradio@2.3.so"
+        ],
+        "vendor.qti.hardware.radio.qtiradio@2.4.so": [
+          "vendor/vendor.qti.hardware.radio.qtiradio@2.4.so",
+          "system_ext/vendor.qti.hardware.radio.qtiradio@2.4.so"
+        ],
+        "android.hardware.radio@1.0.so": [
+          "vendor/android.hardware.radio@1.0.so",
+          "system/android.hardware.radio@1.0.so"
+        ],
+        "android.hardware.radio.config@1.0.so": [
+          "vendor/android.hardware.radio.config@1.0.so",
+          "system/android.hardware.radio.config@1.0.so"
+        ],
+        "android.hardware.secure_element@1.0.so": [
+          "vendor/android.hardware.secure_element@1.0.so",
+          "system/android.hardware.secure_element@1.0.so"
+        ],
+        "libsqlite.so": [
+          "vendor/libsqlite.so",
+          "system/libsqlite.so"
+        ],
+        "android.hardware.radio@1.1.so": [
+          "vendor/android.hardware.radio@1.1.so",
+          "system/android.hardware.radio@1.1.so"
+        ],
+        "android.hardware.radio@1.2.so": [
+          "vendor/android.hardware.radio@1.2.so",
+          "system/android.hardware.radio@1.2.so"
+        ],
+        "android.hardware.radio@1.3.so": [
+          "vendor/android.hardware.radio@1.3.so",
+          "system/android.hardware.radio@1.3.so"
+        ],
+        "android.hardware.radio@1.4.so": [
+          "vendor/android.hardware.radio@1.4.so",
+          "system/android.hardware.radio@1.4.so"
+        ],
+        "android.hardware.radio@1.5.so": [
+          "vendor/android.hardware.radio@1.5.so",
+          "system_ext/android.hardware.radio@1.5.so"
+        ],
+        "android.hardware.radio.deprecated@1.0.so": [
+          "vendor/android.hardware.radio.deprecated@1.0.so",
+          "system/android.hardware.radio.deprecated@1.0.so"
+        ],
+        "libz.so": [
+          "vendor/libz.so",
+          "system/libz.so"
+        ],
+        "libxml2.so": [
+          "vendor/libxml2.so",
+          "system/libxml2.so"
+        ],
+        "vendor.qti.hardware.data.iwlan@1.0.so": [
+          "vendor/vendor.qti.hardware.data.iwlan@1.0.so",
+          "system_ext/vendor.qti.hardware.data.iwlan@1.0.so"
+        ],
+        "vendor.qti.hardware.data.connection@1.0.so": [
+          "vendor/vendor.qti.hardware.data.connection@1.0.so",
+          "system_ext/vendor.qti.hardware.data.connection@1.0.so"
+        ],
+        "vendor.qti.hardware.data.connection@1.1.so": [
+          "vendor/vendor.qti.hardware.data.connection@1.1.so",
+          "system_ext/vendor.qti.hardware.data.connection@1.1.so"
+        ],
+        "android.hidl.safe_union@1.0.so": [
+          "vendor/android.hidl.safe_union@1.0.so",
+          "system/android.hidl.safe_union@1.0.so"
+        ],
+        "libnetutils.so": [
+          "vendor/libnetutils.so",
+          "system/libnetutils.so"
+        ]
+      },
+      "linker_namespace_verified": false,
+      "symbol_versions_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "binary": "rmt_storage",
+      "sha256": "6034f09049c1ef80b390d30c9cfff6a8640f25a06eb0e5b27f757f274cbfe86c",
+      "elf_class": 64,
+      "machine": "EM_AARCH64",
+      "direct_needed": [
+        "libqmi_csi.so",
+        "libqmi_common_so.so",
+        "libcutils.so",
+        "liblog.so",
+        "libmdmdetect.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "candidate_dependency_count": 15,
+      "missing_in_inventory": [],
+      "root_undefined_in_inventory": [],
+      "dependent_undefined_in_inventory": {},
+      "multiple_candidates": {
+        "libcutils.so": [
+          "vendor/libcutils.so",
+          "system/libcutils.so"
+        ],
+        "libc++.so": [
+          "vendor/libc++.so",
+          "system/libc++.so"
+        ],
+        "libutils.so": [
+          "vendor/libutils.so",
+          "system/libutils.so"
+        ],
+        "libbase.so": [
+          "vendor/libbase.so",
+          "system/libbase.so"
+        ]
+      },
+      "linker_namespace_verified": false,
+      "symbol_versions_verified": false,
+      "runtime_verified": false
+    }
+  ],
+  "note": "Candidate paths only, not a linker verdict. APEX/VNDK namespaces, dlopen dependencies, symbol versions, CPU instructions and HAL registration still need validation."
+}

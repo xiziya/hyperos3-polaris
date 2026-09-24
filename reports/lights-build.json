@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "target": "polaris Android 15 / SDK35",
+  "source_lock_sha256": "d7489cfb814c256f997b8c00fb0a2d0d4e17a58fa2a2f382f24df2b1b7999e5c",
+  "binary_sha256": "36224ae9a106a30b9df44177942079f5918432c39dc2d380fb261aa6990913c3",
+  "api": 35,
+  "aidl_version": 2,
+  "aidl_hash": "c7d3d941d303c70d1c22759a0b09e41930c1cddb",
+  "ndk_files_verified": 7184,
+  "brightness_test_passed": true,
+  "vintf_stability_enabled": true,
+  "integrated_into_vendor": false,
+  "runtime_verified": false,
+  "tool": "tools/build_lights_hal.py",
+  "build_script_sha256": "f85060f854bc9a54da889535f3fbfa2c6f6a906e711701af83cd301c9652e1db",
+  "note": "Standalone build and host brightness tests passed. Candidate only; no vendor image integration, enforcing or device validation."
+}

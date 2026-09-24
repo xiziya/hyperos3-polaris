@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "target_sdk": 35,
+  "files": {
+    "ndk_archive": {
+      "source": "https://dl.google.com/android/repository/android-ndk-r27c-linux.zip",
+      "sha256": "59c2f6dc96743b5daf5d1626684640b20a6bd2b1d85b13156b90333741bad5cc",
+      "base64_decode_download": false,
+      "official_repository_sha1": "090e8083a715fdb1a3e402d0763c388abb03fb4e"
+    },
+    "libbase_archive": {
+      "source": "https://android.googlesource.com/platform/system/libbase/+archive/68f963c62f7fddc70c34df141d943ae0f7631020.tar.gz",
+      "sha256": "36d4f0ac73a60abac2efe9876cc18eaf69cbbf500d7c6ae03663e712ed691c07",
+      "base64_decode_download": false
+    },
+    "binder_headers_archive": {
+      "source": "https://android.googlesource.com/platform/frameworks/native/+archive/9224694e64b2464dcdc03fe42740d06c08b27a88/libs/binder/ndk/include_platform.tar.gz",
+      "sha256": "21d231537dd923b168b61da03442d77df74ba8fe452c7e4f7aacc92f9e1ac1cd",
+      "base64_decode_download": false
+    },
+    "llndk_header": {
+      "source": "https://android.googlesource.com/platform/system/core/+/32bd7a7dd5190626302b661d818f1d23d9be7b0b/libvendorsupport/include_llndk/android/llndk-versioning.h?format=TEXT",
+      "sha256": "b1b626909baf2fb45bbfcfb9f3482272309733c7d4caf8879942f7f21580921e",
+      "base64_decode_download": true
+    },
+    "aidl": {
+      "source": "https://android.googlesource.com/platform/prebuilts/build-tools/+/d91d878ca61f179f08161888beab574aa38bcddd/linux-x86/bin/aidl?format=TEXT",
+      "sha256": "618a6ccb60a7210e40a3f8064d0af7cc8da926ebda7579ff44c461641fcf2bc8",
+      "base64_decode_download": true
+    },
+    "aidl_libcxx": {
+      "source": "https://android.googlesource.com/platform/prebuilts/build-tools/+/d91d878ca61f179f08161888beab574aa38bcddd/linux-x86/lib64/libc++.so?format=TEXT",
+      "sha256": "dbf10d96b476657061e5d3e10920becd9edfda858bcf101dccfeca092cbce84d",
+      "base64_decode_download": true
+    },
+    "binder_library": {
+      "source": "local extracted OS3.0.6.0.VLLCNXM system/lib64/libbinder_ndk.so (never redistributed)",
+      "sha256": "11b588cbb63f31d3a40ea14dabbde6fd7c1e36efe55e538c6b0b4cc2645b9c57",
+      "base64_decode_download": false
+    }
+  },
+  "trees": {
+    "light": {
+      "repository": "https://github.com/LineageOS/android_hardware_lineage_interfaces",
+      "commit": "3466aa530ace6de0760c12a68cf81b31e8d3807b",
+      "path": "light",
+      "files": {
+        "BacklightDevice.cpp": "3af8bb9e3ea8f640b8a344d12ca534892857690fc977f188fa366fddb7714bb8",
+        "BacklightDevice.h": "4f47db192567c4b77e65b37f2aa39ba0abf357d1e87416f64156fbc1f6c7d347",
+        "Devices.cpp": "01664d64e1d288335d953ffd4c543b5c6ca8c990a4c5409ed61634446fc48104",
+        "Devices.h": "736036a50004edb54f9908384d90d8e32f66fc247deb2cac510c0c2cb171cfa2",
+        "IDumpable.h": "cdb441d7a87fab8cd59f6880601861fc81ab48941a4810914ed69ff82b7b7887",
+        "LedDevice.cpp": "7912bd8702ace655b1a2088b690793317bfcfd30afc0bd56f8920927233a2dcb",
+        "LedDevice.h": "b27643ca25752813b50ce8ec1c4e7e18b618c2dc18dcb72b80cf2abada0beb4e",
+        "Lights.cpp": "22dd52eccc633f85c6eaed454563102507417655dc9fe7fa1851528d47dcc16b",
+        "Lights.h": "8070d61d83bea4329680c7a9a1a1f3c92fd091bec686b693d214193ea44ed667",
+        "RgbLedDevice.cpp": "dfe870248ae6e2ae0cd5bfee2903195d426856783cef9593f41f1cde31af93c9",
+        "RgbLedDevice.h": "f16db025bc856b6649a94f90ecf7a3e1b221dc19fb2d2697fdd3e2b5197c6ca9",
+        "Utils.cpp": "cc576d1c3fa6fe9430a727d726b99fb9c2662f05c85c5be6d1e00ad4c13c1b41",
+        "Utils.h": "d846d5ffe01f219ac4de39bb7759b80f147828eca4f86a95f9e425429f7a9fba",
+        "service.cpp": "f3d2233d4bc7ce877271cfdd6d95584372faf6cc9551f403130a320493f0eed6"
+      }
+    },
+    "light_api": {
+      "repository": "https://github.com/LineageOS/android_hardware_interfaces",
+      "commit": "89252f8fa9f56b373581beee2ca0ffe19bfdcd93",
+      "path": "light/aidl/aidl_api/android.hardware.light/2",
+      "files": {
+        ".hash": "17e55049913e98a7b12e0220b3c7950242b18610352b2a1c3a7bcc968c7e04c1",
+        "android/hardware/light/BrightnessMode.aidl": "c4b8d4ac9d0e6c498ecb16a8d4dc1f0545b202e016c9486c025c8e660d45814b",
+        "android/hardware/light/FlashMode.aidl": "e1234177c3318023c855d521e35da0be5ae61040682f7bb6cbad97b1a375d7ff",
+        "android/hardware/light/HwLight.aidl": "0a70446bbb1672341fe2b62ae90dd375d15ed40efedd12a75b29fb08e8d6669b",
+        "android/hardware/light/HwLightState.aidl": "8ac2ffd3f907c47c291e6e46ba4b08f03a7813c23d448317878f7d2af7a6efd3",
+        "android/hardware/light/ILights.aidl": "32c3a393b8d2d75ed3d8461ead7820b3ae0c3451a13ce2db52d1a0b6d0bb9363",
+        "android/hardware/light/LightType.aidl": "53cea481a44fcd98056de99bdd236a0a3bd2e34d30d4519f4e3d355a9bbfba71"
+      }
+    }
+  }
+}

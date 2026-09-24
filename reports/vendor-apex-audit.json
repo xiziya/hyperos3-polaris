@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "target_android": 15,
+  "target_sdk": 35,
+  "packages": [
+    {
+      "file": "com.qualcomm.hardware.boot.apex",
+      "sha256": "70fe115b3afd1265948ee9fe7787e1fbe92a3a34ac01d69c40c330447da0f848",
+      "package": "com.qualcomm.hardware.boot",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    },
+    {
+      "file": "com.qualcomm.hardware.devicelvl.apex",
+      "sha256": "3c8fb71a572a21b70134ddc3ed46cb7e1b023b3d47b3b038287c6ded935a6ce0",
+      "package": "com.qualcomm.hardware.devicelvl",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    },
+    {
+      "file": "com.qualcomm.hardware.health.apex",
+      "sha256": "703f8d2693582cc0789ec16549c78059c69daa28dffa5efe4bb09ac162a38bc7",
+      "package": "com.qualcomm.hardware.health",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    },
+    {
+      "file": "com.qualcomm.hardware.ipa.apex",
+      "sha256": "c711a52cc4f5b5b3637eba673dbaecc25ae2d987061491fd1b69cea3bea27b66",
+      "package": "com.qualcomm.hardware.ipa",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    },
+    {
+      "file": "com.qualcomm.hardware.lights.rust.apex",
+      "sha256": "4f7987ceb1f595cc75c70b5f34fda4b99feed883e1df3dce0b10ba2a65d3142e",
+      "package": "com.qualcomm.hardware.lights.rust",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    },
+    {
+      "file": "com.qualcomm.hardware.memtrack.rust.apex",
+      "sha256": "f918259f78086b1b3f8bb83b7e956d8b9f65599cb2b9dd09f156aede77bff2a5",
+      "package": "com.qualcomm.hardware.memtrack.rust",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    },
+    {
+      "file": "com.qualcomm.hardware.perf2.apex",
+      "sha256": "f213054a7f43ded88a749d3295dd871a2c27a246dc53ebc5071ec081caa4cebe",
+      "package": "com.qualcomm.hardware.perf2",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    },
+    {
+      "file": "com.qualcomm.hardware.power.apex",
+      "sha256": "02e2d72f25a36b4e08a71b74bcd4cca119c39bd20bfb9fdf325ebd918aab6994",
+      "package": "com.qualcomm.hardware.power",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    },
+    {
+      "file": "com.qualcomm.hardware.thermal.rust.apex",
+      "sha256": "4745ca90725781a81acb2919e72f4bc55c5b07838942e98ccc457db191a48925",
+      "package": "com.qualcomm.hardware.thermal.rust",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    },
+    {
+      "file": "com.qualcomm.hardware.vibrator.apex",
+      "sha256": "22130c495a2b1fb2da901bb701d23ec9f643cdfc9ad4b4e0bb53bc3cfc74eacc",
+      "package": "com.qualcomm.hardware.vibrator",
+      "min_sdk": 36,
+      "target_sdk": 36,
+      "target_rom_sdk": 35,
+      "sdk_gate": "blocked",
+      "native_abi_verified": false,
+      "signature_verified": false
+    }
+  ],
+  "note": "A passing SDK gate alone does not prove apexd/native ABI/SELinux compatibility. Do not lower minSdk or strip signatures to bypass this gate."
+}

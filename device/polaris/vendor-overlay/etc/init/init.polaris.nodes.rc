@@ -1,0 +1,6 @@
+# ROM overlay, not recovery. The selected kernel has WLAN built in.
+# libwifi-hal runs as wifi and opens this existing 0644 root-owned parameter.
+# Android 15 already labels it sysfs_wlan_fwpath and grants hal_wifi write/open.
+on post-fs-data
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+    chmod 0660 /sys/module/wlan/parameters/fwpath
