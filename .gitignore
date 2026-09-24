@@ -1,0 +1,17 @@
+work/
+downloads/
+build/
+logs/
+private/
+__pycache__/
+*.pyc
+*.img
+*.bin
+*.elf
+*.zip
+*.tgz
+*.qcn
+*.pem
+*.key
+*.log
+.env*
