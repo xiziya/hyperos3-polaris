@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "source": {
+    "date": "2026-09-24",
+    "datetime": 1790244004,
+    "filename": "lineage-22.2-20260924-nightly-polaris-signed.zip",
+    "filepath": "/full/polaris/20260924/lineage-22.2-20260924-nightly-polaris-signed.zip",
+    "os_patch_level": "2026-09-01",
+    "os_sdk_level": 35,
+    "ota_property_files": "metadata:69:334,metadata.pb:471:216                 ",
+    "sha1": "75620aa4ae949af0a840fd2026d26772230fe61a",
+    "sha256": "daa01df26d9679877cdfbe6cc94e493d9ce97899d369074997347eebd9158dd8",
+    "size": 1222658868,
+    "type": "nightly",
+    "url": "https://mirrorbits.lineageos.org/full/polaris/20260924/lineage-22.2-20260924-nightly-polaris-signed.zip"
+  },
+  "source_kernel_version": "4.9.337 (candidate HAL/kernel ABI requires audit)",
+  "files": {
+    "vendor": {
+      "sha256": "7d6221a7f42def81b4ce554dca65da825e8ba4cf0c7f22e6af8ede361fee95c0"
+    },
+    "odm": {
+      "sha256": "1cc8c31df6596b41cb70542f10de2c163dc2bb58cfafbb5daa8f883b5b0cd1aa"
+    },
+    "fstab": {
+      "sha256": "9ce2651424818016346f277e91b811744af3236a9bb4c8802c65320d41aa6eb0"
+    },
+    "lights": {
+      "sha256": "36224ae9a106a30b9df44177942079f5918432c39dc2d380fb261aa6990913c3"
+    },
+    "plat_pub_versioned.cil": {
+      "sha256": "301b11dc60911e2ab7a76ff05a271aa099c89ff0fa34ad1626672502d250cdd3"
+    },
+    "vendor_sepolicy.cil": {
+      "sha256": "a908857d46310142d1c70b20044f885d04920cf786a79a6099546e8a829dd26d"
+    }
+  }
+}

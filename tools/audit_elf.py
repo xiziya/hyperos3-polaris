@@ -28,7 +28,7 @@ def inspect(path):
             for version, auxiliaries in section.iter_versions():
                 version_defs[version['vd_ndx'] & 0x7fff] = next(auxiliaries).name
         versions = elf.get_section_by_name('.gnu.version')
-        required_versions, exported_versions = [], set()
+        required_versions, exported_versions, global_exports = [], set(), set()
         symbols = elf.get_section_by_name('.dynsym')
         if symbols:
             for index, symbol in enumerate(symbols.iter_symbols()):
@@ -47,9 +47,12 @@ def inspect(path):
                         exports.add(symbol.name)
                         if vid in version_defs:
                             exported_versions.add((symbol.name, version_defs[vid]))
+                        elif not versions or versions.get_symbol(index)['ndx'] == 'VER_NDX_GLOBAL':
+                            global_exports.add(symbol.name)
         return {'path': path, 'class': elf.elfclass, 'machine': elf['e_machine'],
                 'needed': needed, 'exports': exports, 'imports': imports,
-                'required_versions': required_versions, 'exported_versions': exported_versions}
+                'required_versions': required_versions, 'exported_versions': exported_versions,
+                'global_exports': global_exports, 'defined_versions': set(version_defs.values())}
 
 
 def main():
@@ -100,10 +103,18 @@ def main():
         undefined = sorted(root['imports'] - visible)
         dependent_undefined = {entry.get('label', binary.name): sorted(entry['imports'] - visible)
                                for entry in visited.values() if entry['imports'] - visible}
-        version_issues = []
+        version_issues, global_fallbacks = [], []
         for library, symbol, version in root['required_versions']:
             matches = providers.get((library, root['class'], root['machine']), [])
-            if not matches or (symbol, version) not in matches[0]['exported_versions']:
+            if matches and (symbol, version) in matches[0]['exported_versions']:
+                continue
+            # Android 15 linker_soinfo.cpp check_symbol_version accepts a
+            # global definition when the requested version is absent in DSO.
+            # Record the fallback distinctly from an exact version match.
+            if (matches and version not in matches[0]['defined_versions']
+                    and symbol in matches[0]['global_exports']):
+                global_fallbacks.append({'library': library, 'symbol': symbol, 'requested_version': version})
+            else:
                 version_issues.append({'library': library, 'symbol': symbol, 'version': version})
         rows.append({'binary': binary.name, 'sha256': hashlib.sha256(binary.read_bytes()).hexdigest(),
                      'elf_class': root['class'], 'machine': root['machine'],
@@ -113,6 +124,7 @@ def main():
                      'dependent_undefined_in_inventory': dependent_undefined,
                      'root_named_version_requirements_checked': len(root['required_versions']),
                      'root_named_version_issues': version_issues,
+                     'root_android_global_version_fallbacks': global_fallbacks,
                      'multiple_candidates': {name: values for name, values in candidates.items() if len(values) > 1},
                      'linker_namespace_verified': False, 'symbol_versions_verified': False,
                      'runtime_verified': False})

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "flashable": false,
+  "files": {
+    "vendor_raw": {
+      "sha256": "fff1b4d272f1be26a78e1d965645cb543a23eecf4e47a9572edd16491809669d",
+      "source": "Locally expanded vendor from user OS4 reference package; not a verified Android15 vendor"
+    },
+    "reference_boot": {
+      "sha256": "1cfc4e20d5b1413c3d0153b82f6eee466dfc65d32f922439529664d833de0fc0",
+      "source": "User OS4 reference; header geometry and reviewed cmdline only, not its kernel/init"
+    },
+    "first_stage_init": {
+      "sha256": "a4400f3de64c620d542425c57767a679d73f12b7b6b6111529fe5926fe6d7120",
+      "source": "Generic init from hash-verified OS3.0.6.0.VLLCNXM boot ramdisk; no donor kernel/DTB"
+    },
+    "mkbootimg_archive": {
+      "sha256": "7372d0dc4da7964a8271436ef182bdff01f7f2104fe19b237f1470f7334d3c7d",
+      "source": "https://android.googlesource.com/platform/system/tools/mkbootimg/+archive/c40a04c0620c5a0dab87497857805b8d9b8a827a.tar.gz"
+    },
+    "kernel": {
+      "sha256": "abc27340b7a895171aee82ede6f3d657c086fcf562be1cd33911f2fc0593fccc",
+      "source": "reports/kernel-build.json"
+    },
+    "lights": {
+      "sha256": "36224ae9a106a30b9df44177942079f5918432c39dc2d380fb261aa6990913c3",
+      "source": "reports/lights-build.json"
+    }
+  },
+  "donor_boot_sha256": "2e55554ff25aff645430aa19bb8284ee44158b875e6471eaa5fed3fddabddd26"
+}

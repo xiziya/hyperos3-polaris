@@ -4,8 +4,8 @@
   "device": "polaris",
   "status": "bringup-incomplete",
   "required": {
-    "live_partition_layout": false,
-    "owner_local_efs_backup": false,
+    "live_partition_layout": true,
+    "owner_local_efs_backup": true,
     "kernel_build_and_boot": false,
     "image_sizes_and_fstab": false,
     "vintf_and_elf_dependencies": false,
@@ -21,6 +21,12 @@
     "xiaomi_account_cloud": false,
     "recovery_rollback": false
   },
-  "deferred": ["nfc"],
-  "note": "No release job may infer hardware success from lint, a screenshot, or a boot animation."
+  "deferred": [
+    "nfc"
+  ],
+  "note": "No release job may infer hardware success from lint, a screenshot, or a boot animation.",
+  "evidence": {
+    "live_partition_layout": "reports/live-layout.json",
+    "owner_local_efs_backup": "reports/device-preflight.json; private backup remains local, rollback not tested"
+  }
 }

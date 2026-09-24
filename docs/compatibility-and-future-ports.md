@@ -1,6 +1,21 @@
 # 兼容性实现记录与未来 HyperOS 4 迁移方法
 
-本文区分实际完成的实现与后续必须完成的验证。当前没有宣称已实现可启动的 HyperOS 3 ROM。
+更新：2026-09-25。本文是后续移植的技术参考，配合 [交接入口](porting-handoff.md)、[装配记录](integration.md) 和 [单项记录模板](porting-record-template.md) 使用。当前已生成工程候选，没有完成可刷 ROM 或真机启动验收。
+
+## 当前实现与证据索引
+
+| 兼容层 | 实际实现 | 证据 | 仍未验证 |
+|---|---|---|---|
+| 内核 | 指定 4.19.325、polaris 配置、BPF backport、纯净检查和 TAS2557 ABI 修复 | `reports/kernel-build.json`、`reports/tas2557-ioctl-abi.json` | 真机 boot、驱动与 BPF 程序运行 |
+| 分区/挂载 | 实机静态布局；boot/vendor fstab 改 EROFS；不挂载 mi_product、去 formattable | `reports/live-layout.json`、`tools/integrate_rom.py` | first-stage 启动、最终镜像组合 |
+| A15 vendor/ODM | 官方 polaris SDK35 vendor；ODM etc 折入 vendor，成组替换 lights | `reports/integration-a15-vendor1.json` | 原配套 4.9 与指定 4.19 ABI |
+| SELinux | 202404 mapping，权限收紧后 split CIL 编译，无 neverallow 绕过 | `config/a15-policy-reductions.json`、`reports/a15-policy.json` | 新 ROM enforcing 与相机/投屏等回归 |
+| native 依赖 | 七个 arm64 服务未发现缺库名/强符号/根版本要求问题；遵循 Android global version fallback | `reports/a15-elf-audit.json` | namespace、dlopen、全部32位服务、注册 |
+| 节点 | 实机背光/白灯/WLAN/DRM/KGSL 读数；候选 Wi-Fi fwpath DAC 与 Lights 转换 | `reports/live-node-contracts.json`、`docs/hardware-nodes.md` | 新内核、新 ROM 下行为与标签 |
+| 版本字符串 | 真实 4.19；若证明确需伪装则指定 5.15.221，目前禁用 | `config/kernel-version-compat.json`、`reports/kernel-matrix-config.json` | 完整 VINTF/具体版本检查 |
+| 恢复/隐私 | 本地 EFS/boot 等备份二次哈希一致，只发布无标识信息的状态 | `reports/device-preflight.json` | recovery 解密和回退试验 |
+
+这些报告对应本次锁定输入；未来 OS4/API 变化后需要重新验证，不能直接复用“通过”结论。
 
 ## 本轮已实现的内容
 
@@ -32,7 +47,7 @@
 
 实际发现 `mi_product.img` 展开 2 MiB，而包内 XML 与 GPT 均仅留 256 KiB；`mi_ext` 也必须核对。EDL GPT 模板的末尾占位项可能需要 patch XML 按实际介质容量修补，所以模板不能当实机 GPT。用户还使用刷机匣通用 845 引导，进一步要求从实机读回核对。
 
-已解出的国行 donor system/system_ext/product 是 EROFS（4 KiB block，LZ4 padding），旧包 boot ramdisk 与 vendor fstab 将这些分区声明为 ext4。因此即使尺寸够大，直接替换镜像也无法正确挂载。未来需同步适配 first-stage ramdisk 和 vendor fstab，或选择可验证的重打包格式；此处尚未生成或刷入新的 boot/ROM。
+已解出的国行 donor system/system_ext/product 是 EROFS（4 KiB block，LZ4 padding），旧包 boot ramdisk 与 vendor fstab 将这些分区声明为 ext4。因此即使尺寸够大，直接替换镜像也无法正确挂载。本轮已同步修改 first-stage ramdisk 和 vendor fstab 并生成 boot/vendor 候选，但未刷入。实机已确认现有分区容量，保留布局路线尚需引导与 recovery 验证。
 
 ### 崩溃诊断的已写实现
 
@@ -40,28 +55,38 @@ ADB 收集器只读、有超时和日志条数上限，保留权限不足错误�
 
 已核对 donor 自带 `logcatlog` 服务和 SELinux 标签，写出待集成的日志 overlay：复用 `kernellog` 域、`offlinelog_file` 路径，将原 640–1280 MiB 的全量离线日志配置替换为仅 crash buffer、约 5 MiB 环形文件；由开关控制启动，不采集常驻 radio，不启用全局 debug trace。文件见 `device/polaris/diagnostics/`。**尚未打入 ROM，SELinux enforcing 与待机功耗尚未真机验证。**
 
-## 已调查但尚未解决的兼容层
+## 硬件与用户空间的兼容路线
 
 ### ROM 节点对齐与 SDK35 硬件服务
 
 节点核对针对 HyperOS ROM 本体：确认 SDE 的 `panel0-backlight`、polaris 两种面板的 4095 最大亮度、KGSL、内建 WLAN/ICNSS 与固件 symlink。Wi-Fi 的 fwpath 参数有具体 DAC 缺口，已准备 wifi:wifi 0660 init overlay；post-boot 的 IRQ 7/493 固定绑核已在生成副本中移除，保留 perf-ready 信号。没有把 donor 的驱动/校准/温控直接带入。
 
-旧 OS4 vendor 的十个 APEX 最低要求 SDK36，而本项目是 SDK35。第一个替代实现为实际编译成功的 A15 ILights V2 服务：静态链接必要 C++ 实现，只通过目标平台 C Binder API 交互，并按真实 max_brightness 换算。源码、NDK 和输入均锁定 hash，512 个亮度输入测试通过；init、VINTF、file_contexts 作为成组候选保留，尚未集成镜像或真机验证。见 [硬件节点记录](hardware-nodes.md) 与 [灯光构建说明](lights-hal.md)。
+旧 OS4 vendor 的十个 APEX 最低要求 SDK36，而本项目是 SDK35。第一个替代实现为实际编译成功的 A15 ILights V2 服务：静态链接必要 C++ 实现，只通过目标平台 C Binder API 交互，并按真实 max_brightness 换算。源码、NDK 和输入均锁定 hash，512 个亮度输入测试通过；init、VINTF、file_contexts 已成组装入 A15 vendor 候选并回读，尚未真机验证。见 [硬件节点记录](hardware-nodes.md) 与 [灯光构建说明](lights-hal.md)。
 
 今后迁移 OS4 时必须重新做 APEX minSdk 和 ELF 导入检查。不能用修改 SDK 数字或补空符号替代 ABI 适配；本次已发现旧 Wi-Fi/Keystore 接口库依赖 A15 没有的 Binder 符号。候选库清单检查还不能证明 namespace、SELinux 或服务注册通过。
+
+主线已改用官方 Android 15 polaris vendor/ODM。其 policy 202404 在 donor 中有 mapping，无旧 SDK36 vendor APEX。对 vendor CIL 做精确权限收紧后，与 donor system/system_ext/product 一起编译通过；保持 neverallow。具体规则、受影响功能及候选镜像见 [装配记录](integration.md)。这避免了已确认的跨 API 障碍，但原配套内核是 4.9.337，对用户指定 4.19 的驱动 ABI 仍需验证。
+
+ELF 检查使用 vendor 自己的配套 libbase/libc++，没有将新符号改成空实现。composer 导入 `sync_wait@LIBSYNC` 而候选 libsync 导出 global 符号，需按 Android linker 的 global fallback 规则处理，不能按纯 GNU 同名版本匹配误报。当前只完成候选依赖检查，不能保证 namespace 选择了同一份库。
 
 本次目标固定为中国版 HyperOS 3 / **Android 15**；Android 17 旧包仅为参考。新增 `audit_sepolicy.py` 发现 system/system_ext/product 三处均缺少 vendor 要求的 `202504.cil`，旧 precompiled policy 的三组来源 hash 均不匹配，报告为阻断，未用 permissive 或伪造版本绕过。候选 OrangeFox 的主/备用分区配置、自动切换逻辑、文件系统支持和解密需一起适配，详见 [recovery.md](recovery.md)。
 
 | 层 | 现有证据 | 下一步验证/实现 |
 |---|---|---|
 | CPU/用户空间 | donor 保留 arm64 与 arm32 ABI，页大小为 4 KiB | 检查 APEX/bionic/native ELF 的指令基线、linker namespace，禁止仅修改 ABI 属性 |
-| VINTF | vendor FCM 6；donor FCM 6 包含 4.19.191 条目；名称清单未发现缺失的必需 provider | 跑完整 checkvintf，核对版本/instance/transport/conditional kernel configs 与服务实际注册 |
-| SELinux | 旧 vendor `plat_sepolicy_vers.txt=202504`，donor 未提供 202504 映射 | 移植/重建与 Android 15 平台匹配的 vendor policy，解决具体符号与规则；不得改版本数字充当适配 |
+| VINTF | 当前 A15 vendor FCM5，旧 OS4 vendor FCM6；donor 两层均有4.19条目，适用配置项无缺项 | 跑完整 checkvintf，核对版本/instance/transport/conditional kernel configs 与服务实际注册 |
+| SELinux | 旧 vendor 202504 不可用；新候选202404策略收紧后通过 host 编译 | enforcing 真机验证与被收紧功能回归；不得改版本数字充当适配 |
 | RIL/IMEI | 旧 vendor 有 qcrild 双实例、rmt_storage、radio HAL | 保留 polaris modem/EFS/校准，核对权限/节点/动态库，实测双卡注册、原 IMEI、通话/数据/IMS |
 | Wi-Fi/蓝牙 | 指定内核内建 QCA_CLD_WLAN，旧 vendor 为 SDM845 配套固件/服务 | 核对 firmware request 名称与路径、persist 校准、驱动控制接口，实测睡眠/唤醒与共存 |
 | 温控/功耗 | 内核已有 TSENS，旧 vendor 有 thermal-engine 与低功耗 init | 核对实际 sysfs 写入、thermal 接管、suspend residency；测待机/负载/充电，不以玄学属性替代 |
 | 小米云/账号 | 国行 donor 存在云备份、查找设备、账号相关权限/组件 | 保留原签名及依赖，实测登录/同步/推送；不伪造证书、IMEI或绕过账号锁 |
-| 启动/存储 | 静态物理分区；logdump 被作 metadata；刷机匣通用引导 | 读取真实 GPT、fstab、加密状态、boot header；确认回退后才构造安装器 |
+| 启动/存储 | 实机静态分区容量/起点、fstab、boot header 已读；logdump 作 metadata | 完整引导/AVB、真实加密与 Keymaster3/4迁移、回退路径待验 |
+
+## 内核版本伪装的决策
+
+用户指定：确需伪装时对外使用 **5.15.221**。目前没有证明 HyperOS 3 存在仅凭 4.19 字符串就阻断本候选的检查，因此开关未启用。真实 4.19.325 满足所检查的 FCM5/6 适用内核配置条目，但完整 VINTF 仍待完成。
+
+今后若遇版本检查，应先记录具体消费者、比较逻辑和拒绝日志，确认真实功能满足再考虑最小范围处理。改变 uname/版本展示不会产生新的 ioctl、BPF helper、GKI/KMI 或驱动能力；不要改源码版本宏影响条件编译，也不要引入 Root 框架来做伪装。报告和构建溯源始终记录真实版本。
 
 ## 将来移植 HyperOS 4 的顺序
 

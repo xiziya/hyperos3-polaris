@@ -1,0 +1,158 @@
+{
+  "schema": 1,
+  "source_vendor": "LineageOS official polaris 22.2 20260924 / SDK35",
+  "sources": {
+    "plat_pub_versioned.cil": "5f7833ddc0ed9bd578384d7c9dc62488e00396d7c03ee9e8f1a0e29e5f90b7cd",
+    "vendor_sepolicy.cil": "38f86f2cdded7887f5e6a6a26abb625033da9e7a49d4ee15ec01968dd3baf0f9"
+  },
+  "reductions": [
+    {
+      "file": "plat_pub_versioned.cil",
+      "old": "(typeattributeset isolated_compute_allowed_device (hwbinder_device_202404 gpu_device_202404 ion_device_202404 dmabuf_system_heap_device_202404))",
+      "new": "(typeattributeset isolated_compute_allowed_device (hwbinder_device_202404 ion_device_202404 dmabuf_system_heap_device_202404))",
+      "reason": "Do not grant isolated compute GPU access forbidden by donor",
+      "count": 1
+    },
+    {
+      "file": "plat_pub_versioned.cil",
+      "old": "(allow vendor_init_202404 vendor_persist_camera_prop_202404 (property_service (set)))",
+      "new": null,
+      "reason": "Respect donor camera property ownership neverallow; requires camera regression",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(typeattributeset netdomain (hal_tv_tuner_default hal_wifi_hostapd_default hal_wifi_supplicant_default rild wpa_supplicant_macsec ssg_app adpl cnd diag vendor_embmssl_app fstman hal_dpmQmiMgr hal_imsrtp hal_rcsservice ims ipacm location vendor_mmi netmgrd qmuxd qti_logkit qti qti_logkit_app qtidataservices_app RIDL wcnss_service wfdvndservice wifi_ftmd wifidisplayhalservice_qti pdt_app vendor-qti-testscripts vtloopback_app mst_test_app glgps lhd))",
+      "new": "(typeattributeset netdomain (hal_wifi_hostapd_default hal_wifi_supplicant_default rild wpa_supplicant_macsec ssg_app adpl cnd diag vendor_embmssl_app fstman hal_dpmQmiMgr hal_imsrtp hal_rcsservice ims ipacm location vendor_mmi netmgrd qmuxd qti_logkit qti qti_logkit_app qtidataservices_app RIDL wcnss_service wifi_ftmd pdt_app vendor-qti-testscripts vtloopback_app mst_test_app glgps lhd))",
+      "reason": "Remove Miracast and unused TV tuner HAL network-domain membership forbidden by target platform; no expansion of HAL socket exceptions",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow hal_atrace_default debugfs_tracing_debug_202404 (dir (ioctl read getattr lock open watch watch_reads search)))",
+      "new": null,
+      "reason": "Remove userdebug trace access prohibited by user platform",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow hal_atrace_default debugfs_tracing_debug_202404 (file (ioctl read write getattr lock append map open watch watch_reads)))",
+      "new": null,
+      "reason": "Remove userdebug trace access prohibited by user platform",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow hal_keymint_server su_202404 (tcp_socket (read write accept getopt)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 2
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow mediacodec su_202404 (fifo_file (append)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow vndservicemanager_202404 su_202404 (tcp_socket (read write accept getopt)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow diag su_202404 (fd (use)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow hostapd su_202404 (unix_dgram_socket (sendto)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow location su_202404 (unix_dgram_socket (sendto)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow vendor_location_app_202404 su_202404 (unix_stream_socket (connectto)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow tee_202404 su_202404 (unix_dgram_socket (sendto)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow qti_logkit_app su_202404 (unix_dgram_socket (sendto)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow system_app_202404 su_202404 (unix_dgram_socket (sendto)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow wfdvndservice su_202404 (tcp_socket (read write accept getopt)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow wifidisplayhalservice_qti su_202404 (tcp_socket (read write accept getopt)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow hal_lineage_health_server su_202404 (tcp_socket (read write accept getopt)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow hal_lineage_livedisplay_server su_202404 (tcp_socket (read write accept getopt)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow hal_lineage_powershare_server su_202404 (tcp_socket (read write accept getopt)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "old": "(allow hal_lineage_touch_server su_202404 (tcp_socket (read write accept getopt)))",
+      "new": null,
+      "reason": "Remove userdebug su interactions for root-free user target",
+      "count": 1
+    }
+  ],
+  "note": "Only reduces permissions; neverallow rules and enforcing remain intact. Camera initialization, isolated compute and Miracast need explicit regression testing."
+}

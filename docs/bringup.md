@@ -4,13 +4,19 @@
 
 本项目目标明确为 **中国版 HyperOS 3 / Android 15**。Android 17 旧包仅供硬件层与分区调查，不改变目标版本。用户选择旧包 OrangeFox 作为候选，调查与独立验收要求见 [recovery.md](recovery.md)。
 
-用户报告：MIX 2S 6 GB / 128 GB、BL 已解锁；现有第三方 Android 17 / OS4 通过 9008 刷入，刷入前硬件正常，USB/ADB 可用。当前开发机 `adb devices` 尚未发现设备。因此分区信息来自用户给定离线包，**不是实机读回结果**。
+用户报告：MIX 2S 6 GB / 128 GB、BL 已解锁；现有第三方 Android 17 / OS4 通过 9008 刷入，刷入前硬件正常，USB/ADB 可用。2026-09-25 已通过 ADB 和用户授权的现有 Shell root 完成只读采集；公开的 `reports/live-layout.json` 是实机读回容量与起点。旧包 XML/GPT 仍作为离线参考，不混为同一来源。
 
 用户进一步确认：刷机工具是刷机匣，使用刷机匣官方通用 845 引导，再经 9008 刷入。实机的引导、GPT、fstab 必须与包内资料分开核对，不能假定实际运行的是包内 bootloader 或包内 GPT。后续安装器默认保留现有引导，不调用通用 9008 刷写脚本。
 
 现有包的内核字符串显示 5.15.221，IKCONFIG 标题显示 5.15.207。用户已明确说明实际为 4.19、这些版本号是作者伪装；不能据此判定 ABI 或内核世代。实际兼容性以源代码、驱动接口、符号、VINTF/SELinux 和启动实测为准。现有内核配置启用了 KSU，故不能作为本项目的纯净内核产物。
 
 指定内核提交的源码 Makefile 是 4.19.325。SDM845 defconfig 已有 BPF_SYSCALL、BPF_JIT、CGROUP_BPF、BPF_LSM、NET_CLS_BPF、NET_ACT_BPF 等设置，不能按原生老 4.19 推断缺功能。仍须查看 `olddefconfig` 的实际结果及 Android netd/bpfloader verifier 报错，不按版本号盲加补丁。
+
+## 当前装配进度
+
+主线转为官方 Lineage 22.2 polaris Android 15 vendor/ODM 候选；其原配套 4.9.337 与指定 4.19 的 ABI 仍需审计。已完成 202404 split SELinux 编译、静态分区 vendor 装配和七个 arm64 服务的候选 ELF 检查，见 [装配记录](integration.md)。尚无完整安装包。
+
+实机 userdata 为 ext4；属性不能证明真实加密方式。新候选 Keymaster 3 与旧 vendor Keymaster 4 差异待查。boot/recovery/vbmeta/EFS/persist 已本地备份并二次对哈希，未验证实际回退。镜像容量足够不等于引导、解密或恢复已通过。
 
 ## China 底包候选
 
@@ -44,7 +50,7 @@
 
 polaris 的 D5X、触摸屏、指纹、无线充电、QCA WLAN、DTS/battery/面板配置来自指定内核现有设备支持，不能套用 donor DTS。新设备树尚未完成；参考源码锁定不等于完成设备适配。
 
-当前旧包 vendor 属性自报 SDK 36、FCM target-level 6，带 `mivendor_sdm845_cn` 和 polaris 指纹伪装。不要把改属性数字当作 HAL 修复。需要解包 donor，验证 framework compatibility matrix、设备 manifest、linker namespace、VNDK、32 位兼容库、SEPolicy 映射和各服务实际启动。
+历史 OS4 vendor 属性自报 SDK 36、FCM target-level 6，带 `mivendor_sdm845_cn` 和 polaris 指纹伪装。不要把改属性数字当作 HAL 修复。需要解包 donor，验证 framework compatibility matrix、设备 manifest、linker namespace、VNDK、32 位兼容库、SEPolicy 映射和各服务实际启动。
 
 | 子系统 | 需对齐/保留的接口 | 真机验收 |
 |---|---|---|
@@ -77,4 +83,4 @@ KERNEL_SOURCE=/linux/kernel KERNEL_OUT=/linux/build CLANG_BIN=/toolchain/bin bas
 
 ## stable 验收
 
-`config/release-gates.json` 当前全部为未验收。至少完成三次冷启动、双卡/数据/通话、Wi-Fi/蓝牙、解密与存储、温控充电与待机、小米账号云同步、恢复回退；先记录基线再对比。NFC 可按用户要求延后，但不能把基带/存储/功耗问题降为可忽略 bug。没有测试证据不得移动 stable 到可刷发布。
+`config/release-gates.json` 已记录实机分区读取、本地备份完成；ROM 启动、硬件、恢复等验收项仍未通过。至少完成三次冷启动、双卡/数据/通话、Wi-Fi/蓝牙、解密与存储、温控充电与待机、小米账号云同步、恢复回退；先记录基线再对比。NFC 可按用户要求延后，但不能把基带/存储/功耗问题降为可忽略 bug。没有测试证据不得移动 stable 到可刷发布。

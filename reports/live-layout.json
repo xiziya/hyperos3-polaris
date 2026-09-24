@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "device": "polaris",
+  "evidence": "live-authorized-root-readonly",
+  "partitions": [
+    {
+      "name": "boot",
+      "block": "/dev/block/sde45",
+      "bytes": 67108864,
+      "start_sector_512": 393216
+    },
+    {
+      "name": "recovery",
+      "block": "/dev/block/sda18",
+      "bytes": 67108864,
+      "start_sector_512": 786432
+    },
+    {
+      "name": "vendor",
+      "block": "/dev/block/sde47",
+      "bytes": 1073741824,
+      "start_sector_512": 917504
+    },
+    {
+      "name": "system",
+      "block": "/dev/block/sde48",
+      "bytes": 1717567488,
+      "start_sector_512": 3014656
+    },
+    {
+      "name": "system_ext",
+      "block": "/dev/block/sde49",
+      "bytes": 1503657984,
+      "start_sector_512": 6369280
+    },
+    {
+      "name": "product",
+      "block": "/dev/block/sda20",
+      "bytes": 5368709120,
+      "start_sector_512": 1441792
+    },
+    {
+      "name": "mi_ext",
+      "block": "/dev/block/sde50",
+      "bytes": 270336,
+      "start_sector_512": 9306112
+    },
+    {
+      "name": "mi_product",
+      "block": "/dev/block/sde51",
+      "bytes": 262144,
+      "start_sector_512": 9306640
+    },
+    {
+      "name": "logdump",
+      "block": "/dev/block/sda16",
+      "bytes": 67108864,
+      "start_sector_512": 393216
+    },
+    {
+      "name": "userdata",
+      "block": "/dev/block/sda21",
+      "bytes": 116928786432,
+      "start_sector_512": 11927552
+    },
+    {
+      "name": "vbmeta",
+      "block": "/dev/block/sde8",
+      "bytes": 131072,
+      "start_sector_512": 2048
+    }
+  ],
+  "hardware_acceptance": false
+}

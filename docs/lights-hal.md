@@ -1,6 +1,6 @@
 # Android 15 Lights HAL 候选
 
-目标是替换用户提供的 OS4 包中最低要求 SDK36 的 lights APEX。当前已从 Android 15 对应源码构建 **arm64 / API35 / AIDL ILights V2** 可执行文件，尚未集成到 vendor 镜像或真机验证。
+目标是提供 polaris 的 Android 15 灯光服务。当前已从对应源码构建 **arm64 / API35 / AIDL ILights V2** 可执行文件，并成组装入两轮 vendor 工程候选，尚未真机验证。旧 OS4 候选已移除最低要求 SDK36 的 lights APEX；主线 A15 候选已替换原 Lineage lights provider。见 [装配记录](integration.md)。
 
 ## 实现方式
 

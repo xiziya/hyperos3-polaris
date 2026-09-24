@@ -2,7 +2,7 @@
 
 维护者：[@xiziya](https://github.com/xiziya)。目标设备：骁龙 845、6 GB / 128 GB。目标系统：**中国版 HyperOS 3 / Android 15**。
 
-**当前阶段：离线调查与适配开发。尚无可刷 ROM；没有通过真机验证的稳定版。**
+**当前阶段：已编译纯净内核与灯光 HAL、完成实机只读调查并生成 boot/vendor 工程候选。尚无完整可刷 ROM；没有通过真机验证的稳定版。**
 
 - `dev`：日常开发，工具、来源锁定、兼容性调查。
 - `stable`：稳定发布入口。只有完成设备验收的版本才可发布；初始分支仅包含项目说明。
@@ -14,4 +14,6 @@
 
 开发记录见 [bringup](docs/bringup.md)，已实现的修改与未来 OS4 迁移方法见 [兼容性记录](docs/compatibility-and-future-ports.md)，旧包橙狐的调查见 [recovery](docs/recovery.md)。来源见 `config/sources.json`；本地镜像、设备日志和 EFS 备份禁止提交。仓库只分发自写工具和许可允许的源代码，厂商二进制保持本地。
 
-ROM 本体适配见 [显示/Wi-Fi 等硬件节点](docs/hardware-nodes.md)；已真实编译的 Android 15 [Lights HAL 候选](docs/lights-hal.md)仍需策略、镜像集成与真机验证。
+**后续继续移植或换到 OS4 时，先读 [移植交接入口](docs/porting-handoff.md) 和 [兼容实现总结](docs/compatibility-and-future-ports.md)。** 仓库根目录 `AGENTS.md` 也指向这些入口，便于后续会话读取并续接。新增适配按 [记录模板](docs/porting-record-template.md) 留下可验证证据。
+
+ROM 本体适配见 [显示/Wi-Fi 等硬件节点](docs/hardware-nodes.md)；已真实编译的 Android 15 [Lights HAL 候选](docs/lights-hal.md)已装入 Android 15 vendor 工程候选，仍需运行验证；见 [镜像装配记录](docs/integration.md)。

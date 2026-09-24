@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "real_kernel": "4.19.325",
+  "checks": [
+    {
+      "level": 5,
+      "minimum_kernel": "4.19.110",
+      "active": true,
+      "unmatched_config": []
+    },
+    {
+      "level": 5,
+      "minimum_kernel": "4.19.110",
+      "active": false,
+      "unmatched_config": []
+    },
+    {
+      "level": 5,
+      "minimum_kernel": "4.19.110",
+      "active": true,
+      "unmatched_config": []
+    },
+    {
+      "level": 5,
+      "minimum_kernel": "4.19.110",
+      "active": false,
+      "unmatched_config": []
+    },
+    {
+      "level": 5,
+      "minimum_kernel": "4.19.110",
+      "active": true,
+      "unmatched_config": []
+    },
+    {
+      "level": 5,
+      "minimum_kernel": "4.19.110",
+      "active": false,
+      "unmatched_config": []
+    },
+    {
+      "level": 5,
+      "minimum_kernel": "4.19.110",
+      "active": true,
+      "unmatched_config": []
+    },
+    {
+      "level": 5,
+      "minimum_kernel": "4.19.110",
+      "active": true,
+      "unmatched_config": []
+    },
+    {
+      "level": 6,
+      "minimum_kernel": "4.19.191",
+      "active": true,
+      "unmatched_config": []
+    },
+    {
+      "level": 6,
+      "minimum_kernel": "4.19.191",
+      "active": false,
+      "unmatched_config": []
+    },
+    {
+      "level": 6,
+      "minimum_kernel": "4.19.191",
+      "active": true,
+      "unmatched_config": []
+    },
+    {
+      "level": 6,
+      "minimum_kernel": "4.19.191",
+      "active": false,
+      "unmatched_config": []
+    },
+    {
+      "level": 6,
+      "minimum_kernel": "4.19.191",
+      "active": true,
+      "unmatched_config": []
+    },
+    {
+      "level": 6,
+      "minimum_kernel": "4.19.191",
+      "active": false,
+      "unmatched_config": []
+    },
+    {
+      "level": 6,
+      "minimum_kernel": "4.19.191",
+      "active": true,
+      "unmatched_config": []
+    },
+    {
+      "level": 6,
+      "minimum_kernel": "4.19.191",
+      "active": true,
+      "unmatched_config": []
+    }
+  ],
+  "checkvintf_pass": false,
+  "note": "Kernel config clauses only, not full VINTF or runtime validation"
+}

@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "compile_passed": true,
+  "neverallow_checks_enabled": true,
+  "policy_version": "202404",
+  "permission_reductions": [
+    {
+      "file": "plat_pub_versioned.cil",
+      "count": 1,
+      "reason": "Do not grant isolated compute GPU access forbidden by donor"
+    },
+    {
+      "file": "plat_pub_versioned.cil",
+      "count": 1,
+      "reason": "Respect donor camera property ownership neverallow; requires camera regression"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove Miracast and unused TV tuner HAL network-domain membership forbidden by target platform; no expansion of HAL socket exceptions"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug trace access prohibited by user platform"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug trace access prohibited by user platform"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 2,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    },
+    {
+      "file": "vendor_sepolicy.cil",
+      "count": 1,
+      "reason": "Remove userdebug su interactions for root-free user target"
+    }
+  ],
+  "runtime_enforcing_verified": false,
+  "diagnostics": "",
+  "input_sha256": {
+    "system/plat_sepolicy.cil": "f80e3aeb841ca64757daf019cc157eb414cd10eed7c6607ae25b083e43c16df2",
+    "system/mapping/202404.cil": "08e17daab6abd232631cad4ddae5df48c5ec58c071899197073d1f0b7fe98fd0",
+    "system_ext/system_ext_sepolicy.cil": "3fb349c3bf36ebe2188b115e95d34345b7cf719684b52a75e8a10cddab8f0afe",
+    "system_ext/mapping/202404.cil": "755ffa0865dcb950cd16870f217a178c32f1a8d412911f182080499af294922a",
+    "product/product_sepolicy.cil": "e9559e3b496d6ded6e24a5be0175eb6eab474cc9182c539fa1f413635018b0b5",
+    "product/mapping/202404.cil": "a1e12ef83dcaf82b6d221eee02b4d4644c4a0545c301c1fced3c35b02e9bd5db",
+    "vendor-prepared/plat_pub_versioned.cil": "301b11dc60911e2ab7a76ff05a271aa099c89ff0fa34ad1626672502d250cdd3",
+    "vendor-prepared/vendor_sepolicy.cil": "a908857d46310142d1c70b20044f885d04920cf786a79a6099546e8a829dd26d"
+  }
+}

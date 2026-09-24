@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "real_source_version": "4.19.325",
+  "requested_compatibility_release": "5.15.221",
+  "enabled": false,
+  "activation_requirement": "A concrete target HyperOS component rejects the real version despite independently verified required kernel functionality; document the check and regression test before enabling.",
+  "current_evidence": "China OS3 Android15 FCM5 and FCM6 matrices contain 4.19 kernel entries. No version-string-only boot blocker has been demonstrated.",
+  "root_framework_required": false,
+  "note": "Do not change LINUX_VERSION_CODE, claim new ioctls/BPF helpers, or falsify build provenance. uname release and actual driver ABI are different contracts."
+}

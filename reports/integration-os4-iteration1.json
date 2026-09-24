@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "phase": "offline-image-assembly",
+  "flashable": false,
+  "source_lock_sha256": "ecd78d66671b1c2c8d99173c1cb142a7093c6f0164a03153cf8ee7d2b4b8980c",
+  "images": [
+    {
+      "name": "boot-candidate.img",
+      "bytes": 29417472,
+      "sha256": "31b729909e6b0574821b0d8592cf2e81963f99ed9ad25eba978773291c7efb0d"
+    },
+    {
+      "name": "vendor-candidate.img",
+      "bytes": 804544512,
+      "sha256": "5f054fcbda47b296a97aea7a505882d7b926022d38a92285253ee436a7268870"
+    }
+  ],
+  "vendor_replacements_verified": [
+    {
+      "path": "/etc/fstab.qcom",
+      "sha256": "9ce2651424818016346f277e91b811744af3236a9bb4c8802c65320d41aa6eb0",
+      "mode": "0o644",
+      "selinux": "u:object_r:vendor_configs_file:s0"
+    },
+    {
+      "path": "/bin/init.qcom.post_boot.sh",
+      "sha256": "f2e64e898bc501b7491c21579e753a94809dfeac1de96bcff3694bb2a31c1857",
+      "mode": "0o755",
+      "selinux": "u:object_r:vendor_qti_init_shell_exec:s0"
+    },
+    {
+      "path": "/etc/selinux/vendor_file_contexts",
+      "sha256": "6797a22a9bc6b6307eaf3ca250a8ea02b8adedd42d13f9052a0aaf267f3fd213",
+      "mode": "0o644",
+      "selinux": "u:object_r:vendor_configs_file:s0"
+    },
+    {
+      "path": "/etc/selinux/vendor_sepolicy.cil",
+      "sha256": "169d80a2c93bd1f99087951bfca671b7877cd0442e10041ab6a396061e623deb",
+      "mode": "0o644",
+      "selinux": "u:object_r:vendor_configs_file:s0"
+    },
+    {
+      "path": "/etc/init/init.polaris.nodes.rc",
+      "sha256": "2e317d0811c560c637b90bc93d31660715f4a583330f4e6985d686cfecd9c46b",
+      "mode": "0o644",
+      "selinux": "u:object_r:vendor_configs_file:s0"
+    },
+    {
+      "path": "/bin/hw/android.hardware.light-service.polaris",
+      "sha256": "36224ae9a106a30b9df44177942079f5918432c39dc2d380fb261aa6990913c3",
+      "mode": "0o755",
+      "selinux": "u:object_r:hal_light_default_exec:s0"
+    },
+    {
+      "path": "/etc/init/android.hardware.light-service.polaris.rc",
+      "sha256": "f8d4cdee8b643ba97ee233ed4021f811e3f37b39c267fe7fdb9a22f16b1b7163",
+      "mode": "0o644",
+      "selinux": "u:object_r:vendor_configs_file:s0"
+    },
+    {
+      "path": "/etc/vintf/manifest/android.hardware.light-service.polaris.xml",
+      "sha256": "202fd854aaa7d849d900c16501a30cd626b46a9b306415d4c0c13c36dacd85d2",
+      "mode": "0o644",
+      "selinux": "u:object_r:vendor_configs_file:s0"
+    }
+  ],
+  "vendor_removed": [
+    "/apex/com.qualcomm.hardware.lights.rust.apex",
+    "/etc/vintf/manifest/vendor.qti.hardware.lights.service.rust.xml"
+  ],
+  "removed_permissive_domains": [
+    "vendor_pdt_app",
+    "vendor-qti-testscripts",
+    "vendor_hal_debugutils_default",
+    "vendor_cta_app",
+    "vendor_logkit_app",
+    "mst_test_app"
+  ],
+  "vendor_fsck_clean": true,
+  "boot_component_roundtrip_passed": true,
+  "ramdisk_vendor_fstab_identical": true,
+  "tested_on_device": false,
+  "blockers": [
+    "vendor SDK36 APEX services remaining",
+    "vendor/platform SELinux compatibility",
+    "Wi-Fi/Keystore Binder ABI",
+    "actual partition sizes and boot-chain validation",
+    "data encryption and recovery rollback"
+  ],
+  "note": "No installer, EDL rawprogram or device write is produced. System donor images remain source inputs pending full integration.",
+  "historical": true,
+  "reproduction_note": "Current tool preserves header cgroup_disable=pressure; historical image removed it from header only. Kernel embeds it in both. See docs/integration.md."
+}

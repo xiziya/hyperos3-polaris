@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "observed_at": "2026-09-25",
+  "device": "polaris",
+  "collection": "ADB and explicitly authorized existing Shell root; read-only",
+  "live_partition_layout_collected": true,
+  "local_backup_second_hash_match": true,
+  "backup_partitions": [
+    "boot",
+    "recovery",
+    "vbmeta",
+    "modemst1",
+    "modemst2",
+    "fsg",
+    "fsc",
+    "persist"
+  ],
+  "backup_data_and_device_identifiers_published": false,
+  "recovery_rollback_tested": false,
+  "candidate_rom_booted": false,
+  "userdata_observed_fs": "ext4",
+  "encryption_migration_verified": false,
+  "boot_properties_consistent_with_cmdline": false,
+  "note": "Existing OS4 observations are not acceptance of our ROM; backup does not establish a working restore path."
+}

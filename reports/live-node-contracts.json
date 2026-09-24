@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "observed_at": "2026-09-25",
+  "source": "current OS4 authorized read-only collection",
+  "candidate_rom_runtime_verified": false,
+  "backlight": {
+    "realpath": "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight",
+    "owner": "system:system",
+    "mode": "0644",
+    "selinux_type": "vendor_sysfs_graphics",
+    "max_brightness": 4095
+  },
+  "white_led": {
+    "max_brightness": 4,
+    "selinux_type": "vendor_sysfs_graphics"
+  },
+  "wifi_fwpath": {
+    "path": "/sys/module/wlan/parameters/fwpath",
+    "owner": "root:root",
+    "mode": "0644",
+    "selinux_type": "sysfs_wlan_fwpath"
+  },
+  "wlan_device": {
+    "path": "/dev/wlan",
+    "owner": "wifi:wifi",
+    "mode": "0660",
+    "selinux_type": "vendor_wlan_device"
+  },
+  "kgsl_and_drm_nodes_present": true,
+  "sleep_disabled": "N",
+  "mem_sleep": "s2idle [deep]"
+}

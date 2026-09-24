@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "flashable": false,
+  "base": {
+    "date": "2026-09-24",
+    "datetime": 1790244004,
+    "filename": "lineage-22.2-20260924-nightly-polaris-signed.zip",
+    "filepath": "/full/polaris/20260924/lineage-22.2-20260924-nightly-polaris-signed.zip",
+    "os_patch_level": "2026-09-01",
+    "os_sdk_level": 35,
+    "ota_property_files": "metadata:69:334,metadata.pb:471:216                 ",
+    "sha1": "75620aa4ae949af0a840fd2026d26772230fe61a",
+    "sha256": "daa01df26d9679877cdfbe6cc94e493d9ce97899d369074997347eebd9158dd8",
+    "size": 1222658868,
+    "type": "nightly",
+    "url": "https://mirrorbits.lineageos.org/full/polaris/20260924/lineage-22.2-20260924-nightly-polaris-signed.zip"
+  },
+  "image": {
+    "bytes": 805306368,
+    "sha256": "107c499d2fa390dc29df9bc3fe12150af76da15fd29b8b9440ea75ac83bf4088"
+  },
+  "replacements": [
+    {
+      "path": "/odm/etc/build.prop",
+      "sha256": "7b12eed5e9c1ecbcbe3f36393a9ea73785b89ee809a9be4e5e56427a625ec067",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/fs_config_files",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/fs_config_dirs",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/group",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/passwd",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/NOTICE.xml.gz",
+      "sha256": "797592f41bcdd1d68de1f11d24fc903203b8203c9874361ff0e1c0a1b35b7a62",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/selinux/odm_sepolicy.cil",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/selinux/odm_file_contexts",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/selinux/odm_hwservice_contexts",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/selinux/odm_service_contexts",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/selinux/odm_property_contexts",
+      "sha256": "5344618a013d829cf09cd91670ecbacfea124857d368d3e6015c4dc552bfef54",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/selinux/odm_mac_permissions.xml",
+      "sha256": "9fc6e3bc49b67055ec3e2059f5fce7c7e5b72069697d82f963aec4dd2d61fcf0",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/odm/etc/selinux/odm_seapp_contexts",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/etc/selinux/plat_pub_versioned.cil",
+      "sha256": "301b11dc60911e2ab7a76ff05a271aa099c89ff0fa34ad1626672502d250cdd3",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/etc/selinux/vendor_sepolicy.cil",
+      "sha256": "a908857d46310142d1c70b20044f885d04920cf786a79a6099546e8a829dd26d",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/etc/fstab.qcom",
+      "sha256": "9ce2651424818016346f277e91b811744af3236a9bb4c8802c65320d41aa6eb0",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/etc/init/init.polaris.nodes.rc",
+      "sha256": "2e317d0811c560c637b90bc93d31660715f4a583330f4e6985d686cfecd9c46b",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/bin/hw/android.hardware.light-service.polaris",
+      "sha256": "36224ae9a106a30b9df44177942079f5918432c39dc2d380fb261aa6990913c3",
+      "mode": "0o755",
+      "label": "hal_light_default_exec"
+    },
+    {
+      "path": "/etc/init/android.hardware.light-service.polaris.rc",
+      "sha256": "f8d4cdee8b643ba97ee233ed4021f811e3f37b39c267fe7fdb9a22f16b1b7163",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/etc/vintf/manifest/android.hardware.light-service.polaris.xml",
+      "sha256": "202fd854aaa7d849d900c16501a30cd626b46a9b306415d4c0c13c36dacd85d2",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    },
+    {
+      "path": "/etc/selinux/vendor_file_contexts",
+      "sha256": "75bf13c5d192920a72765649213c84b8d8710c425401f26bb1c06d6567c22537",
+      "mode": "0o644",
+      "label": "vendor_configs_file"
+    }
+  ],
+  "fsck_clean": true,
+  "odm_folded_into_vendor": true,
+  "no_sdk36_vendor_apex": true,
+  "tested_on_device": false,
+  "blockers": [
+    "4.9-origin HALs vs selected 4.19 kernel ABI",
+    "full VINTF and linker namespaces",
+    "data encryption migration",
+    "system/product device overlays and power control",
+    "boot and rollback trial"
+  ]
+}
