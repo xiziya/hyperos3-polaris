@@ -29,7 +29,7 @@ def main():
     shutil.copytree(upstream / 'vendor/lib64', root / 'vendor/lib64')
     # No factory/format/dynamic-conversion scripts from the generic device tree.
     (root / 'system/bin').mkdir(parents=True)
-    for name in ('qseecomd', 'android.hardware.keymaster@4.0-service-qti',
+    for name in ('qseecomd', 'android.hardware.keymaster@3.0-service-qti',
                  'android.hardware.gatekeeper@1.0-service-qti'):
         shutil.copy2(upstream / 'system/bin' / name, root / 'system/bin' / name)
     shutil.copy2(common / 'recovery/kernel_419/init.recovery.usb.rc', root / 'init.recovery.usb.rc')

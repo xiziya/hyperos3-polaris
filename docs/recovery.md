@@ -4,13 +4,15 @@
 
 用户已决定自行编译适合本项目的 OrangeFox。`recovery/polaris` 是新的静态布局设备树；旧包镜像只保留为对比证据。使用官方 `fox_12.1`（官方文档推荐用于 Android 12 及以后设备），不把 recovery 的编译平台版本当作被恢复 ROM 的 Android 版本。
 
-新树使用本项目从指定源码构建的纯净 4.19 内核；启用 ext4/F2FS/EROFS、FBE v2 和 QCOM Keymaster 4.0 解密路径，独立映射 system_ext/product，logdump 仅作为 metadata。移除通用动态分区转换、格式化辅助脚本、Magisk addon 和自动 boot/AVB/加密修改。尚未读取实机布局，**这是待编译、待真机验收的开发配置**；启用解密代码不代表解密已经成功。
+新树使用本项目从指定源码构建的纯净 4.19 内核；支持 ext4/F2FS/EROFS，但本 ROM 的 userdata 默认明确为 ext4、软件 AES-XTS/CTS FBE v2。QCOM Keymaster 服务、接口声明和构建属性统一为主线 A15 vendor 的 3.0，独立映射 system_ext/product，logdump 仅作为 metadata。移除通用动态分区转换、格式化辅助脚本、Magisk addon 和自动 boot/AVB/加密修改。实机静态布局已只读确认，见 `reports/live-layout.json`；**仍是待编译、待真机验收的开发配置**，不能声称解密已成功，也不能承诺保留旧 Android 17 数据降级。
 
 源码锁见 `config/recovery-sources.json`。标准 Linux CI 工作流 `.github/workflows/recovery.yml` 只由 dev 手动触发；会构建指定内核、同步官方最小源码、记录 Android manifest/补丁和配置，成功时产出明确标为 UNTESTED 的 recovery。构建提交后继续 ROM 本体适配，不等待 recovery 完成；没有自动发布 stable 或刷机步骤。
 
 参考与许可证：设备构建设置参考官方 OrangeFox polaris 与 sdm845-common（GPL-3.0-or-later/上游文件所载许可），保留来源。硬件 HAL 文件在构建时从锁定上游取出，未复制进本仓库。`stage_recovery.py` 限定复制硬件库与三个解密服务，USB rc 沿用上游 4.19 分支。官方说明：https://wiki.orangefox.tech/en/dev/building 。
 
 ## 旧包 recovery 调查
+
+2026-09-25 CI 修复：首次运行 [36037703003](https://github.com/xiziya/hyperos3-polaris/actions/runs/36037703003) 已完成纯净内核编译，但在 OrangeFox 同步入口退出。锁定的上游脚本用 `BASE_DIR="$PWD"` 查找 patches；原调用从本工程根目录执行，找错 `patches/patch-manifest-fox_12.1.diff`。`tools/run_recovery_sync.sh` 改为先检查真实 patch，再在 sync checkout 内执行，两个回归测试覆盖异目录调用和缺失 patch 的提前失败。内核配置和 provenance 现在在同步 Android 源码之前保存，即使同步失败也有证据。此修复不等于 recovery 已编译或启动成功。
 
 项目目标是 **HyperOS 3 China / Android 15**。现有 Android 17 移植包中的 unofficial OrangeFox 是用户指定的候选，不等于 Android 17 recovery，也不因 unofficial 标签而直接判定不可用。
 

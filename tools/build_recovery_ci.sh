@@ -17,22 +17,23 @@ checkout_locked() {
     git -C "$destination" checkout --detach FETCH_HEAD
     [[ $(git -C "$destination" rev-parse HEAD) == "$revision" ]]
 }
+checkout_locked "$project/config/recovery-sources.json" sync "$RECOVERY_WORK/sync"
+test -f "$RECOVERY_WORK/sync/patches/patch-manifest-fox_12.1.diff"
+mkdir -p "$project/build/recovery-evidence"
 checkout_locked "$project/config/sources.json" kernel "$RECOVERY_WORK/kernel"
 checkout_locked "$project/config/sources.json" toolchain "$RECOVERY_WORK/clang"
 KERNEL_SOURCE="$RECOVERY_WORK/kernel" KERNEL_OUT="$RECOVERY_WORK/kernel-out" CLANG_BIN="$RECOVERY_WORK/clang/bin" JOBS=4 \
     bash "$project/tools/build_kernel.sh"
-checkout_locked "$project/config/recovery-sources.json" sync "$RECOVERY_WORK/sync"
+cp "$RECOVERY_WORK/kernel-out/provenance.txt" "$project/build/recovery-evidence/kernel-provenance.txt"
+cp "$RECOVERY_WORK/kernel-out/.config" "$project/build/recovery-evidence/kernel.config"
 # Reviewed official sync script; runs only inside this dedicated checkout.
-bash "$RECOVERY_WORK/sync/orangefox_sync.sh" --branch 12.1 --path "$RECOVERY_WORK/android"
+bash "$project/tools/run_recovery_sync.sh" "$RECOVERY_WORK/sync" "$RECOVERY_WORK/android"
 checkout_locked "$project/config/recovery-sources.json" recovery "$RECOVERY_WORK/android/bootable/recovery"
 checkout_locked "$project/config/recovery-sources.json" vendor "$RECOVERY_WORK/android/vendor/recovery"
 checkout_locked "$project/config/recovery-sources.json" common "$RECOVERY_WORK/android/device/xiaomi/sdm845-common"
 checkout_locked "$project/config/recovery-sources.json" qcom_common "$RECOVERY_WORK/android/device/qcom/common"
 checkout_locked "$project/config/recovery-sources.json" qcom_twrp_common "$RECOVERY_WORK/android/device/qcom/twrp-common"
 python3 "$project/tools/stage_recovery.py" "$RECOVERY_WORK/android" "$RECOVERY_WORK/kernel-out/arch/arm64/boot/Image.gz-dtb"
-mkdir -p "$project/build/recovery-evidence"
-cp "$RECOVERY_WORK/kernel-out/provenance.txt" "$project/build/recovery-evidence/kernel-provenance.txt"
-cp "$RECOVERY_WORK/kernel-out/.config" "$project/build/recovery-evidence/kernel.config"
 cd "$RECOVERY_WORK/android"
 repo manifest -r -o "$project/build/recovery-evidence/android-manifest.xml"
 repo diff > "$project/build/recovery-evidence/android-source-changes.patch"

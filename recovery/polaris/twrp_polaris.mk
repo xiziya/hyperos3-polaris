@@ -14,10 +14,10 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Mi MIX 2S
 PRODUCT_SHIPPING_API_LEVEL := 27
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH) $(SDM845_COMMON_PATH) vendor/qcom/opensource/commonsys-intf/display
-PRODUCT_PACKAGES += qcom_decrypt qcom_decrypt_fbe android.hardware.keymaster@4.0.vendor android.system.keystore2 android.hardware.usb@1.0-service
+PRODUCT_PACKAGES += qcom_decrypt qcom_decrypt_fbe android.hardware.keymaster@3.0.vendor android.system.keystore2 android.hardware.usb@1.0-service
 TARGET_RECOVERY_DEVICE_MODULES += libion vendor.display.config@1.0 vendor.display.config@2.0 libdisplayconfig.qti
 RECOVERY_LIBRARY_SOURCE_FILES += $(TARGET_OUT_SHARED_LIBRARIES)/libion.so $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so
-PRODUCT_PROPERTY_OVERRIDES += ro.orangefox.dynamic.build=false ro.fox.keymaster_version=4
+PRODUCT_PROPERTY_OVERRIDES += ro.orangefox.dynamic.build=false ro.fox.keymaster_version=3
 PRODUCT_VENDOR_PROPERTIES += vendor.usb.use_ffs_mtp=1 sys.usb.mtp.batchcancel=1
 
 # Staging copies only pinned hardware libraries/HAL executables and the 4.19 USB rc.
