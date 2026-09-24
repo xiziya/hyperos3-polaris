@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "flashable": false,
+  "device": "polaris",
+  "status": "bringup-incomplete",
+  "required": {
+    "live_partition_layout": false,
+    "owner_local_efs_backup": false,
+    "kernel_build_and_boot": false,
+    "image_sizes_and_fstab": false,
+    "vintf_and_elf_dependencies": false,
+    "selinux_enforcing": false,
+    "baseband_imei_both_sims": false,
+    "calls_sms_lte_ims": false,
+    "wifi_bluetooth": false,
+    "storage_encryption_reboot": false,
+    "charging_thermal_suspend": false,
+    "xiaomi_account_cloud": false,
+    "recovery_rollback": false
+  },
+  "deferred": ["nfc"],
+  "note": "No release job may infer hardware success from lint, a screenshot, or a boot animation."
+}

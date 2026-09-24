@@ -1,0 +1,1199 @@
+{
+  "schema": 1,
+  "evidence": "package-only-not-device",
+  "partitions": [
+    {
+      "label": "switch",
+      "lun": 0,
+      "start_sector": "6",
+      "sectors": 4,
+      "sector_bytes": 4096,
+      "file": "dummy.img",
+      "bytes": 16384
+    },
+    {
+      "label": "ssd",
+      "lun": 0,
+      "start_sector": "10",
+      "sectors": 8,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 32768
+    },
+    {
+      "label": "bk01",
+      "lun": 0,
+      "start_sector": "18",
+      "sectors": 110,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 450560
+    },
+    {
+      "label": "bk02",
+      "lun": 0,
+      "start_sector": "128",
+      "sectors": 64,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 262144
+    },
+    {
+      "label": "bk03",
+      "lun": 0,
+      "start_sector": "192",
+      "sectors": 64,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 262144
+    },
+    {
+      "label": "keystore",
+      "lun": 0,
+      "start_sector": "256",
+      "sectors": 128,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 524288
+    },
+    {
+      "label": "frp",
+      "lun": 0,
+      "start_sector": "384",
+      "sectors": 128,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 524288
+    },
+    {
+      "label": "bk04",
+      "lun": 0,
+      "start_sector": "512",
+      "sectors": 512,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 2097152
+    },
+    {
+      "label": "misc",
+      "lun": 0,
+      "start_sector": "1024",
+      "sectors": 1024,
+      "sector_bytes": 4096,
+      "file": "misc.img",
+      "bytes": 4194304
+    },
+    {
+      "label": "logfs",
+      "lun": 0,
+      "start_sector": "2048",
+      "sectors": 2048,
+      "sector_bytes": 4096,
+      "file": "logfs_ufs_8mb.bin",
+      "bytes": 8388608
+    },
+    {
+      "label": "oops",
+      "lun": 0,
+      "start_sector": "4096",
+      "sectors": 4096,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 16777216
+    },
+    {
+      "label": "devinfo",
+      "lun": 0,
+      "start_sector": "8192",
+      "sectors": 4096,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 16777216
+    },
+    {
+      "label": "bk05",
+      "lun": 0,
+      "start_sector": "12288",
+      "sectors": 4096,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 16777216
+    },
+    {
+      "label": "persist",
+      "lun": 0,
+      "start_sector": "16384",
+      "sectors": 16384,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 67108864
+    },
+    {
+      "label": "persistbak",
+      "lun": 0,
+      "start_sector": "32768",
+      "sectors": 16384,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 67108864
+    },
+    {
+      "label": "logdump",
+      "lun": 0,
+      "start_sector": "49152",
+      "sectors": 16384,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 67108864
+    },
+    {
+      "label": "minidump",
+      "lun": 0,
+      "start_sector": "65536",
+      "sectors": 32768,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 134217728
+    },
+    {
+      "label": "recovery",
+      "lun": 0,
+      "start_sector": "98304",
+      "sectors": 16384,
+      "sector_bytes": 4096,
+      "file": "recovery.img",
+      "bytes": 67108864
+    },
+    {
+      "label": "cache",
+      "lun": 0,
+      "start_sector": "114688",
+      "sectors": 65536,
+      "sector_bytes": 4096,
+      "file": "cache.img",
+      "bytes": 268435456
+    },
+    {
+      "label": "product",
+      "lun": 0,
+      "start_sector": "180224",
+      "sectors": 1310720,
+      "sector_bytes": 4096,
+      "file": "product.img",
+      "bytes": 5368709120
+    },
+    {
+      "label": "userdata",
+      "lun": 0,
+      "start_sector": "1490944",
+      "sectors": 0,
+      "sector_bytes": 4096,
+      "file": "userdata.img",
+      "bytes": 0
+    },
+    {
+      "label": "PrimaryGPT",
+      "lun": 0,
+      "start_sector": "0",
+      "sectors": 6,
+      "sector_bytes": 4096,
+      "file": "gpt_main0.bin",
+      "bytes": 24576
+    },
+    {
+      "label": "BackupGPT",
+      "lun": 0,
+      "start_sector": "NUM_DISK_SECTORS-5.",
+      "sectors": 5,
+      "sector_bytes": 4096,
+      "file": "gpt_backup0.bin",
+      "bytes": 20480
+    },
+    {
+      "label": "xbl_config_a",
+      "lun": 1,
+      "start_sector": "6",
+      "sectors": 128,
+      "sector_bytes": 4096,
+      "file": "xbl_config.img",
+      "bytes": 524288
+    },
+    {
+      "label": "xbl_a",
+      "lun": 1,
+      "start_sector": "134",
+      "sectors": 1792,
+      "sector_bytes": 4096,
+      "file": "xbl.img",
+      "bytes": 7340032
+    },
+    {
+      "label": "last_parti",
+      "lun": 1,
+      "start_sector": "1926",
+      "sectors": 0,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 0
+    },
+    {
+      "label": "PrimaryGPT",
+      "lun": 1,
+      "start_sector": "0",
+      "sectors": 6,
+      "sector_bytes": 4096,
+      "file": "gpt_main1.bin",
+      "bytes": 24576
+    },
+    {
+      "label": "BackupGPT",
+      "lun": 1,
+      "start_sector": "NUM_DISK_SECTORS-5.",
+      "sectors": 5,
+      "sector_bytes": 4096,
+      "file": "gpt_backup1.bin",
+      "bytes": 20480
+    },
+    {
+      "label": "xbl_config_b",
+      "lun": 2,
+      "start_sector": "6",
+      "sectors": 128,
+      "sector_bytes": 4096,
+      "file": "xbl_config.img",
+      "bytes": 524288
+    },
+    {
+      "label": "xbl_b",
+      "lun": 2,
+      "start_sector": "134",
+      "sectors": 1792,
+      "sector_bytes": 4096,
+      "file": "xbl.img",
+      "bytes": 7340032
+    },
+    {
+      "label": "last_parti",
+      "lun": 2,
+      "start_sector": "1926",
+      "sectors": 0,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 0
+    },
+    {
+      "label": "PrimaryGPT",
+      "lun": 2,
+      "start_sector": "0",
+      "sectors": 6,
+      "sector_bytes": 4096,
+      "file": "gpt_main2.bin",
+      "bytes": 24576
+    },
+    {
+      "label": "BackupGPT",
+      "lun": 2,
+      "start_sector": "NUM_DISK_SECTORS-5.",
+      "sectors": 5,
+      "sector_bytes": 4096,
+      "file": "gpt_backup2.bin",
+      "bytes": 20480
+    },
+    {
+      "label": "bk31",
+      "lun": 3,
+      "start_sector": "6",
+      "sectors": 8,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 32768
+    },
+    {
+      "label": "cdt",
+      "lun": 3,
+      "start_sector": "14",
+      "sectors": 32,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 131072
+    },
+    {
+      "label": "bk32",
+      "lun": 3,
+      "start_sector": "46",
+      "sectors": 216,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 884736
+    },
+    {
+      "label": "ddr",
+      "lun": 3,
+      "start_sector": "262",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 1048576
+    },
+    {
+      "label": "bk33",
+      "lun": 3,
+      "start_sector": "518",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 1048576
+    },
+    {
+      "label": "last_parti",
+      "lun": 3,
+      "start_sector": "774",
+      "sectors": 0,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 0
+    },
+    {
+      "label": "PrimaryGPT",
+      "lun": 3,
+      "start_sector": "0",
+      "sectors": 6,
+      "sector_bytes": 4096,
+      "file": "gpt_main3.bin",
+      "bytes": 24576
+    },
+    {
+      "label": "BackupGPT",
+      "lun": 3,
+      "start_sector": "NUM_DISK_SECTORS-5.",
+      "sectors": 5,
+      "sector_bytes": 4096,
+      "file": "gpt_backup3.bin",
+      "bytes": 20480
+    },
+    {
+      "label": "sec",
+      "lun": 4,
+      "start_sector": "6",
+      "sectors": 8,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 32768
+    },
+    {
+      "label": "limits",
+      "lun": 4,
+      "start_sector": "14",
+      "sectors": 8,
+      "sector_bytes": 4096,
+      "file": "dummy.img",
+      "bytes": 32768
+    },
+    {
+      "label": "bk41",
+      "lun": 4,
+      "start_sector": "22",
+      "sectors": 42,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 172032
+    },
+    {
+      "label": "qupfw_a",
+      "lun": 4,
+      "start_sector": "64",
+      "sectors": 32,
+      "sector_bytes": 4096,
+      "file": "qupfw.img",
+      "bytes": 131072
+    },
+    {
+      "label": "qupfw_b",
+      "lun": 4,
+      "start_sector": "96",
+      "sectors": 32,
+      "sector_bytes": 4096,
+      "file": "qupfw.img",
+      "bytes": 131072
+    },
+    {
+      "label": "apdp",
+      "lun": 4,
+      "start_sector": "128",
+      "sectors": 64,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 262144
+    },
+    {
+      "label": "msadp",
+      "lun": 4,
+      "start_sector": "192",
+      "sectors": 64,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 262144
+    },
+    {
+      "label": "vbmeta",
+      "lun": 4,
+      "start_sector": "256",
+      "sectors": 32,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 131072
+    },
+    {
+      "label": "bk42",
+      "lun": 4,
+      "start_sector": "288",
+      "sectors": 32,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 131072
+    },
+    {
+      "label": "storsec_a",
+      "lun": 4,
+      "start_sector": "320",
+      "sectors": 32,
+      "sector_bytes": 4096,
+      "file": "storsec.img",
+      "bytes": 131072
+    },
+    {
+      "label": "storsec_b",
+      "lun": 4,
+      "start_sector": "352",
+      "sectors": 32,
+      "sector_bytes": 4096,
+      "file": "storsec.img",
+      "bytes": 131072
+    },
+    {
+      "label": "devcfg_a",
+      "lun": 4,
+      "start_sector": "384",
+      "sectors": 64,
+      "sector_bytes": 4096,
+      "file": "devcfg.img",
+      "bytes": 262144
+    },
+    {
+      "label": "devcfg_b",
+      "lun": 4,
+      "start_sector": "448",
+      "sectors": 64,
+      "sector_bytes": 4096,
+      "file": "devcfg.img",
+      "bytes": 262144
+    },
+    {
+      "label": "aop_a",
+      "lun": 4,
+      "start_sector": "512",
+      "sectors": 128,
+      "sector_bytes": 4096,
+      "file": "aop.img",
+      "bytes": 524288
+    },
+    {
+      "label": "aop_b",
+      "lun": 4,
+      "start_sector": "640",
+      "sectors": 128,
+      "sector_bytes": 4096,
+      "file": "aop.img",
+      "bytes": 524288
+    },
+    {
+      "label": "bk43",
+      "lun": 4,
+      "start_sector": "768",
+      "sectors": 128,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 524288
+    },
+    {
+      "label": "bk44",
+      "lun": 4,
+      "start_sector": "896",
+      "sectors": 128,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 524288
+    },
+    {
+      "label": "cmnlib_a",
+      "lun": 4,
+      "start_sector": "1024",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "cmnlib.img",
+      "bytes": 1048576
+    },
+    {
+      "label": "cmnlib_b",
+      "lun": 4,
+      "start_sector": "1280",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "cmnlib.img",
+      "bytes": 1048576
+    },
+    {
+      "label": "cmnlib64_a",
+      "lun": 4,
+      "start_sector": "1536",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "cmnlib64.img",
+      "bytes": 1048576
+    },
+    {
+      "label": "cmnlib64_b",
+      "lun": 4,
+      "start_sector": "1792",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "cmnlib64.img",
+      "bytes": 1048576
+    },
+    {
+      "label": "keymaster_a",
+      "lun": 4,
+      "start_sector": "2048",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "keymaster.img",
+      "bytes": 1048576
+    },
+    {
+      "label": "keymaster_b",
+      "lun": 4,
+      "start_sector": "2304",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "keymaster.img",
+      "bytes": 1048576
+    },
+    {
+      "label": "bluetooth",
+      "lun": 4,
+      "start_sector": "2560",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "bluetooth.img",
+      "bytes": 1048576
+    },
+    {
+      "label": "bk45",
+      "lun": 4,
+      "start_sector": "2816",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 1048576
+    },
+    {
+      "label": "hyp_a",
+      "lun": 4,
+      "start_sector": "3072",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "hyp.img",
+      "bytes": 1048576
+    },
+    {
+      "label": "hyp_b",
+      "lun": 4,
+      "start_sector": "3328",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "hyp.img",
+      "bytes": 1048576
+    },
+    {
+      "label": "dip",
+      "lun": 4,
+      "start_sector": "3584",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 1048576
+    },
+    {
+      "label": "bk46",
+      "lun": 4,
+      "start_sector": "3840",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 1048576
+    },
+    {
+      "label": "sti",
+      "lun": 4,
+      "start_sector": "4096",
+      "sectors": 512,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 2097152
+    },
+    {
+      "label": "toolsfv",
+      "lun": 4,
+      "start_sector": "4608",
+      "sectors": 512,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 2097152
+    },
+    {
+      "label": "abl_a",
+      "lun": 4,
+      "start_sector": "5120",
+      "sectors": 512,
+      "sector_bytes": 4096,
+      "file": "abl.img",
+      "bytes": 2097152
+    },
+    {
+      "label": "abl_b",
+      "lun": 4,
+      "start_sector": "5632",
+      "sectors": 512,
+      "sector_bytes": 4096,
+      "file": "abl.img",
+      "bytes": 2097152
+    },
+    {
+      "label": "tz_a",
+      "lun": 4,
+      "start_sector": "6144",
+      "sectors": 1024,
+      "sector_bytes": 4096,
+      "file": "tz.img",
+      "bytes": 4194304
+    },
+    {
+      "label": "tz_b",
+      "lun": 4,
+      "start_sector": "7168",
+      "sectors": 1024,
+      "sector_bytes": 4096,
+      "file": "tz.img",
+      "bytes": 4194304
+    },
+    {
+      "label": "fsg",
+      "lun": 4,
+      "start_sector": "8192",
+      "sectors": 2048,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 8388608
+    },
+    {
+      "label": "dtbo",
+      "lun": 4,
+      "start_sector": "10240",
+      "sectors": 2048,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 8388608
+    },
+    {
+      "label": "bk47",
+      "lun": 4,
+      "start_sector": "12288",
+      "sectors": 2048,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 8388608
+    },
+    {
+      "label": "spunvm",
+      "lun": 4,
+      "start_sector": "14336",
+      "sectors": 2048,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 8388608
+    },
+    {
+      "label": "bk48",
+      "lun": 4,
+      "start_sector": "16384",
+      "sectors": 4096,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 16777216
+    },
+    {
+      "label": "bk49",
+      "lun": 4,
+      "start_sector": "20480",
+      "sectors": 4096,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 16777216
+    },
+    {
+      "label": "splash",
+      "lun": 4,
+      "start_sector": "24576",
+      "sectors": 8192,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 33554432
+    },
+    {
+      "label": "logo",
+      "lun": 4,
+      "start_sector": "32768",
+      "sectors": 8192,
+      "sector_bytes": 4096,
+      "file": "logo.img",
+      "bytes": 33554432
+    },
+    {
+      "label": "dsp",
+      "lun": 4,
+      "start_sector": "40960",
+      "sectors": 8192,
+      "sector_bytes": 4096,
+      "file": "dsp.img",
+      "bytes": 33554432
+    },
+    {
+      "label": "boot",
+      "lun": 4,
+      "start_sector": "49152",
+      "sectors": 16384,
+      "sector_bytes": 4096,
+      "file": "boot.img",
+      "bytes": 67108864
+    },
+    {
+      "label": "modem",
+      "lun": 4,
+      "start_sector": "65536",
+      "sectors": 49152,
+      "sector_bytes": 4096,
+      "file": "modem.img",
+      "bytes": 201326592
+    },
+    {
+      "label": "vendor",
+      "lun": 4,
+      "start_sector": "114688",
+      "sectors": 262144,
+      "sector_bytes": 4096,
+      "file": "vendor.img",
+      "bytes": 1073741824
+    },
+    {
+      "label": "system",
+      "lun": 4,
+      "start_sector": "376832",
+      "sectors": 419328,
+      "sector_bytes": 4096,
+      "file": "system.img",
+      "bytes": 1717567488
+    },
+    {
+      "label": "system_ext",
+      "lun": 4,
+      "start_sector": "796160",
+      "sectors": 367104,
+      "sector_bytes": 4096,
+      "file": "system_ext.img",
+      "bytes": 1503657984
+    },
+    {
+      "label": "mi_ext",
+      "lun": 4,
+      "start_sector": "1163264",
+      "sectors": 66,
+      "sector_bytes": 4096,
+      "file": "mi_ext.img",
+      "bytes": 270336
+    },
+    {
+      "label": "mi_product",
+      "lun": 4,
+      "start_sector": "1163330",
+      "sectors": 64,
+      "sector_bytes": 4096,
+      "file": "mi_product.img",
+      "bytes": 262144
+    },
+    {
+      "label": "last_parti",
+      "lun": 4,
+      "start_sector": "1163394",
+      "sectors": 0,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 0
+    },
+    {
+      "label": "PrimaryGPT",
+      "lun": 4,
+      "start_sector": "0",
+      "sectors": 6,
+      "sector_bytes": 4096,
+      "file": "gpt_main4.bin",
+      "bytes": 24576
+    },
+    {
+      "label": "BackupGPT",
+      "lun": 4,
+      "start_sector": "NUM_DISK_SECTORS-5.",
+      "sectors": 5,
+      "sector_bytes": 4096,
+      "file": "gpt_backup4.bin",
+      "bytes": 20480
+    },
+    {
+      "label": "fsc",
+      "lun": 5,
+      "start_sector": "6",
+      "sectors": 64,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 262144
+    },
+    {
+      "label": "bk51",
+      "lun": 5,
+      "start_sector": "70",
+      "sectors": 186,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 761856
+    },
+    {
+      "label": "bk52",
+      "lun": 5,
+      "start_sector": "256",
+      "sectors": 256,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 1048576
+    },
+    {
+      "label": "ImageFv",
+      "lun": 5,
+      "start_sector": "512",
+      "sectors": 512,
+      "sector_bytes": 4096,
+      "file": "imagefv.elf",
+      "bytes": 2097152
+    },
+    {
+      "label": "bk53",
+      "lun": 5,
+      "start_sector": "1024",
+      "sectors": 1024,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 4194304
+    },
+    {
+      "label": "modemst1",
+      "lun": 5,
+      "start_sector": "2048",
+      "sectors": 2048,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 8388608
+    },
+    {
+      "label": "modemst2",
+      "lun": 5,
+      "start_sector": "4096",
+      "sectors": 2048,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 8388608
+    },
+    {
+      "label": "last_parti",
+      "lun": 5,
+      "start_sector": "6144",
+      "sectors": 0,
+      "sector_bytes": 4096,
+      "file": "",
+      "bytes": 0
+    },
+    {
+      "label": "PrimaryGPT",
+      "lun": 5,
+      "start_sector": "0",
+      "sectors": 6,
+      "sector_bytes": 4096,
+      "file": "gpt_main5.bin",
+      "bytes": 24576
+    },
+    {
+      "label": "BackupGPT",
+      "lun": 5,
+      "start_sector": "NUM_DISK_SECTORS-5.",
+      "sectors": 5,
+      "sector_bytes": 4096,
+      "file": "gpt_backup5.bin",
+      "bytes": 20480
+    }
+  ],
+  "images": [
+    {
+      "file": "abl.img",
+      "stored_bytes": 155648,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 155648
+    },
+    {
+      "file": "aop.img",
+      "stored_bytes": 184748,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 184748
+    },
+    {
+      "file": "bluetooth.img",
+      "stored_bytes": 765952,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 765952,
+      "partition_bytes": 1048576,
+      "fits_package_partition": true
+    },
+    {
+      "file": "boot.img",
+      "stored_bytes": 67092480,
+      "format": "android-boot",
+      "header_version": 1,
+      "kernel_bytes": 34972662,
+      "ramdisk_bytes": 3736576,
+      "page_size": 4096,
+      "cmdline": "console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000 androidboot.hardware=qcom androidboot.console=ttyMSM0 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true loop.max_part=7 androidboot.usbcontroller=a600000.dwc3 androidboot.boot_devices=soc/1d84000.ufshc cgroup_disable=pressure",
+      "partition_bytes": 67108864,
+      "fits_package_partition": true,
+      "sha256": "1cfc4e20d5b1413c3d0153b82f6eee466dfc65d32f922439529664d833de0fc0"
+    },
+    {
+      "file": "cmnlib.img",
+      "stored_bytes": 377092,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 377092
+    },
+    {
+      "file": "cmnlib64.img",
+      "stored_bytes": 496466,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 496466
+    },
+    {
+      "file": "devcfg.img",
+      "stored_bytes": 40336,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 40336
+    },
+    {
+      "file": "dsp.img",
+      "stored_bytes": 33554432,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 33554432,
+      "partition_bytes": 33554432,
+      "fits_package_partition": true
+    },
+    {
+      "file": "dummy.img",
+      "stored_bytes": 8192,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 8192
+    },
+    {
+      "file": "hyp.img",
+      "stored_bytes": 396624,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 396624
+    },
+    {
+      "file": "keymaster.img",
+      "stored_bytes": 220813,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 220813
+    },
+    {
+      "file": "logo.img",
+      "stored_bytes": 20537344,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 20537344,
+      "partition_bytes": 33554432,
+      "fits_package_partition": true
+    },
+    {
+      "file": "mi_ext.img",
+      "stored_bytes": 114884,
+      "format": "android-sparse",
+      "expanded_bytes": 2097152,
+      "block_size": 4096,
+      "chunks": 14,
+      "partition_bytes": 270336,
+      "fits_package_partition": false
+    },
+    {
+      "file": "mi_product.img",
+      "stored_bytes": 180624,
+      "format": "android-sparse",
+      "expanded_bytes": 2097152,
+      "block_size": 4096,
+      "chunks": 31,
+      "partition_bytes": 262144,
+      "fits_package_partition": false
+    },
+    {
+      "file": "misc.img",
+      "stored_bytes": 8192,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 8192,
+      "partition_bytes": 4194304,
+      "fits_package_partition": true
+    },
+    {
+      "file": "modem.img",
+      "stored_bytes": 172470272,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 172470272,
+      "partition_bytes": 201326592,
+      "fits_package_partition": true,
+      "sha256": "70361079c61f2884687f9516744663156c184d6c2ddc83ee8c4887539429cd3c"
+    },
+    {
+      "file": "persist.img",
+      "stored_bytes": 33554432,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 33554432,
+      "partition_bytes": 67108864,
+      "fits_package_partition": true
+    },
+    {
+      "file": "product.img",
+      "stored_bytes": 4689678924,
+      "format": "android-sparse",
+      "expanded_bytes": 4987490304,
+      "block_size": 4096,
+      "chunks": 2436,
+      "partition_bytes": 5368709120,
+      "fits_package_partition": true
+    },
+    {
+      "file": "qupfw.img",
+      "stored_bytes": 65490,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 65490
+    },
+    {
+      "file": "recovery.img",
+      "stored_bytes": 67108864,
+      "format": "android-boot",
+      "header_version": 1,
+      "kernel_bytes": 22552284,
+      "ramdisk_bytes": 30461032,
+      "page_size": 4096,
+      "cmdline": "console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.usbcontroller=a600000.dwc3 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.configfs=true androidboot.boot_devices=soc/1d84000.ufshc androidboot.selinux=permissive buildvariant=eng",
+      "partition_bytes": 67108864,
+      "fits_package_partition": true
+    },
+    {
+      "file": "storsec.img",
+      "stored_bytes": 20777,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 20777
+    },
+    {
+      "file": "system.img",
+      "stored_bytes": 1502937304,
+      "format": "android-sparse",
+      "expanded_bytes": 1603309568,
+      "block_size": 4096,
+      "chunks": 4453,
+      "partition_bytes": 1717567488,
+      "fits_package_partition": true
+    },
+    {
+      "file": "system_ext.img",
+      "stored_bytes": 1333443944,
+      "format": "android-sparse",
+      "expanded_bytes": 1422626816,
+      "block_size": 4096,
+      "chunks": 3697,
+      "partition_bytes": 1503657984,
+      "fits_package_partition": true
+    },
+    {
+      "file": "tz.img",
+      "stored_bytes": 2064384,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 2064384
+    },
+    {
+      "file": "vendor.img",
+      "stored_bytes": 754550844,
+      "format": "android-sparse",
+      "expanded_bytes": 804544512,
+      "block_size": 4096,
+      "chunks": 1880,
+      "partition_bytes": 1073741824,
+      "fits_package_partition": true,
+      "sha256": "617aad9ab27afd5a860ffec161e98b432a3e67da45fc593c68312cd0f21edff9"
+    },
+    {
+      "file": "xbl.img",
+      "stored_bytes": 3965832,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 3965832
+    },
+    {
+      "file": "xbl_config.img",
+      "stored_bytes": 98140,
+      "format": "raw-or-unknown",
+      "expanded_bytes": 98140
+    }
+  ],
+  "missing_program_files": [
+    "cache.img",
+    "userdata.img"
+  ],
+  "protected_program_entries": [
+    "PrimaryGPT",
+    "BackupGPT",
+    "PrimaryGPT",
+    "BackupGPT",
+    "PrimaryGPT",
+    "BackupGPT",
+    "PrimaryGPT",
+    "BackupGPT",
+    "PrimaryGPT",
+    "BackupGPT",
+    "PrimaryGPT",
+    "BackupGPT"
+  ],
+  "xml_sha256": {
+    "partition.xml": "e4442e28e9b3921a95a785587997d3a025cf4bfbb28c9b6288ebadc603d63b2d",
+    "patch0.xml": "844936ac68453d440fd62c0ba4c5f1a3a7d04be57854641717a65e45953dc067",
+    "patch1.xml": "79bc1e2887602035220b904bf91ce29644b2c153b1bad46b84c21a610a265f69",
+    "patch2.xml": "c95d6590ef60f854fe5f7ff4d63dd98aad327dc8e9f7aca079158b6a522999da",
+    "patch3.xml": "936bcb0694f4cbc28b2538c2b7b40c9c2e53f4491e7a50caa34df7a43ce28147",
+    "patch4.xml": "29cec3224e9a2b81a0bee042a20230bcbaf2548a28cd6a0c44149ed873d36075",
+    "patch5.xml": "83d39d9605cb52a10f61f3c55a4d8be28aad80b6027c31a9184928e8889354f4",
+    "rawprogram0.xml": "7acb5c866ff0ca4e84b14cdff149f5bdfae789cb629aaf878d0567b7fc627098",
+    "rawprogram1.xml": "d071fc55ce498542712e46085a5f47022ebb458f1db684643d9dfefad3b29d61",
+    "rawprogram2.xml": "685faf87e99115a73617eece3c056e86d1b73bd6a90c11fa5ded8b18b865212f",
+    "rawprogram3.xml": "593d6ebfbbdeda10a4373b23e44f3305ddd43988cbb73ff2960d3289dc4738da",
+    "rawprogram4.xml": "aea396d1f03477560c1acba0f174cbc4c1c069a5567d57d8a84e6c0ba4e37d1b",
+    "rawprogram5.xml": "22a3222f04eafcb1352160eb732a1805e415063d16d6ccb13383c829db2c1c7e"
+  }
+}

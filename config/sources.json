@@ -1,0 +1,34 @@
+{
+  "kernel": {
+    "url": "https://github.com/xiziya/114514_kernel_xiaomi_sdm845.git",
+    "branch": "lineage-23.2_xiaomi",
+    "commit": "1f326a9202472e8228c2a08ebfd4fdb83da52675",
+    "version": "4.19.325",
+    "configs": ["vendor/sdm845-perf_defconfig", "vendor/xiaomi/sdm845-common.config", "vendor/xiaomi/polaris.config"],
+    "build_verified": false
+  },
+  "device_reference": {
+    "url": "https://github.com/LineageOS/android_device_xiaomi_polaris.git",
+    "commit": "1b46255cfa29026819b9177f1c7f73ee72388e76",
+    "usage": "reference-only: its retrofit-dynamic layout does not match supplied EDL package"
+  },
+  "common_reference": {
+    "url": "https://github.com/LineageOS/android_device_xiaomi_sdm845-common.git",
+    "commit": "35cf356b095e033e71261b16c7fa319faac12cb3"
+  },
+  "donor_candidate": {
+    "device": "ziyi",
+    "model": "Xiaomi Civi 2",
+    "version": "OS3.0.6.0.VLLCNXM",
+    "android": 15,
+    "soc": "Snapdragon 7 Gen 1",
+    "selection": "candidate-awaiting-binary-and-VINTF-audit",
+    "catalog": "https://mirom.ezbox.idv.tw/en/phone/ziyi/roms-cn-stable/",
+    "urls": ["https://bigota.d.miui.com/OS3.0.6.0.VLLCNXM/ziyi-ota_full-OS3.0.6.0.VLLCNXM-user-15.0-f6ef5f9254.zip", "https://hugeota.d.miui.com/OS3.0.6.0.VLLCNXM/ziyi-ota_full-OS3.0.6.0.VLLCNXM-user-15.0-f6ef5f9254.zip"],
+    "bytes": 6275771344,
+    "sha256": null,
+    "download_referer": "https://www.mi.com/",
+    "allowed_roles": ["framework-candidate", "system-apps-candidate"],
+    "forbidden_roles": ["modem", "bootloader", "vendor", "kernel", "dtb", "thermal", "powerhal"]
+  }
+}

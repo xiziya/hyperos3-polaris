@@ -1,0 +1,30 @@
+name: Validate development tools
+on:
+  push:
+    branches: [dev, stable]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  tools:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Test package inspection and pure kernel gates
+        run: python3 -m unittest discover -s tests -v
+      - name: Check script syntax
+        run: |
+          python3 -m compileall -q tools tests
+          bash -n tools/build_kernel.sh tools/download_donor.sh
+      - name: Validate configuration and no accidental firmware or private logs
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, subprocess
+          for p in pathlib.Path('config').glob('*.json'):
+              json.loads(p.read_text())
+          paths = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
+          forbidden = ('.img', '.bin', '.qcn', '.elf', '.zip', '.tgz', '.pem', '.key', '.log')
+          assert not any(p.lower().endswith(forbidden) or p.startswith(('private/', 'logs/')) for p in paths)
+          PY
