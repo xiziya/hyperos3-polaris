@@ -1,0 +1,650 @@
+{
+  "schema": 1,
+  "source_image_sha256": "49016f848160f57bb0909abffe8480d827640fbc83aa70b60ffa5e828787d5ba",
+  "reference_vendor_sha256": "fff1b4d272f1be26a78e1d965645cb543a23eecf4e47a9572edd16491809669d",
+  "image_sha256": "ccb31ff55e63ad4871c8eb0eae482beb65f67e2834fcd0f205bb82916a28ebd5",
+  "bytes": 805306368,
+  "changes": [
+    {
+      "path": "/lib/android.hardware.graphics.allocator@2.0.so",
+      "sha256": "bbfd331016567c1c47a8fffab748ff7bf1f427155fc4c4e064981e5be458eed1",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.allocator@3.0.so",
+      "sha256": "35dcf490526f481edb9fa4b77d8cd2cc644a39d96a2f17e39df7b2b0c3a528cd",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.allocator@4.0.so",
+      "sha256": "dc00956f88818d99fe037a2dc3a17323c7d2d5e3122ddefc37a62524404a2c5d",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.bufferqueue@1.0.so",
+      "sha256": "25c7832b2d491075530f3dec4c6ba2d87a89baeb9471a4bc1ceae39e3b5a5553",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.bufferqueue@2.0.so",
+      "sha256": "53bd94816cac0d4048537cf362940d602a3e9a96e46c786742a7e1a819130dec",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.common@1.0.so",
+      "sha256": "da5d74e66d1b341b8294ca46a44104128d149ba710855ff1bb471276e59b87a7",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.common@1.1.so",
+      "sha256": "5a6f59420818556ef2bd09a93861c7fe13924e71da4539fa3b1e4715e0924a7c",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.common@1.2.so",
+      "sha256": "17b517a20ea5ad2e52322ed4c73f6432333f423473ef46288df2e4f517826399",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.mapper@2.0.so",
+      "sha256": "56ae8ece125efe99b6c7da5e5aa7ce5800a47b3d4b97b20453f45d43cd183cf3",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.mapper@2.1.so",
+      "sha256": "071da7627a07db16faba8c501ee2e2267d6c5ed178ad59b880a49705b757bca4",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.mapper@3.0.so",
+      "sha256": "ab4950926b2c2e8974663161b5571986cdb407fab223265b67713e4f14ef6ddf",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/android.hardware.graphics.mapper@4.0.so",
+      "sha256": "fc89f555887720b28d5ec33045f38fffbb1f7c22c9c2e4548c9a984f12b25ecd",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libcodec2.so",
+      "sha256": "ebbf50359bc27bb306b5ba6ede467d0e588f0f96c87dd9c190d1562551ea4c0b",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libcodec2_hal_common.so",
+      "sha256": "461938309d8a4cb45ed222a1cc38c5732f282c751ae48c7b6ca408145d400ff5",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libcodec2_hidl@1.0.so",
+      "sha256": "b77dabe3fd74fe0e42019fab2b30fc0e9be368e07b9d708e4d5c47a3986d3629",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libcodec2_hidl_plugin.so",
+      "sha256": "06148e270ad1060716816ba272ac98a3badf2df9756b4ee75b1d962089f749f3",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libcodec2_vndk.so",
+      "sha256": "f89398b08dcada9405351d222957404f293b8c3eb2a335f7b82919ba4ba1854b",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libdisplayconfig.qti.so",
+      "sha256": "8903776f62ebf2f98273873b05801803d91e71730ecc505aa84e3993de7f3226",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libgralloc.qti.so",
+      "sha256": "0639d92c70c3eea9b9d36469812871ac1c7e86cfa164392186539b352736a2a2",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libgralloccore.so",
+      "sha256": "a9bf4d9d2c86701694579492b924bf6b42b5480e37fa88589d1d23a170f6f263",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libgralloctypes.so",
+      "sha256": "64b0e6df3fc1a47773eb14365c4b21b6d7ba051716344a5fe0c5dedfd130f461",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libgrallocutils.so",
+      "sha256": "b221e9e3abc95a728470b2401dcc78ac0d9b5fa8c635c541c5e1fc24573b61b9",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libqcodec2.so",
+      "sha256": "e324087821f7dab1fe3340d3d13579347e9d7e9e9acbd01bc6792376d3c73ce5",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/libqdMetaData.so",
+      "sha256": "f862341f78d92ea02fa381ccc75fb1cb3509f67789233c511d3a4b7b129f6f14",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/vendor.display.config@2.0.so",
+      "sha256": "114595562b51744c04977e9742ca1bae8d6fedbc344d4d389a052e5ca5076a97",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/vendor.qti.hardware.display.mapper@2.0.so",
+      "sha256": "df471f7e7461c586106fde27912410b635342110fe9757185e13d66320877b0d",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/vendor.qti.hardware.display.mapper@3.0.so",
+      "sha256": "9c10010e59db2b94c5715adaef84c1872bd1abad18e86a129b964268e2146663",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/vendor.qti.hardware.display.mapper@4.0.so",
+      "sha256": "c3c866d841b3c467222112a8e9cd9e572d57d98d56797b709f2bb3887855a683",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/vendor.qti.hardware.display.mapperextensions@1.0.so",
+      "sha256": "7010e672aeb5d97147711db51c6e2a1ed2fbbf354fbfcbce426213f876e8cb16",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/vendor.qti.hardware.display.mapperextensions@1.1.so",
+      "sha256": "9c5536de662db54922e6d5d6864ad652cbaee12e1c4929b9ce06c4e6f7d03f51",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/hw/android.hardware.graphics.mapper@3.0-impl-qti-display.so",
+      "sha256": "fa480eeb20c273f30d6f24566a93fdc3009bba813c17fd35bd41d966a767e36a",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so",
+      "sha256": "d6be476ccd3a0a5d065184705edfdeea370eaaf809a7fafbe9f4d77790644de8",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/hw/gralloc.qcom.so",
+      "sha256": "cc830d048242465a9ace93b9b7753e1ed68ed08f26ee732d2589dc3261861ac7",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib/hw/gralloc.default.so",
+      "sha256": "5b693d83746021a5981f02788193dac7a4ab1067c0e2d7ccb57b719e5cee4e1f",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.allocator@2.0.so",
+      "sha256": "b8f2b0f065ca7f141d448beab99d11af2bb350699a52c773245ef6f379b1fa9b",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.allocator@3.0.so",
+      "sha256": "8f3e9883a2f5c70fe3c8c3ccf13cced363ce025cb1f9f200c0e8b2adcac9dfc8",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.allocator@4.0.so",
+      "sha256": "47839c92fb384747d60ab0dec46b80164ea68e47f86b1b098cb2ba02dab13468",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.common@1.0.so",
+      "sha256": "138ade6e57e291b8bc6f7eb78224ae31007b2aa82263a7d00feae7d7122a983f",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.common@1.1.so",
+      "sha256": "daa1fcf2abd2b9aeeeb00cb5f46494abd8955a74dbe02060a62e17845e094731",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.common@1.2.so",
+      "sha256": "0f7ade3b1762dde9721b2b2f303d0d50139853b8f01df2f602fd3f9f0e8b997f",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.composer@2.1.so",
+      "sha256": "23f48f353ff189c71e5610b98e9e31c508627ebbacb255d8332cc697200faf2b",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.composer@2.2.so",
+      "sha256": "c30173aa44760a707e30eb4928749fa1975a6c366d4dc6a21e4529b7aeafcbcc",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.composer@2.3.so",
+      "sha256": "14c6771febe1ef23833e1dbb7de731ec3da73371d90d8fa5e041775b028b2f85",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.composer@2.4.so",
+      "sha256": "2c13d7008fd98d35bc10f384a9b09235a7cb1f60dedc6f1e1ecd810fce20f0f2",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.mapper@2.0.so",
+      "sha256": "d64ad74acb0760e3983857fd0d5962169ece773a93abf1f6b0a40b1fe2634969",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.mapper@2.1.so",
+      "sha256": "9e24fe62603bd39779cd7754959d79ef7302dc8fa55f1b83716045a3696f099e",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.mapper@3.0.so",
+      "sha256": "8a0c590b277a8eac64880f9c482bd4fde11788561e3c5924109dcfe7e1f10b49",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/android.hardware.graphics.mapper@4.0.so",
+      "sha256": "48777b6d5459426797a183c87fd0da62231dcbd7f9c5cc819400ce6f7851d509",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libdisplayconfig.qti.so",
+      "sha256": "63e7610e600eea67cb2192fab3e9979171036b97b8b1c4b1eb189b6e46a2062f",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libdisplaydebug.so",
+      "sha256": "92d79d00cea6b21865bc97bf346624d707d49c81b54eecce3106f8405ba7c009",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libdrm.so",
+      "sha256": "c893e69876279416b1faa647a4945a037ad70e4adb65c9e100ec2c4194ffedc6",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libdrmutils.so",
+      "sha256": "2bb1a23de49b1cbd45a5859d8e59c5735063349eb8489d1d6a07273d89ce8282",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libgpu_tonemapper.so",
+      "sha256": "7a2dfc8fea6c832e6fc1de8149eaadd0af60bac5990b82f7b6823176d4b7ab69",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libgralloc.qti.so",
+      "sha256": "b5dc8b2162d53aa7f6fd14dc58cf04bba71388102c4f531b740a83f8b216be56",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libgralloccore.so",
+      "sha256": "5c853e3934e8a2962804ecb17d372f5d715ad042731ec0997eec3e4dc8df04b2",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libgralloctypes.so",
+      "sha256": "d142390341d3b791438fcf403d7972934bcb4a9f16f48f330a5e24d432cda4ea",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libgrallocutils.so",
+      "sha256": "345f851543eb4f587156d0c888452cdfd954cec975e7af063339880aa30156bd",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libhistogram.so",
+      "sha256": "a263b59d0cf63bedd3eb2423252573233165ef9f51d2d660c105c153288f8625",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libqdMetaData.so",
+      "sha256": "2f2e1a0ef4f9aa84f543517a3f22c687ae6ce72da069b98f56eb76a15efdd774",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libqdutils.so",
+      "sha256": "84a6e5eb837a0ff5af7fde8d4ec9a50cf05debfdd268d0429f4ddb841c439bb9",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libqservice.so",
+      "sha256": "f13317591a869c5ee34c9bd41e86fa03d5b7180834c039d43b1a77961a76afbc",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libsdm-color.so",
+      "sha256": "aabcaa0a80b58c3e64ebd1bb59a11bf5417af2941a813754bf501e24b0aa67e5",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libsdm-colormgr-algo.so",
+      "sha256": "e71466031f52d58774d5f103994807b7651f4b5566179c602a27e628e400ab31",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libsdm-diag.so",
+      "sha256": "7fd0ddd7cca2a93fd4b441c76f883b3dabd7ef221c1f9d2b7577503d6183e845",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libsdm-disp-vndapis.so",
+      "sha256": "0960bb66c2270de6852680b304aba6403081e7eeb84ecb378188954c09e52372",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libsdmcore.so",
+      "sha256": "4961e8bd42e7f213f25c3e2b1b4ef294ec2d8363bd8aabf3ad0ec11be9c7dccc",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libsdmextension.so",
+      "sha256": "b7bb14f2f00e50d686a59de8cf6f658d0b4df4a50ccffa7590a93c0d59bec64f",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/libsdmutils.so",
+      "sha256": "6117c8a4146a5f3f3cbb78e2197400f66b4dfa36b421a56cf46413d199bb5374",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.display.color@1.0.so",
+      "sha256": "15936bf06720964a0420bd60dbd4306b21b062417864bb20e47b745aa4a42828",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.display.color@1.1.so",
+      "sha256": "0d44b3dd056a1b865dfea4aa7717e5fe0b28b27d5fcfce8b90adc5d50a7d9cdb",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.display.color@1.2.so",
+      "sha256": "c97156dc20f45af9324e765b97e6da2aa70b5de83cddc592dba56cc6dd9d1c77",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.display.color@1.3.so",
+      "sha256": "4e7eba2b131ec31679ffd179279bd565a1c6f61563c63b488ef65d9307a045a5",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.display.color@1.4.so",
+      "sha256": "e21359c1434f2c4163d604094fb10df69c18cb67033b77a924ce43d3ca9f17b1",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.display.color@1.5.so",
+      "sha256": "3ce7bc4443ecc34d4f670dba3eb819f525842fa83f24db8444eee42ddea3a5f0",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.display.config@1.0.so",
+      "sha256": "7c22b69fdaf903d1e3722e3c72972708a006434d89ed8197f6d1a0e1782a4108",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.display.config@2.0.so",
+      "sha256": "f3d28fd16f05e179c01f9ab5bdbdad4e581383ada576270df14cb53cc1f07de4",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.display.postproc@1.0.so",
+      "sha256": "abcafa25276064a3b9b74f2c0cd8c0d71cfbaf1a08a14d4870154a27af9b5c82",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.allocator@3.0.so",
+      "sha256": "89efba91e16ddbdca3530911fdbe02cb5a65536d1a0bdf937f620bfe083785cf",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.allocator@4.0.so",
+      "sha256": "70d8febe519471ac8f3ac4c63a8abdda804e4706a2dee9594c27e1fd26002b12",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.composer@3.0.so",
+      "sha256": "9c41e404693688026f14b9edea2965a3e1caf5b8cc5956b93da6d349dea65422",
+      "label": "vendor_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.mapper@2.0.so",
+      "sha256": "27cd830830317ee9b697b01ab223a90dd8ccbb10b687161678085659d61b8e10",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.mapper@3.0.so",
+      "sha256": "29046295db94fa3b3b6238669b5edbc7010870aef7a6497eaca1ffc2c4f024d8",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.mapper@4.0.so",
+      "sha256": "3c3cfb750865c8ffe4a5607f545de6cd5ff6bda6f3d39bb0762784969ca66f9f",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.mapperextensions@1.0.so",
+      "sha256": "215f3de03b9f3290cb1e9dc70f15d257e51cee2fece1a57f35574db283a75696",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/vendor.qti.hardware.display.mapperextensions@1.1.so",
+      "sha256": "1a7fad8e87d4f67fd496dbd77bbf0b0e0c620d0abd4858c21c6124685baa3fdf",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/hw/android.hardware.graphics.mapper@3.0-impl-qti-display.so",
+      "sha256": "f47990468d1056c1ba2e2b3a549c3b3cf8fc9e4e324f214cc327fd5f6f432913",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so",
+      "sha256": "955b5b167680be21d3040f34f6a20ed9ce8ac82d73ed5091a9651e2a47109be8",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/hw/gralloc.qcom.so",
+      "sha256": "ab04c5596f151b46880bc81127ca82dba61cecf7cd1fc7eb6ed7cf792cff96eb",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/lib64/hw/gralloc.default.so",
+      "sha256": "a423e6ec64983239fefabde58353e08bce71e88d2d77df78ac2bcb224d219374",
+      "label": "same_process_hal_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/bin/hw/vendor.qti.hardware.display.allocator-service",
+      "sha256": "de71ecc62dfd302ee0a406ab8ad0c9b6759d39d4882b4e527074a64c202f2edb",
+      "label": "hal_graphics_allocator_default_exec",
+      "mode": "0o755"
+    },
+    {
+      "path": "/etc/init/vendor.qti.hardware.display.allocator-service.rc",
+      "sha256": "5f1d3dbdd7c2ca4ffbcdfd54883f5d6f1b98fe0eed6f0f0c84f67644da828f78",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/bin/hw/vendor.qti.hardware.display.composer-service",
+      "sha256": "996eb6575c08cddd598cb769a44cca76a00461c6877ce4f7174609db2de4f0cd",
+      "label": "hal_graphics_composer_default_exec",
+      "mode": "0o755"
+    },
+    {
+      "path": "/etc/init/vendor.qti.hardware.display.composer-service.rc",
+      "sha256": "b50778544a9f52cc7fbd127b7f886a75a2a19f53379341051bbb0afc0bab2ce9",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/bin/hw/vendor.qti.media.c2@1.0-service",
+      "sha256": "f5d50776323f264c83a63360d3fa768a1dfd5aab787fd24938cf2df029079f02",
+      "label": "mediacodec_exec",
+      "mode": "0o755"
+    },
+    {
+      "path": "/etc/init/vendor.qti.media.c2@1.0-service.rc",
+      "sha256": "44bdd7972aea03f838ba0afb50ed5518c1bdb12bbb23d29684e9da04048e9bbb",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/etc/vintf/manifest.xml",
+      "sha256": "53cadf2c29ffe569d7a9e9e398a90a0953c042748ba8b2de6e57952dd6806760",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/etc/vintf/manifest/polaris-media-display.xml",
+      "sha256": "17b763737a40f934dfb36dcda24004a5d782b5bb60ee7980c5a0d5663c394833",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/etc/media_codecs_c2.xml",
+      "sha256": "a533846fccd63a67ec3e99a9cbfe180058f5422f0db52fa0f6c49afd5ec3fcf1",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/etc/media_codecs_performance_c2.xml",
+      "sha256": "49b1437ce1620a8f6570d749c116ca04083fcb3d93f303571dca2c40b63ddaf9",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/etc/media_codecs.xml",
+      "sha256": "5f6dc91aeaf44919e51480a67a0f59a82293667f7f6f72b04faa54d0c700894e",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/etc/media_codecs_performance.xml",
+      "sha256": "afa285bacb517c093000fce1999d035e0020be9b9a0b6364190d0a4c23dcf156",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/etc/seccomp_policy/codec2.vendor.base.policy",
+      "sha256": "a822f748871a593c6a1738a18cfd2ae4f789e0c46ed0c51cd03d96e7dda23fe1",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/etc/seccomp_policy/codec2.vendor.ext.policy",
+      "sha256": "78182c6303ad4a87ffab14ad76f31a03c012d150d1f50fff952acfd0e110489a",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/etc/selinux/vendor_file_contexts",
+      "sha256": "74ddedc1980be1d1ba6adf6cacac3f75fa2548a4fb781fded95a74b1c51748c9",
+      "label": "vendor_configs_file",
+      "mode": "0o644"
+    },
+    {
+      "path": "/build.prop",
+      "sha256": "6a0b83fc6309764f9a74f61dd4050d8caedad140c1677fce4ffb985f29d61285",
+      "label": "vendor_file",
+      "mode": "0o644"
+    }
+  ],
+  "removed_init_and_vintf": [
+    "/etc/init/android.hardware.graphics.composer@2.3-service.rc",
+    "/etc/init/vendor.qti.hardware.display.allocator@1.0-service.rc",
+    "/etc/init/vendor.display.color@1.0-service.rc",
+    "/etc/init/vendor.lineage.livedisplay-service.sdm.rc",
+    "/etc/vintf/manifest/vendor.lineage.livedisplay-service.sdm-dm.xml",
+    "/etc/vintf/manifest/vendor.lineage.livedisplay-service.sdm-pa.xml"
+  ],
+  "flashable": false,
+  "runtime_verified": false,
+  "note": "Coherent display/Codec2 candidate replaces 4.9-origin hardware path; complete ROM, policy/runtime and dlopen checks remain."
+}

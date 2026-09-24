@@ -2,7 +2,9 @@
 
 维护者：[@xiziya](https://github.com/xiziya)。目标设备：骁龙 845、6 GB / 128 GB。目标系统：**中国版 HyperOS 3 / Android 15**。
 
-**当前阶段：已编译纯净内核与灯光 HAL、完成实机只读调查并生成 boot/vendor 工程候选。尚无完整可刷 ROM；没有通过真机验证的稳定版。**
+**当前阶段：首次开发测试 ZIP 已生成，六份镜像均通过 ZIP 解压哈希回读。尚未进行真机启动或硬件验收，没有稳定版。** 安装边界和首次测试见 [首次上机说明](docs/first-device-test.md)，完整校验记录见 [封装报告](reports/development-package.json)。封装完成不等于运行成功。
+
+本地产物：`HyperOS3-Polaris-A15-China-dev-20260925.zip`，5,596,345,065 字节；SHA256：`5f7775157bcc22909b466d3cfdfb003f05ba6ea89141584c11d5eb6797c8c1c4`。仓库不托管厂商镜像；此报告用于核对机主本地测试包。
 
 - `dev`：日常开发，工具、来源锁定、兼容性调查。
 - `stable`：稳定发布入口。只有完成设备验收的版本才可发布；初始分支仅包含项目说明。

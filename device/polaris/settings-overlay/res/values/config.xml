@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_device_is_hole_type">false</bool>
+    <bool name="config_show_softap_wifi6">false</bool>
+    <bool name="credentials_image_2209129sc">false</bool>
+    <bool name="credentials_image_2210129sg">false</bool>
+</resources>

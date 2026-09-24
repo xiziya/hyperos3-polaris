@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.polaris.hyperos.settings.overlay" android:versionCode="1" android:versionName="1">
+    <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="35" />
+    <overlay android:targetPackage="com.android.settings" android:isStatic="true" android:priority="9999" />
+    <application android:hasCode="false" android:label="MIX 2S settings hardware configuration" />
+</manifest>

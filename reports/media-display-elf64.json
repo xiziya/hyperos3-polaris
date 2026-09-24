@@ -1,0 +1,906 @@
+{
+  "schema": 1,
+  "library_counts": {
+    "media-mix": 51,
+    "vendor": 473,
+    "system": 808,
+    "system_ext": 582,
+    "bionic": 5
+  },
+  "binaries": [
+    {
+      "binary": "android.hardware.graphics.mapper@3.0-impl-qti-display.so",
+      "sha256": "f47990468d1056c1ba2e2b3a549c3b3cf8fc9e4e324f214cc327fd5f6f432913",
+      "elf_class": 64,
+      "machine": "EM_AARCH64",
+      "direct_needed": [
+        "liblog.so",
+        "libcutils.so",
+        "libutils.so",
+        "libhidlbase.so",
+        "libqdMetaData.so",
+        "libgrallocutils.so",
+        "libgralloccore.so",
+        "libsync.so",
+        "vendor.qti.hardware.display.mapper@3.0.so",
+        "vendor.qti.hardware.display.mapperextensions@1.0.so",
+        "android.hardware.graphics.mapper@2.0.so",
+        "android.hardware.graphics.mapper@2.1.so",
+        "vendor.qti.hardware.display.mapperextensions@1.1.so",
+        "android.hardware.graphics.mapper@3.0.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "candidate_dependency_count": 35,
+      "missing_in_inventory": [],
+      "root_undefined_in_inventory": [],
+      "dependent_undefined_in_inventory": {},
+      "root_named_version_requirements_checked": 13,
+      "root_named_version_issues": [],
+      "root_android_global_version_fallbacks": [
+        {
+          "library": "libsync.so",
+          "symbol": "sync_wait",
+          "requested_version": "LIBSYNC"
+        }
+      ],
+      "multiple_candidates": {
+        "libcutils.so": [
+          "vendor/libcutils.so",
+          "system/libcutils.so"
+        ],
+        "libutils.so": [
+          "vendor/libutils.so",
+          "system/libutils.so"
+        ],
+        "libhidlbase.so": [
+          "vendor/libhidlbase.so",
+          "system/libhidlbase.so"
+        ],
+        "libqdMetaData.so": [
+          "media-mix/libqdMetaData.so",
+          "vendor/libqdMetaData.so"
+        ],
+        "libgrallocutils.so": [
+          "media-mix/libgrallocutils.so",
+          "vendor/libgrallocutils.so"
+        ],
+        "libgralloccore.so": [
+          "media-mix/libgralloccore.so",
+          "vendor/libgralloccore.so"
+        ],
+        "android.hardware.graphics.mapper@2.0.so": [
+          "media-mix/android.hardware.graphics.mapper@2.0.so",
+          "vendor/android.hardware.graphics.mapper@2.0.so",
+          "system/android.hardware.graphics.mapper@2.0.so"
+        ],
+        "android.hardware.graphics.mapper@2.1.so": [
+          "media-mix/android.hardware.graphics.mapper@2.1.so",
+          "vendor/android.hardware.graphics.mapper@2.1.so",
+          "system/android.hardware.graphics.mapper@2.1.so"
+        ],
+        "android.hardware.graphics.mapper@3.0.so": [
+          "media-mix/android.hardware.graphics.mapper@3.0.so",
+          "vendor/android.hardware.graphics.mapper@3.0.so",
+          "system/android.hardware.graphics.mapper@3.0.so"
+        ],
+        "libc++.so": [
+          "vendor/libc++.so",
+          "system/libc++.so"
+        ],
+        "android.hardware.graphics.common@1.0.so": [
+          "media-mix/android.hardware.graphics.common@1.0.so",
+          "vendor/android.hardware.graphics.common@1.0.so",
+          "system/android.hardware.graphics.common@1.0.so"
+        ],
+        "android.hardware.graphics.common@1.1.so": [
+          "media-mix/android.hardware.graphics.common@1.1.so",
+          "vendor/android.hardware.graphics.common@1.1.so",
+          "system/android.hardware.graphics.common@1.1.so"
+        ],
+        "android.hardware.graphics.common@1.2.so": [
+          "media-mix/android.hardware.graphics.common@1.2.so",
+          "vendor/android.hardware.graphics.common@1.2.so",
+          "system/android.hardware.graphics.common@1.2.so"
+        ],
+        "libgralloctypes.so": [
+          "media-mix/libgralloctypes.so",
+          "vendor/libgralloctypes.so",
+          "system/libgralloctypes.so"
+        ],
+        "libgralloc.qti.so": [
+          "media-mix/libgralloc.qti.so",
+          "vendor/libgralloc.qti.so"
+        ],
+        "libion.so": [
+          "vendor/libion.so",
+          "system/libion.so"
+        ],
+        "android.hardware.graphics.mapper@4.0.so": [
+          "media-mix/android.hardware.graphics.mapper@4.0.so",
+          "vendor/android.hardware.graphics.mapper@4.0.so",
+          "system/android.hardware.graphics.mapper@4.0.so"
+        ],
+        "libhardware.so": [
+          "vendor/libhardware.so",
+          "system/libhardware.so"
+        ],
+        "android.hardware.common-V2-ndk.so": [
+          "vendor/android.hardware.common-V2-ndk.so",
+          "system/android.hardware.common-V2-ndk.so"
+        ],
+        "libbinder.so": [
+          "vendor/libbinder.so",
+          "system/libbinder.so"
+        ],
+        "libbase.so": [
+          "vendor/libbase.so",
+          "system/libbase.so"
+        ]
+      },
+      "linker_namespace_verified": false,
+      "symbol_versions_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "binary": "android.hardware.graphics.mapper@4.0-impl-qti-display.so",
+      "sha256": "955b5b167680be21d3040f34f6a20ed9ce8ac82d73ed5091a9651e2a47109be8",
+      "elf_class": 64,
+      "machine": "EM_AARCH64",
+      "direct_needed": [
+        "liblog.so",
+        "libcutils.so",
+        "libutils.so",
+        "libhidlbase.so",
+        "libqdMetaData.so",
+        "libgrallocutils.so",
+        "libgralloccore.so",
+        "libgralloctypes.so",
+        "libsync.so",
+        "vendor.qti.hardware.display.mapper@4.0.so",
+        "vendor.qti.hardware.display.mapperextensions@1.0.so",
+        "android.hardware.graphics.mapper@2.0.so",
+        "android.hardware.graphics.mapper@2.1.so",
+        "vendor.qti.hardware.display.mapperextensions@1.1.so",
+        "android.hardware.graphics.mapper@3.0.so",
+        "android.hardware.graphics.mapper@4.0.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "candidate_dependency_count": 35,
+      "missing_in_inventory": [],
+      "root_undefined_in_inventory": [],
+      "dependent_undefined_in_inventory": {},
+      "root_named_version_requirements_checked": 17,
+      "root_named_version_issues": [],
+      "root_android_global_version_fallbacks": [
+        {
+          "library": "libsync.so",
+          "symbol": "sync_wait",
+          "requested_version": "LIBSYNC"
+        }
+      ],
+      "multiple_candidates": {
+        "libcutils.so": [
+          "vendor/libcutils.so",
+          "system/libcutils.so"
+        ],
+        "libutils.so": [
+          "vendor/libutils.so",
+          "system/libutils.so"
+        ],
+        "libhidlbase.so": [
+          "vendor/libhidlbase.so",
+          "system/libhidlbase.so"
+        ],
+        "libqdMetaData.so": [
+          "media-mix/libqdMetaData.so",
+          "vendor/libqdMetaData.so"
+        ],
+        "libgrallocutils.so": [
+          "media-mix/libgrallocutils.so",
+          "vendor/libgrallocutils.so"
+        ],
+        "libgralloccore.so": [
+          "media-mix/libgralloccore.so",
+          "vendor/libgralloccore.so"
+        ],
+        "libgralloctypes.so": [
+          "media-mix/libgralloctypes.so",
+          "vendor/libgralloctypes.so",
+          "system/libgralloctypes.so"
+        ],
+        "android.hardware.graphics.mapper@2.0.so": [
+          "media-mix/android.hardware.graphics.mapper@2.0.so",
+          "vendor/android.hardware.graphics.mapper@2.0.so",
+          "system/android.hardware.graphics.mapper@2.0.so"
+        ],
+        "android.hardware.graphics.mapper@2.1.so": [
+          "media-mix/android.hardware.graphics.mapper@2.1.so",
+          "vendor/android.hardware.graphics.mapper@2.1.so",
+          "system/android.hardware.graphics.mapper@2.1.so"
+        ],
+        "android.hardware.graphics.mapper@3.0.so": [
+          "media-mix/android.hardware.graphics.mapper@3.0.so",
+          "vendor/android.hardware.graphics.mapper@3.0.so",
+          "system/android.hardware.graphics.mapper@3.0.so"
+        ],
+        "android.hardware.graphics.mapper@4.0.so": [
+          "media-mix/android.hardware.graphics.mapper@4.0.so",
+          "vendor/android.hardware.graphics.mapper@4.0.so",
+          "system/android.hardware.graphics.mapper@4.0.so"
+        ],
+        "libc++.so": [
+          "vendor/libc++.so",
+          "system/libc++.so"
+        ],
+        "android.hardware.graphics.common@1.0.so": [
+          "media-mix/android.hardware.graphics.common@1.0.so",
+          "vendor/android.hardware.graphics.common@1.0.so",
+          "system/android.hardware.graphics.common@1.0.so"
+        ],
+        "android.hardware.graphics.common@1.1.so": [
+          "media-mix/android.hardware.graphics.common@1.1.so",
+          "vendor/android.hardware.graphics.common@1.1.so",
+          "system/android.hardware.graphics.common@1.1.so"
+        ],
+        "android.hardware.graphics.common@1.2.so": [
+          "media-mix/android.hardware.graphics.common@1.2.so",
+          "vendor/android.hardware.graphics.common@1.2.so",
+          "system/android.hardware.graphics.common@1.2.so"
+        ],
+        "android.hardware.common-V2-ndk.so": [
+          "vendor/android.hardware.common-V2-ndk.so",
+          "system/android.hardware.common-V2-ndk.so"
+        ],
+        "libbinder.so": [
+          "vendor/libbinder.so",
+          "system/libbinder.so"
+        ],
+        "libgralloc.qti.so": [
+          "media-mix/libgralloc.qti.so",
+          "vendor/libgralloc.qti.so"
+        ],
+        "libion.so": [
+          "vendor/libion.so",
+          "system/libion.so"
+        ],
+        "libhardware.so": [
+          "vendor/libhardware.so",
+          "system/libhardware.so"
+        ],
+        "libbase.so": [
+          "vendor/libbase.so",
+          "system/libbase.so"
+        ]
+      },
+      "linker_namespace_verified": false,
+      "symbol_versions_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "binary": "vendor.qti.hardware.display.allocator-service",
+      "sha256": "de71ecc62dfd302ee0a406ab8ad0c9b6759d39d4882b4e527074a64c202f2edb",
+      "elf_class": 64,
+      "machine": "EM_AARCH64",
+      "direct_needed": [
+        "liblog.so",
+        "libcutils.so",
+        "libutils.so",
+        "libhidlbase.so",
+        "libqdMetaData.so",
+        "libgrallocutils.so",
+        "libgralloccore.so",
+        "libgralloctypes.so",
+        "vendor.qti.hardware.display.allocator@3.0.so",
+        "vendor.qti.hardware.display.allocator@4.0.so",
+        "vendor.qti.hardware.display.mapper@3.0.so",
+        "vendor.qti.hardware.display.mapper@4.0.so",
+        "android.hardware.graphics.mapper@4.0.so",
+        "android.hardware.graphics.mapper@3.0.so",
+        "android.hardware.graphics.mapper@2.1.so",
+        "android.hardware.graphics.allocator@4.0.so",
+        "android.hardware.graphics.allocator@3.0.so",
+        "vendor.qti.hardware.display.mapperextensions@1.0.so",
+        "vendor.qti.hardware.display.mapperextensions@1.1.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "candidate_dependency_count": 39,
+      "missing_in_inventory": [],
+      "root_undefined_in_inventory": [],
+      "dependent_undefined_in_inventory": {},
+      "root_named_version_requirements_checked": 12,
+      "root_named_version_issues": [],
+      "root_android_global_version_fallbacks": [],
+      "multiple_candidates": {
+        "libcutils.so": [
+          "vendor/libcutils.so",
+          "system/libcutils.so"
+        ],
+        "libutils.so": [
+          "vendor/libutils.so",
+          "system/libutils.so"
+        ],
+        "libhidlbase.so": [
+          "vendor/libhidlbase.so",
+          "system/libhidlbase.so"
+        ],
+        "libqdMetaData.so": [
+          "media-mix/libqdMetaData.so",
+          "vendor/libqdMetaData.so"
+        ],
+        "libgrallocutils.so": [
+          "media-mix/libgrallocutils.so",
+          "vendor/libgrallocutils.so"
+        ],
+        "libgralloccore.so": [
+          "media-mix/libgralloccore.so",
+          "vendor/libgralloccore.so"
+        ],
+        "libgralloctypes.so": [
+          "media-mix/libgralloctypes.so",
+          "vendor/libgralloctypes.so",
+          "system/libgralloctypes.so"
+        ],
+        "android.hardware.graphics.mapper@4.0.so": [
+          "media-mix/android.hardware.graphics.mapper@4.0.so",
+          "vendor/android.hardware.graphics.mapper@4.0.so",
+          "system/android.hardware.graphics.mapper@4.0.so"
+        ],
+        "android.hardware.graphics.mapper@3.0.so": [
+          "media-mix/android.hardware.graphics.mapper@3.0.so",
+          "vendor/android.hardware.graphics.mapper@3.0.so",
+          "system/android.hardware.graphics.mapper@3.0.so"
+        ],
+        "android.hardware.graphics.mapper@2.1.so": [
+          "media-mix/android.hardware.graphics.mapper@2.1.so",
+          "vendor/android.hardware.graphics.mapper@2.1.so",
+          "system/android.hardware.graphics.mapper@2.1.so"
+        ],
+        "android.hardware.graphics.allocator@4.0.so": [
+          "media-mix/android.hardware.graphics.allocator@4.0.so",
+          "vendor/android.hardware.graphics.allocator@4.0.so",
+          "system/android.hardware.graphics.allocator@4.0.so"
+        ],
+        "android.hardware.graphics.allocator@3.0.so": [
+          "media-mix/android.hardware.graphics.allocator@3.0.so",
+          "vendor/android.hardware.graphics.allocator@3.0.so",
+          "system/android.hardware.graphics.allocator@3.0.so"
+        ],
+        "libc++.so": [
+          "vendor/libc++.so",
+          "system/libc++.so"
+        ],
+        "android.hardware.graphics.common@1.0.so": [
+          "media-mix/android.hardware.graphics.common@1.0.so",
+          "vendor/android.hardware.graphics.common@1.0.so",
+          "system/android.hardware.graphics.common@1.0.so"
+        ],
+        "android.hardware.graphics.common@1.1.so": [
+          "media-mix/android.hardware.graphics.common@1.1.so",
+          "vendor/android.hardware.graphics.common@1.1.so",
+          "system/android.hardware.graphics.common@1.1.so"
+        ],
+        "android.hardware.graphics.common@1.2.so": [
+          "media-mix/android.hardware.graphics.common@1.2.so",
+          "vendor/android.hardware.graphics.common@1.2.so",
+          "system/android.hardware.graphics.common@1.2.so"
+        ],
+        "android.hardware.graphics.mapper@2.0.so": [
+          "media-mix/android.hardware.graphics.mapper@2.0.so",
+          "vendor/android.hardware.graphics.mapper@2.0.so",
+          "system/android.hardware.graphics.mapper@2.0.so"
+        ],
+        "android.hardware.common-V2-ndk.so": [
+          "vendor/android.hardware.common-V2-ndk.so",
+          "system/android.hardware.common-V2-ndk.so"
+        ],
+        "libbinder.so": [
+          "vendor/libbinder.so",
+          "system/libbinder.so"
+        ],
+        "libgralloc.qti.so": [
+          "media-mix/libgralloc.qti.so",
+          "vendor/libgralloc.qti.so"
+        ],
+        "libion.so": [
+          "vendor/libion.so",
+          "system/libion.so"
+        ],
+        "libhardware.so": [
+          "vendor/libhardware.so",
+          "system/libhardware.so"
+        ],
+        "libbase.so": [
+          "vendor/libbase.so",
+          "system/libbase.so"
+        ]
+      },
+      "linker_namespace_verified": false,
+      "symbol_versions_verified": false,
+      "runtime_verified": false
+    },
+    {
+      "binary": "vendor.qti.hardware.display.composer-service",
+      "sha256": "996eb6575c08cddd598cb769a44cca76a00461c6877ce4f7174609db2de4f0cd",
+      "elf_class": 64,
+      "machine": "EM_AARCH64",
+      "direct_needed": [
+        "libbinder.so",
+        "libhardware.so",
+        "libhistogram.so",
+        "libutils.so",
+        "libcutils.so",
+        "libsync.so",
+        "liblog.so",
+        "libhidlbase.so",
+        "libfmq.so",
+        "libhardware_legacy.so",
+        "libsdmcore.so",
+        "libqservice.so",
+        "libqdutils.so",
+        "libqdMetaData.so",
+        "libdisplaydebug.so",
+        "libsdmutils.so",
+        "libui.so",
+        "libgrallocutils.so",
+        "libgpu_tonemapper.so",
+        "libEGL.so",
+        "libGLESv2.so",
+        "libGLESv3.so",
+        "vendor.qti.hardware.display.composer@3.0.so",
+        "android.hardware.graphics.composer@2.1.so",
+        "android.hardware.graphics.composer@2.2.so",
+        "android.hardware.graphics.composer@2.3.so",
+        "android.hardware.graphics.composer@2.4.so",
+        "android.hardware.graphics.mapper@2.0.so",
+        "android.hardware.graphics.mapper@2.1.so",
+        "android.hardware.graphics.mapper@3.0.so",
+        "android.hardware.graphics.allocator@2.0.so",
+        "android.hardware.graphics.allocator@3.0.so",
+        "libdisplayconfig.qti.so",
+        "libdrm.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "candidate_dependency_count": 71,
+      "missing_in_inventory": [],
+      "root_undefined_in_inventory": [],
+      "dependent_undefined_in_inventory": {
+        "system/libgraphicsenv.so": [
+          "_ZN7android4base4JoinINSt3__16vectorINS2_12basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEENS7_IS9_EEEEcEES9_RKT_T0_"
+        ]
+      },
+      "root_named_version_requirements_checked": 147,
+      "root_named_version_issues": [],
+      "root_android_global_version_fallbacks": [
+        {
+          "library": "libsync.so",
+          "symbol": "sync_wait",
+          "requested_version": "LIBSYNC"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglGetDisplay",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglBindAPI",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglInitialize",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglChooseConfig",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglCreateContext",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglCreatePbufferSurface",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glEnableVertexAttribArray",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glVertexAttribPointer",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glDrawArrays",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glCreateProgram",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glCreateShader",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glShaderSource",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glCompileShader",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glAttachShader",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glLinkProgram",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glDetachShader",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glDeleteShader",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glGetShaderiv",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glGetShaderInfoLog",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglMakeCurrent",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glUseProgram",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glDeleteProgram",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glActiveTexture",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glBindTexture",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glBindFramebuffer",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglCreateSyncKHR",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglGetCurrentDisplay",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglWaitSyncKHR",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglDestroySyncKHR",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glFlush",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglDupNativeFenceFDANDROID",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglDestroySurface",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglDestroyContext",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libEGL.so",
+          "symbol": "eglTerminate",
+          "requested_version": "LIBEGL"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glViewport",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glDisable",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glEnable",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glScissor",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glClearColor",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libGLESv2.so",
+          "symbol": "glClear",
+          "requested_version": "LIBGLESV2"
+        },
+        {
+          "library": "libsync.so",
+          "symbol": "sync_merge",
+          "requested_version": "LIBSYNC"
+        },
+        {
+          "library": "libsync.so",
+          "symbol": "sync_file_info",
+          "requested_version": "LIBSYNC"
+        }
+      ],
+      "multiple_candidates": {
+        "libbinder.so": [
+          "vendor/libbinder.so",
+          "system/libbinder.so"
+        ],
+        "libhardware.so": [
+          "vendor/libhardware.so",
+          "system/libhardware.so"
+        ],
+        "libutils.so": [
+          "vendor/libutils.so",
+          "system/libutils.so"
+        ],
+        "libcutils.so": [
+          "vendor/libcutils.so",
+          "system/libcutils.so"
+        ],
+        "libhidlbase.so": [
+          "vendor/libhidlbase.so",
+          "system/libhidlbase.so"
+        ],
+        "libfmq.so": [
+          "vendor/libfmq.so",
+          "system/libfmq.so"
+        ],
+        "libhardware_legacy.so": [
+          "vendor/libhardware_legacy.so",
+          "system/libhardware_legacy.so"
+        ],
+        "libsdmcore.so": [
+          "media-mix/libsdmcore.so",
+          "vendor/libsdmcore.so"
+        ],
+        "libqservice.so": [
+          "media-mix/libqservice.so",
+          "vendor/libqservice.so"
+        ],
+        "libqdutils.so": [
+          "media-mix/libqdutils.so",
+          "vendor/libqdutils.so"
+        ],
+        "libqdMetaData.so": [
+          "media-mix/libqdMetaData.so",
+          "vendor/libqdMetaData.so"
+        ],
+        "libdisplaydebug.so": [
+          "media-mix/libdisplaydebug.so",
+          "vendor/libdisplaydebug.so"
+        ],
+        "libsdmutils.so": [
+          "media-mix/libsdmutils.so",
+          "vendor/libsdmutils.so"
+        ],
+        "libui.so": [
+          "vendor/libui.so",
+          "system/libui.so"
+        ],
+        "libgrallocutils.so": [
+          "media-mix/libgrallocutils.so",
+          "vendor/libgrallocutils.so"
+        ],
+        "libgpu_tonemapper.so": [
+          "media-mix/libgpu_tonemapper.so",
+          "vendor/libgpu_tonemapper.so"
+        ],
+        "vendor.qti.hardware.display.composer@3.0.so": [
+          "media-mix/vendor.qti.hardware.display.composer@3.0.so",
+          "system_ext/vendor.qti.hardware.display.composer@3.0.so"
+        ],
+        "android.hardware.graphics.composer@2.1.so": [
+          "media-mix/android.hardware.graphics.composer@2.1.so",
+          "vendor/android.hardware.graphics.composer@2.1.so",
+          "system_ext/android.hardware.graphics.composer@2.1.so"
+        ],
+        "android.hardware.graphics.composer@2.2.so": [
+          "media-mix/android.hardware.graphics.composer@2.2.so",
+          "vendor/android.hardware.graphics.composer@2.2.so",
+          "system_ext/android.hardware.graphics.composer@2.2.so"
+        ],
+        "android.hardware.graphics.composer@2.3.so": [
+          "media-mix/android.hardware.graphics.composer@2.3.so",
+          "vendor/android.hardware.graphics.composer@2.3.so",
+          "system_ext/android.hardware.graphics.composer@2.3.so"
+        ],
+        "android.hardware.graphics.composer@2.4.so": [
+          "media-mix/android.hardware.graphics.composer@2.4.so",
+          "system_ext/android.hardware.graphics.composer@2.4.so"
+        ],
+        "android.hardware.graphics.mapper@2.0.so": [
+          "media-mix/android.hardware.graphics.mapper@2.0.so",
+          "vendor/android.hardware.graphics.mapper@2.0.so",
+          "system/android.hardware.graphics.mapper@2.0.so"
+        ],
+        "android.hardware.graphics.mapper@2.1.so": [
+          "media-mix/android.hardware.graphics.mapper@2.1.so",
+          "vendor/android.hardware.graphics.mapper@2.1.so",
+          "system/android.hardware.graphics.mapper@2.1.so"
+        ],
+        "android.hardware.graphics.mapper@3.0.so": [
+          "media-mix/android.hardware.graphics.mapper@3.0.so",
+          "vendor/android.hardware.graphics.mapper@3.0.so",
+          "system/android.hardware.graphics.mapper@3.0.so"
+        ],
+        "android.hardware.graphics.allocator@2.0.so": [
+          "media-mix/android.hardware.graphics.allocator@2.0.so",
+          "vendor/android.hardware.graphics.allocator@2.0.so",
+          "system/android.hardware.graphics.allocator@2.0.so"
+        ],
+        "android.hardware.graphics.allocator@3.0.so": [
+          "media-mix/android.hardware.graphics.allocator@3.0.so",
+          "vendor/android.hardware.graphics.allocator@3.0.so",
+          "system/android.hardware.graphics.allocator@3.0.so"
+        ],
+        "libdisplayconfig.qti.so": [
+          "media-mix/libdisplayconfig.qti.so",
+          "vendor/libdisplayconfig.qti.so"
+        ],
+        "libdrm.so": [
+          "media-mix/libdrm.so",
+          "vendor/libdrm.so",
+          "system/libdrm.so"
+        ],
+        "libc++.so": [
+          "vendor/libc++.so",
+          "system/libc++.so"
+        ],
+        "vendor.display.config@2.0.so": [
+          "media-mix/vendor.display.config@2.0.so",
+          "vendor/vendor.display.config@2.0.so",
+          "system_ext/vendor.display.config@2.0.so"
+        ],
+        "android.hardware.graphics.common@1.0.so": [
+          "media-mix/android.hardware.graphics.common@1.0.so",
+          "vendor/android.hardware.graphics.common@1.0.so",
+          "system/android.hardware.graphics.common@1.0.so"
+        ],
+        "android.hardware.graphics.common@1.1.so": [
+          "media-mix/android.hardware.graphics.common@1.1.so",
+          "vendor/android.hardware.graphics.common@1.1.so",
+          "system/android.hardware.graphics.common@1.1.so"
+        ],
+        "android.hardware.graphics.common@1.2.so": [
+          "media-mix/android.hardware.graphics.common@1.2.so",
+          "vendor/android.hardware.graphics.common@1.2.so",
+          "system/android.hardware.graphics.common@1.2.so"
+        ],
+        "libbase.so": [
+          "vendor/libbase.so",
+          "system/libbase.so"
+        ],
+        "libz.so": [
+          "vendor/libz.so",
+          "system/libz.so"
+        ],
+        "android.hardware.graphics.mapper@4.0.so": [
+          "media-mix/android.hardware.graphics.mapper@4.0.so",
+          "vendor/android.hardware.graphics.mapper@4.0.so",
+          "system/android.hardware.graphics.mapper@4.0.so"
+        ],
+        "android.hardware.graphics.allocator@4.0.so": [
+          "media-mix/android.hardware.graphics.allocator@4.0.so",
+          "vendor/android.hardware.graphics.allocator@4.0.so",
+          "system/android.hardware.graphics.allocator@4.0.so"
+        ],
+        "libgralloctypes.so": [
+          "media-mix/libgralloctypes.so",
+          "vendor/libgralloctypes.so",
+          "system/libgralloctypes.so"
+        ],
+        "android.hardware.graphics.allocator-V2-ndk.so": [
+          "vendor/android.hardware.graphics.allocator-V2-ndk.so",
+          "system/android.hardware.graphics.allocator-V2-ndk.so"
+        ],
+        "android.hardware.common-V2-ndk.so": [
+          "vendor/android.hardware.common-V2-ndk.so",
+          "system/android.hardware.common-V2-ndk.so"
+        ],
+        "libgralloc.qti.so": [
+          "media-mix/libgralloc.qti.so",
+          "vendor/libgralloc.qti.so"
+        ],
+        "libdrmutils.so": [
+          "media-mix/libdrmutils.so",
+          "vendor/libdrmutils.so"
+        ],
+        "libaconfig_storage_read_api_cc.so": [
+          "vendor/libaconfig_storage_read_api_cc.so",
+          "system/libaconfig_storage_read_api_cc.so"
+        ],
+        "server_configurable_flags.so": [
+          "vendor/server_configurable_flags.so",
+          "system/server_configurable_flags.so"
+        ],
+        "android.system.suspend-V1-ndk.so": [
+          "vendor/android.system.suspend-V1-ndk.so",
+          "system/android.system.suspend-V1-ndk.so"
+        ]
+      },
+      "linker_namespace_verified": false,
+      "symbol_versions_verified": false,
+      "runtime_verified": false
+    }
+  ],
+  "note": "Candidate paths only, not a linker verdict. APEX/VNDK namespaces, dlopen dependencies, symbol versions, CPU instructions and HAL registration still need validation."
+}

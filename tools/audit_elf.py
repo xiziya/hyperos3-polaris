@@ -2,6 +2,7 @@
 """Inventory ELF dependencies without running binaries (requires pyelftools)."""
 import argparse
 import hashlib
+import io
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -9,7 +10,9 @@ from elftools.elf.elffile import ELFFile
 
 
 def inspect(path):
-    with path.open('rb') as stream:
+    # pyelftools performs many small seeks. A memory buffer avoids minutes of
+    # per-read overhead when input files reside on a Windows/WSL mount.
+    with io.BytesIO(path.read_bytes()) as stream:
         if stream.read(4) != b'\x7fELF':
             return None
         stream.seek(0)

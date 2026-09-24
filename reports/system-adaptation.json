@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "changes": [
+    {
+      "path": "system/system/bin/logcatlog.sh",
+      "before_sha256": "249fe3c415045ff20a44f4fe9cd8e9aa878af46b0c2336f142871e6c81ce4bc6",
+      "sha256": "a2c522860eb4d813ac1d70665b7f1fd1e3cc7057fa82983b0324ae4e69420694",
+      "uid": 0,
+      "gid": 2000,
+      "mode": "0o755",
+      "selinux": "u:object_r:kernellog_exec:s0"
+    },
+    {
+      "path": "system/system/etc/init/init.offline.log.rc",
+      "before_sha256": "bf8499ea809dec8022163d61061e545b358d27bb82255f63b8e3322452d58090",
+      "sha256": "70b87e5e10fd405a0be77a2f5188427a7de7dfb8286e171f6bcceec41f0b2ad1",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "selinux": "u:object_r:system_file:s0"
+    },
+    {
+      "path": "system/system/etc/selinux/plat_property_contexts",
+      "before_sha256": "571dc2634209ccfbc141d9ab6c7ed676b1a5c220fbfeb6397b42d4edd0b9413b",
+      "sha256": "ed068b41af19d8efc90b58c1d7384519b3a342d6db0a2b1f1d76178521bbe72c",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "selinux": "u:object_r:property_contexts_file:s0"
+    },
+    {
+      "path": "system/system/build.prop",
+      "before_sha256": "8a14f867e28b0adadb727c07146961d783b87ac89553952d814bab30b15e62af",
+      "sha256": "293ae48cd11f7113b6aef42eb488e26f19f27e27bc45fd845ef80900daad863d",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o600",
+      "selinux": "u:object_r:system_file:s0"
+    },
+    {
+      "path": "mi_ext/etc/build.prop",
+      "before_sha256": "79720d00680f820a87d42c37aca0e119f0f9019e9758339eae6da363e8fdf016",
+      "sha256": "8a734f9438817eb1e2051f6206e656e3b2b612c39966ad14395c896d5ceae4cd",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "selinux": "u:object_r:system_file:s0"
+    },
+    {
+      "path": "system_ext/etc/init/miuibooster.rc",
+      "before_sha256": "f2a7451afa0a6ec89430c4400e18f74280c657be0c475eab50487344d707a4ec",
+      "sha256": "d2bca73f17d752a78a08239d9fbb4c884ac7243732003a215ef54d96e3973c02",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "selinux": "u:object_r:system_file:s0"
+    },
+    {
+      "path": "system_ext/etc/init/perfservice.rc",
+      "before_sha256": "75a6780e848cbe61bd5c5de33c8b6184c314fb84d5f2bf2bc4d1a7ec7874fdfb",
+      "sha256": "aa85c85e61cde890e48dd05557ecad1de67297578c7a34cd6082fd274bfca24d",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "selinux": "u:object_r:system_file:s0"
+    },
+    {
+      "path": "product/etc/device_features/polaris.xml",
+      "before_sha256": null,
+      "sha256": "1cf3023fa832737922294663bc63996921c6de40c250e1696e0654416d396bfb",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "selinux": "u:object_r:system_file:s0"
+    },
+    {
+      "path": "product/etc/build.prop",
+      "before_sha256": "deee7695fd0813e731e3ce2edb2044fde402dc67597a9b10648b3aec89fd2885",
+      "sha256": "0a7fae1d7a9993d1e1c4a0451a3a2eff81da16db412a221aaca3272719fccbf2",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o644",
+      "selinux": "u:object_r:system_file:s0"
+    }
+  ],
+  "device_runtime_verified": false,
+  "notes": [
+    "Per-app Xiaomi donor camera resources remain unvalidated; base HAL must be tested first.",
+    "No signing bypass, IMEI changes, root, autoformat or thermal disable."
+  ]
+}

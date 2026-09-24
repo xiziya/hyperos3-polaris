@@ -16,8 +16,8 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Check script syntax
         run: |
-          python3 -m compileall -q tools tests
-          bash -n tools/build_kernel.sh tools/download_donor.sh tools/build_recovery_ci.sh recovery/polaris/vendorsetup.sh device/polaris/diagnostics/system/bin/logcatlog.sh
+          python3 -m compileall -q tools tests recipes
+          bash -n tools/build_kernel.sh tools/download_donor.sh tools/build_recovery_ci.sh tools/run_recovery_sync.sh recovery/polaris/vendorsetup.sh device/polaris/diagnostics/system/bin/logcatlog.sh device/polaris/installer/update-binary
       - name: Validate configuration and no accidental firmware or private logs
         run: |
           python3 - <<'PY'

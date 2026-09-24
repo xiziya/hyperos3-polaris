@@ -2,14 +2,16 @@
   "schema": 1,
   "flashable": false,
   "device": "polaris",
-  "status": "bringup-incomplete",
+  "status": "development-package-complete-runtime-unverified",
+  "development_package_report": "reports/development-package.json",
+  "scope": "Stable release gates. A separately labelled first-boot development package does not satisfy these gates.",
   "required": {
     "live_partition_layout": true,
     "owner_local_efs_backup": true,
     "kernel_build_and_boot": false,
-    "image_sizes_and_fstab": false,
+    "image_sizes_and_fstab": true,
     "vintf_and_elf_dependencies": false,
-    "vendor_apex_target_sdk": false,
+    "vendor_apex_target_sdk": true,
     "hal_single_provider_and_registration": false,
     "display_backlight_touch_nodes": false,
     "selinux_enforcing": false,
@@ -27,6 +29,8 @@
   "note": "No release job may infer hardware success from lint, a screenshot, or a boot animation.",
   "evidence": {
     "live_partition_layout": "reports/live-layout.json",
-    "owner_local_efs_backup": "reports/device-preflight.json; private backup remains local, rollback not tested"
+    "owner_local_efs_backup": "reports/device-preflight.json; private backup remains local, rollback not tested",
+    "image_sizes_and_fstab": "reports/final-images.json; real partition capacities, EROFS metadata/hash roundtrip, vendor fsck, identical boot/vendor fstab",
+    "vendor_apex_target_sdk": "SDK35 Lineage vendor baseline contains no vendor APEX; selected reference media/display are legacy ELF components, not SDK36 APEX"
   }
 }

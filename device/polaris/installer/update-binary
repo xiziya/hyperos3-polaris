@@ -1,0 +1,89 @@
+#!/sbin/sh
+# Recovery installer for the owner's measured STATIC polaris layout only.
+# No GPT, firmware, modem, EFS, persist, recovery, vbmeta or userdata writes.
+set -eu
+set -o pipefail
+PATH=/system/bin:/sbin:/bin
+export PATH
+OUTFD=${2:-}
+ZIP=${3:-}
+say() {
+    printf 'ui_print %s\nui_print\n' "$*" > "/proc/self/fd/$OUTFD"
+}
+abort() { say "ERROR: $*"; exit 1; }
+case "$OUTFD" in ''|*[!0-9]*) exit 1;; esac
+[ -r "$ZIP" ] || abort 'ZIP is not readable.'
+[ "$(id -u)" = 0 ] || abort 'Recovery root is required.'
+[ -n "$(getprop ro.twrp.version)$(getprop ro.orangefox.version)" ] || abort 'Run only in TWRP/OrangeFox recovery.'
+device_ok=0
+for key in ro.product.device ro.product.vendor.device ro.build.product; do
+    [ "$(getprop "$key")" != polaris ] || device_ok=1
+done
+[ "$device_ok" = 1 ] || abort 'This package is only for MIX 2S (polaris).'
+for cmd in unzip sha256sum blockdev readlink awk head dd sync od wc cat tr mktemp; do
+    command -v "$cmd" >/dev/null 2>&1 || abort "Required recovery tool missing: $cmd"
+done
+TASK_TMP=$(mktemp -d /tmp/polaris-install.XXXXXX) || abort 'Cannot create temporary directory.'
+trap 'rm -f "$TASK_TMP/manifest.tsv" "$TASK_TMP/data.super"; rmdir "$TASK_TMP"' EXIT
+unzip -p "$ZIP" manifest.tsv > "$TASK_TMP/manifest.tsv" || abort 'Cannot read manifest (ZIP64 support is required).'
+[ "$(wc -l < "$TASK_TMP/manifest.tsv" | tr -d '[:space:]')" = 6 ] || abort 'Invalid image count.'
+[ "$(awk 'END{print $1}' "$TASK_TMP/manifest.tsv")" = boot ] || abort 'Boot must be last.'
+
+# A17 app/key data cannot safely be carried into this first A15 build. Only
+# inspect the mounted clean ext4 filesystem; never silently format it.
+data_dev=$(readlink -f /dev/block/by-name/userdata) || abort 'Missing userdata.'
+[ -b "$data_dev" ] || abort 'userdata is not a block device.'
+[ "$(blockdev --getsize64 "$data_dev")" = 116928786432 ] || abort 'Unexpected userdata capacity.'
+data_name=${data_dev##*/}
+[ "$(cat "/sys/class/block/$data_name/start")" = 11927552 ] || abort 'Unexpected userdata position.'
+data_major_minor=$(cat "/sys/class/block/$data_name/dev")
+awk -v d="$data_major_minor" '$3==d && $5=="/data" && / - ext4 / {ok=1} END{exit !ok}' /proc/self/mountinfo || abort 'Mount freshly formatted ext4 /data in recovery first; this installer does not format it.'
+for path in /data/system/packages.xml /data/misc/vold/user_keys /data/system_de/0 /data/system_ce/0; do
+    [ ! -e "$path" ] || abort 'Existing Android user/key data detected. Back up files and explicitly Format Data in recovery before the A17 to A15 downgrade.'
+done
+dd if="$data_dev" of="$TASK_TMP/data.super" bs=1024 skip=1 count=1 2>/dev/null || abort 'Cannot inspect ext4 superblock.'
+fs_magic=$(od -An -tu2 -j56 -N2 "$TASK_TMP/data.super" | tr -d ' ')
+fs_incompat=$(od -An -tu4 -j96 -N4 "$TASK_TMP/data.super" | tr -d ' ')
+[ "$fs_magic" = 61267 ] || abort 'Data is not ext4.'
+[ "$((fs_incompat & 65536))" != 0 ] || abort 'Data ext4 lacks the encryption feature required by this FBEv2 build. Use a compatible recovery formatter; no automatic filesystem changes were made.'
+
+say 'Polaris HyperOS 3 / Android 15 - first-boot development build'
+say 'Checking every partition and image before any write...'
+seen=' '
+while read -r name capacity start block bytes hash; do
+    case "$name" in system|system_ext|product|mi_ext|vendor|boot) ;; *) abort 'Unexpected partition in manifest.';; esac
+    case "$seen" in *" $name "*) abort 'Duplicate partition.';; esac
+    seen="$seen$name "
+    case "$capacity$start$bytes" in *[!0-9]*|'') abort 'Invalid numeric manifest entry.';; esac
+    case "$hash" in *[!0-9a-f]*|'') abort 'Invalid digest.';; esac
+    [ "${#hash}" = 64 ] || abort 'Invalid digest length.'
+    target=$(readlink -f "/dev/block/by-name/$name") || abort "Missing partition: $name"
+    [ "$target" = "/dev/block/$block" ] && [ -b "$target" ] || abort "Unexpected partition mapping: $name"
+    [ "$(blockdev --getsize64 "$target")" = "$capacity" ] || abort "Capacity differs: $name"
+    [ "$(cat "/sys/class/block/$block/start")" = "$start" ] || abort "Position differs: $name"
+    [ "$bytes" -gt 0 ] && [ "$bytes" -le "$capacity" ] || abort "Image too large: $name"
+    mm=$(cat "/sys/class/block/$block/dev")
+    if awk -v d="$mm" '$3==d {found=1} END{exit !found}' /proc/self/mountinfo; then
+        abort "Unmount $name in recovery before installing; no images were written."
+    fi
+    # A mapped holder would evade a simple direct mount check.
+    for holder in "/sys/class/block/$block/holders/"*; do
+        [ ! -e "$holder" ] || abort "Partition has an active device-mapper holder: $name"
+    done
+    actual_size=$(unzip -p "$ZIP" "images/$name.img" | wc -c | tr -d '[:space:]') || abort "Cannot read image: $name"
+    [ "$actual_size" = "$bytes" ] || abort "Image length differs: $name"
+    actual_hash=$(unzip -p "$ZIP" "images/$name.img" | sha256sum | awk '{print $1}') || abort "Cannot hash image: $name"
+    [ "$actual_hash" = "$hash" ] || abort "Image digest differs: $name"
+done < "$TASK_TMP/manifest.tsv"
+
+say 'Preflight passed. Writing system partitions; boot is written last.'
+while read -r name capacity start block bytes hash; do
+    say "Writing $name..."
+    unzip -p "$ZIP" "images/$name.img" | dd of="/dev/block/$block" bs=4194304 conv=fsync || abort "Write failed: $name. Stay in recovery; do not boot a partial installation."
+    sync
+    actual_hash=$(head -c "$bytes" "/dev/block/$block" | sha256sum | awk '{print $1}') || abort "Readback failed: $name"
+    [ "$actual_hash" = "$hash" ] || abort "Readback digest differs: $name. Stay in recovery."
+done < "$TASK_TMP/manifest.tsv"
+say 'Image writes and readback checks completed. Hardware and first boot are not yet validated.'
+say 'Recovery, modem, EFS, persist, GPT and user data were not written. Reboot manually when ready.'
+exit 0

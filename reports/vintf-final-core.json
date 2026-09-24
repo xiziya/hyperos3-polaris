@@ -1,0 +1,247 @@
+{
+  "schema": 1,
+  "scope": "Actual AOSP libvintf core parser/merger and bidirectional checkCompatibility; not full checkvintf CLI",
+  "libvintf_commit": "0748000fca71d7ecea7184883fed4c23997f91b6",
+  "vendor_sha256": "efa196838c791381920ba75c50c42bccdb0761bf9f85a9e3cf53a4ca2269e55e",
+  "real_kernel": "4.19.325",
+  "kernel_level_assumption": 5,
+  "returncode": 0,
+  "actual_vendor_xml_extracted": true,
+  "complete_checkvintf": false,
+  "negative_missing_required_hal_rejected": true,
+  "output": "device_to_framework=1\n\nframework_to_device=1\n\nscope=libvintf core manifest/matrix checks; not full checkvintf, runtime or registration\n",
+  "diagnostics": "",
+  "inputs": [
+    {
+      "option": "--device",
+      "file": "device-with-real-kernel.xml",
+      "sha256": "65585a6506075b312becc37b481aced453638cafebe819c1f48553e739c695e8"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.biometrics.fingerprint-service.xiaomi.xml",
+      "sha256": "f561900e9441124bd0528757bb8d94a42a19292d491c666ddc5c8a11b89188db"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.cas@1.2-service.xml",
+      "sha256": "fd1cba56acd3804b38b125c4b067b3b11e39b261e991ebe5896c2503946a8b94"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.drm-service.clearkey.xml",
+      "sha256": "a2a32a383a3cb94f0ae5acef610ad8707441d4a106668323a32c3e286798e303"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml",
+      "sha256": "d95ddf3be8558345ee4bbd0a28f4931dc2e06cba13b06ac947680ba214e63fab"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.health-service.qti.xml",
+      "sha256": "e147ee74630577d18780dc8c4081f9d594464c940e56b550e6e1b20f202c5f64"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.light-service.polaris.xml",
+      "sha256": "9827c51351635c169da49cf83f2a02af6fbf5cf075421941961ee7c9a138159f"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.power-service.lineage.xml",
+      "sha256": "9c489ac7fb048f6aa65c87e9ec06dbd303899a996e53c25566463afd6084ddd4"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.usb.gadget-service.qti.xml",
+      "sha256": "ab677624fa85504848b8b4b0e4cfd8fb93df28cab89df88af627d3272918affb"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.usb@1.3-service.dual_role_usb.xml",
+      "sha256": "30e371d04c5cbe99af6e36a74a0ff0b6cb1c5533ea813a5ee82b8de7f8bf0aba"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.wifi-service.xml",
+      "sha256": "e79e702ff8fabac3c9fe9ea6d5a4bfd6d09c3118f45b54a2c010f9736e10d476"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.wifi.hostapd.xml",
+      "sha256": "1be3f9d089114972a65ccfe4cdf69d0836b8784df2678fedd0de696f0796fa72"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/android.hardware.wifi.supplicant.xml",
+      "sha256": "c430856c91fca923aa4138815b52fce2c99ad5ddba5c01d487b2a2ccb1486d2b"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/bluetooth_audio.xml",
+      "sha256": "a4986880672722010391b68239527e1b7e0af6bd4d27812bd191017b9e87bfab"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/memtrack_qti.xml",
+      "sha256": "356ebd614b1a5eedecd50aa39be54e6e15e990beaf8def739e0b4237cf38dd96"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/nfc-service-nxp.xml",
+      "sha256": "6b7dd52709b26fbe3de1cdfc81d6de1a4242467ebf5d45f4e4e08bb641e5cee9"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/polaris-media-display.xml",
+      "sha256": "17b763737a40f934dfb36dcda24004a5d782b5bb60ee7980c5a0d5663c394833"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/vendor.lineage.health-service.default.xml",
+      "sha256": "d46f825a06cbfc371a2dab06f091233e43e665c648ca8c99f1b130e126779e98"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/vendor.qti.gnss@3.0-service.xml",
+      "sha256": "9ab9c340db1f6a99b75c371593fa594fab5e7faa5f469ac9b2f5a4773fc74e45"
+    },
+    {
+      "option": "--device",
+      "file": "vendor-final/vintf/manifest/vendor.qti.hardware.vibrator.service.xml",
+      "sha256": "f0723ee153cea0376810056911dcfdf6c495024050498fe98bdcaf0ff84faec9"
+    },
+    {
+      "option": "--device-matrix",
+      "file": "vendor-final/vintf/compatibility_matrix.xml",
+      "sha256": "cdd4c541dfa70e681f21ce3d3e24f7f1a3e061e4ba690b1720d5dcd78b473383"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system-etc/vintf/manifest.xml",
+      "sha256": "c5f28c2bc9da0f564ad3e916a48f1fb885697c6516fdd325ede1e8bed42196f7"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system-etc/vintf/manifest/android.frameworks.stats-service.xml",
+      "sha256": "a331681b3939dfe4becdf6f19d4c6c44ddbf8eea7d68326d41717043f161c1e7"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system-etc/vintf/manifest/android.system.keystore2-service.xml",
+      "sha256": "56386506e242c517c0d871c954e57b56ff50a37b74352b2cc58663eb3bc6e234"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system-etc/vintf/manifest/android.system.net.netd-service.xml",
+      "sha256": "76765f833532c4259ee814c09d7d910b34f2874a9958b88c121b73f6ee62ce19"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system-etc/vintf/manifest/android.system.suspend-service.xml",
+      "sha256": "5767bf3347caca18f1a5a6b849ca75784f48d33f63871208f0010dd43a2e6741"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system-etc/vintf/manifest/manifest_android.frameworks.cameraservice.service.xml",
+      "sha256": "c2fac78fc0ff522c4fc9f98134dc12bf92d2dcd5a1e8328e517bb3ad626cb295"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system-etc/vintf/manifest/manifest_media_c2_software.xml",
+      "sha256": "bf265765f06e16784bfcef808512037e02982c822aaec44b772f7b64e7dbdfb6"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system-etc/vintf/manifest/manifest_services.xml",
+      "sha256": "42f46ad6a5e82a246754ea8d34c3680be2570f167d14abadaa01035a31001e92"
+    },
+    {
+      "option": "--framework-matrix",
+      "file": "work/research/donor-system-etc/vintf/compatibility_matrix.202404.xml",
+      "sha256": "0d2e50cad01e80f9a0899abbdbc73391dfc4a52e497a6965c1771a7199701900"
+    },
+    {
+      "option": "--framework-matrix",
+      "file": "work/research/donor-system-etc/vintf/compatibility_matrix.5.xml",
+      "sha256": "6cef358cb92a30090094592e842419d91e9be429a3077ee97304583c34970390"
+    },
+    {
+      "option": "--framework-matrix",
+      "file": "work/research/donor-system-etc/vintf/compatibility_matrix.6.xml",
+      "sha256": "60df7df8311e1e0506d89e59182199b3707a19da9282579ed5adab6456536729"
+    },
+    {
+      "option": "--framework-matrix",
+      "file": "work/research/donor-system-etc/vintf/compatibility_matrix.7.xml",
+      "sha256": "42d77b3d5d5380f04c1c6a7490a9cd0b96c60f4746ea24f207d3a92c4338d720"
+    },
+    {
+      "option": "--framework-matrix",
+      "file": "work/research/donor-system-etc/vintf/compatibility_matrix.8.xml",
+      "sha256": "db6704dbab9db4e9c31e9fe935db33a4f85826f1e3fdf51cf47860d9831f3e6b"
+    },
+    {
+      "option": "--framework-matrix",
+      "file": "work/research/donor-system-etc/vintf/compatibility_matrix.device.xml",
+      "sha256": "274e3a30590a94e5f1638fd026c372a8654b4acf0bb721880325f0ebdc975c56"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system_ext-etc/vintf/manifest.xml",
+      "sha256": "412c4e8d2ad66790b81d596f4ccd7d502860f76396c3ea98cf13159ff407cd5a"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system_ext-etc/vintf/manifest/android.hidl.allocator@1.0-service.xml",
+      "sha256": "b888e347c8e2e38006f4dc87532e842f88b910ebf8748d22994d31af037b7021"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system_ext-etc/vintf/manifest/atcmdfwd-saidl.xml",
+      "sha256": "e2b7a18e0d3fff9b2ea7592bf96f10a166855c8c8dd10bc05c339fae7bd226dd"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system_ext-etc/vintf/manifest/manifest_hypsys_system.xml",
+      "sha256": "21d24a000a389d8901354859382b5949074f896743f395ed40539f01e8272b8d"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system_ext-etc/vintf/manifest/vendor.qti.hardware.sigma_miracast.xml",
+      "sha256": "c94ecad5fbd0ed6e7a403c3e32ecfdd87fa1a689e7b5158f017f9edb223f6354"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system_ext-etc/vintf/manifest/vendor.qti.hardware.sigma_miracast_aidl.xml",
+      "sha256": "6598bbcc4ba7652441f6f23a04bb442d1dc94776051a8f93d9f17dd4dd1af22d"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system_ext-etc/vintf/manifest/vendor.qti.hardware.systemhelperaidl.xml",
+      "sha256": "5864a6919fdc5ce6b61a9fa8a5ff84756e9b579bc1da341df5d639dfc685f4fa"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system_ext-etc/vintf/manifest/vendor.qti.qccsyshal_aidl-service.xml",
+      "sha256": "846f3784f04d394124597e2d9ab52480f662eee30b1fc79fc2bd9b8a8cd85d42"
+    },
+    {
+      "option": "--framework",
+      "file": "work/research/donor-system_ext-etc/vintf/manifest/vendor.qti.qesdsys.service.xml",
+      "sha256": "d4c181c8e2be7271f0d7cdbcbd4076ad3d15ed43ee805311addf4cd03722a9a0"
+    },
+    {
+      "option": "--framework-matrix",
+      "file": "work/research/donor-product-etc/vintf/compatibility_matrix.knock.xml",
+      "sha256": "8dbb8edb5aba5b31ed5f02341dec4775f3f52a32609630f18d74c1c053519e7b"
+    },
+    {
+      "option": "--framework-matrix",
+      "file": "work/research/donor-product-etc/vintf/compatibility_matrix.xml",
+      "sha256": "3d7572b1744808242fd8ad3e8a99e5eb3c87a02b6da44b153140dbd4822d0fca"
+    }
+  ],
+  "runtime_verified": false
+}

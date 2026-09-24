@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "erofs": [
+    {
+      "schema": 1,
+      "image": "system.img",
+      "bytes": 746143744,
+      "sha256": "2d36af6f17fdb7491dedf3dffe4ff1aef8626f486275283801c88bb1dd169433",
+      "partition_capacity": 1717567488,
+      "erofs_compat": 3,
+      "erofs_incompat": 1,
+      "all_files_metadata_and_hash_roundtrip": true,
+      "file_count": 3950,
+      "manifest_sha256": "6af9ee8838d5a5fed7d3d96208556f30e51bad3c404c6c5879df9232316090fd",
+      "fsck_passed": true,
+      "mkfs_command": [
+        "mkfs.erofs",
+        "--quiet",
+        "-z",
+        "lz4hc,level=9",
+        "-C4096",
+        "-E",
+        "^xattr-name-filter",
+        "--workers=4"
+      ],
+      "fsck_output": "",
+      "runtime_verified": false
+    },
+    {
+      "schema": 1,
+      "image": "system_ext.img",
+      "bytes": 756944896,
+      "sha256": "65fe98b58fc42480e84b36037cdbaec5d784fc55fa3558def251c27a5aa0dc22",
+      "partition_capacity": 1503657984,
+      "erofs_compat": 3,
+      "erofs_incompat": 1,
+      "all_files_metadata_and_hash_roundtrip": true,
+      "file_count": 3227,
+      "manifest_sha256": "d8ae3dada9b60e0a234ee98ee49c0f380bbf86a9f249b5bebd4261ec39ab20db",
+      "fsck_passed": true,
+      "mkfs_command": [
+        "mkfs.erofs",
+        "--quiet",
+        "-z",
+        "lz4hc,level=9",
+        "-C4096",
+        "-E",
+        "^xattr-name-filter",
+        "--workers=4"
+      ],
+      "fsck_output": "",
+      "runtime_verified": false
+    },
+    {
+      "schema": 1,
+      "image": "product.img",
+      "bytes": 4493500416,
+      "sha256": "b4097c742a826963fbabc6fc5da376923751079524757be0498bb42b25d472f9",
+      "partition_capacity": 5368709120,
+      "erofs_compat": 3,
+      "erofs_incompat": 1,
+      "all_files_metadata_and_hash_roundtrip": true,
+      "file_count": 1949,
+      "manifest_sha256": "807eb7e647d6b6c8ba1e1745a4b93e759492b95797efb5e13505df81cbb7d6da",
+      "fsck_passed": true,
+      "mkfs_command": [
+        "mkfs.erofs",
+        "--quiet",
+        "-z",
+        "lz4hc,level=9",
+        "-C4096",
+        "-E",
+        "^xattr-name-filter",
+        "--workers=4"
+      ],
+      "fsck_output": "",
+      "runtime_verified": false
+    },
+    {
+      "schema": 1,
+      "image": "mi_ext.img",
+      "bytes": 126976,
+      "sha256": "00692a21a091ce0f87e765dbc8afbcd9ed87dbbd9d670178c16d313db80ad06b",
+      "partition_capacity": 270336,
+      "erofs_compat": 3,
+      "erofs_incompat": 1,
+      "all_files_metadata_and_hash_roundtrip": true,
+      "file_count": 45,
+      "manifest_sha256": "c0452f24146cfd17750a8b38a886f96a9988ff6e398db89e6024a7bd2e9cd067",
+      "fsck_passed": true,
+      "mkfs_command": [
+        "mkfs.erofs",
+        "--quiet",
+        "-z",
+        "lz4hc,level=9",
+        "-C4096",
+        "-E",
+        "^xattr-name-filter",
+        "--workers=4"
+      ],
+      "fsck_output": "",
+      "runtime_verified": false
+    }
+  ],
+  "vendor_boot": {
+    "schema": 1,
+    "source_vendor_sha256": "ccb31ff55e63ad4871c8eb0eae482beb65f67e2834fcd0f205bb82916a28ebd5",
+    "changes": [
+      {
+        "path": "/etc/fstab.qcom",
+        "sha256": "bf16906d8b12024897d6c19fd3b95946fc89b71b1ca0c8ef228c06d27596f19d",
+        "selinux": "u:object_r:vendor_configs_file:s0",
+        "mode": "0o644",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "path": "/build.prop",
+        "sha256": "17720ef8424133fdb5d3a18cd928eb6323ec1e841344089c12dfef9f8de2ce04",
+        "selinux": "u:object_r:vendor_file:s0",
+        "mode": "0o644",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "path": "/etc/init/hw/init.qcom.rc",
+        "sha256": "52b810a16fd6bc779b9150c9b68feec251c74069a53f4deff889a4543c449366",
+        "selinux": "u:object_r:vendor_configs_file:s0",
+        "mode": "0o644",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "path": "/etc/init/hw/init.qcom.power.rc",
+        "sha256": "756385e386f98cc60ca74c3886504cdb42d4e932175e5535555c0e6fbe55dc6a",
+        "selinux": "u:object_r:vendor_configs_file:s0",
+        "mode": "0o644",
+        "uid": 0,
+        "gid": 0
+      }
+    ],
+    "vendor_fsck_passed": true,
+    "boot_roundtrip_passed": true,
+    "boot_vendor_fstab_identical": true,
+    "userdata": "Clean ext4 required for first Android17 to Android15 downgrade. Software AES-XTS/CTS FBEv2; no autoformat, no ICE claim. Recovery decryption and keymaster3 runtime remain untested.",
+    "images": [
+      {
+        "name": "vendor.img",
+        "bytes": 805306368,
+        "sha256": "efa196838c791381920ba75c50c42bccdb0761bf9f85a9e3cf53a4ca2269e55e"
+      },
+      {
+        "name": "boot.img",
+        "bytes": 29417472,
+        "sha256": "8386301e30128e107dfe7a47d02e118f83e08d828e1bc0b21bc83f471f73b256"
+      }
+    ],
+    "runtime_verified": false
+  },
+  "runtime_verified": false
+}

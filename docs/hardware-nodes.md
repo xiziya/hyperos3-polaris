@@ -18,6 +18,8 @@ HAL 还使用 `/sys/module/wlan/parameters/fwpath`；内核默认 0644，HAL 身
 
 ## 开机与功耗
 
+最新显示/Codec2 成组集成、真实 video32/video33 与 ION 证据、重复 pps socket 清理、硬件能力 RRO 和最终温控启动修复见 [开发镜像兼容实现](development-integration.md)。下文保留早期调查，不能把旧 OS4 的 SDK36 阻断误当成最终 A15 vendor 仍包含这些 APEX。
+
 旧 post-boot 脚本把 IRQ 7 标为 msm_drm、493 标为 kgsl-3d0 并强制绑核；不同内核的 Linux IRQ 编号不能这样继承。生成的 overlay 删除这两项调优，保留内核默认亲和性及 `vendor.post_boot.parsed=1`，避免 perf HAL 一直拒绝请求。未来若测量证明需要 IRQ 调优，应按实际 action 名和 CPU 拓扑验证；不使用旧编号，也不未经测量就改温控或最低频率。
 
 ## 历史 OS4 vendor 的硬件服务阻断

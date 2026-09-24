@@ -1,6 +1,6 @@
 # ROM 工程镜像装配记录
 
-更新：2026-09-25。以下是本地实际生成的中间产物，**不是完整可刷 ROM**。没有运行刷机匣/9008 脚本，没有写入或格式化手机。
+更新：2026-09-25。**本页保留前期中间产物的历史状态。最新六镜像开发包集成见 [development-integration](development-integration.md)，首次上机说明见 [first-device-test](first-device-test.md)。** 没有运行刷机匣/9008 脚本，没有写入或格式化手机。
 
 ## 输入分层
 

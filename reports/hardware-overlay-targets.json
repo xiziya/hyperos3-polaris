@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "overlays": [
+    {
+      "target_sha256": "8692f131a3636ed4c21b21fc6191b5b4036a49785f9c2e746af4bb2d1c96f5f6",
+      "overlay": "PolarisFrameworkOverlay.apk",
+      "overlay_sha256": "5f4794bcf2edbb725f5a2ec068c7f8cbc05afff69a12cd34378d2fff6d4fef77",
+      "resources": [
+        "bool/config_dozeAlwaysOnDisplayAvailable",
+        "bool/config_dozeAlwaysOnEnabled",
+        "string/config_dozeComponent",
+        "integer/config_defaultRefreshRate",
+        "integer/config_defaultPeakRefreshRate",
+        "array/config_udfps_sensor_props",
+        "string/config_mainBuiltInDisplayCutout",
+        "string/config_mainBuiltInDisplayCutoutRectApproximation",
+        "string/config_mainDisplayShape",
+        "dimen/rounded_corner_radius",
+        "dimen/rounded_corner_radius_top",
+        "dimen/rounded_corner_radius_bottom",
+        "dimen/status_bar_height_default",
+        "dimen/status_bar_height_portrait"
+      ],
+      "missing_target_resources": [],
+      "apk_signature_valid": true
+    },
+    {
+      "target_sha256": "d1b175eb115666fb2f8b62130648fd54641c98040d905f980fa30797c81f396e",
+      "overlay": "PolarisSettingsOverlay.apk",
+      "overlay_sha256": "fdc85fd8c03325846645db660812d1a930ca45b83201852d31e4d64345f0e06d",
+      "resources": [
+        "bool/config_device_is_hole_type",
+        "bool/config_show_softap_wifi6",
+        "bool/credentials_image_2209129sc",
+        "bool/credentials_image_2210129sg"
+      ],
+      "missing_target_resources": [],
+      "apk_signature_valid": true
+    }
+  ],
+  "runtime_idmap_and_ui_verified": false
+}

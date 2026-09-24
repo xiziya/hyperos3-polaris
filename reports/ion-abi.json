@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "reference_kernel_commit": "aa8adfe9bf212c6e93238a86980b4024da4f819a",
+  "selected_kernel_commit": "1f326a9202472e8228c2a08ebfd4fdb83da52675",
+  "checks": [
+    {
+      "arch": "arm64",
+      "ioctl_names": [
+        "ALLOC",
+        "FREE",
+        "MAP",
+        "SHARE",
+        "IMPORT"
+      ],
+      "old": [
+        3223341312,
+        3221506305,
+        3221768450,
+        3221768452,
+        3221768453,
+        32,
+        8,
+        4
+      ],
+      "new_legacy": [
+        3223341312,
+        3221506305,
+        3221768450,
+        3221768452,
+        3221768453,
+        32,
+        8,
+        4
+      ],
+      "equal": true
+    },
+    {
+      "arch": "arm32",
+      "ioctl_names": [
+        "ALLOC",
+        "FREE",
+        "MAP",
+        "SHARE",
+        "IMPORT"
+      ],
+      "old": [
+        3222554880,
+        3221506305,
+        3221768450,
+        3221768452,
+        3221768453,
+        20,
+        8,
+        4
+      ],
+      "new_legacy": [
+        3222554880,
+        3221506305,
+        3221768450,
+        3221768452,
+        3221768453,
+        20,
+        8,
+        4
+      ],
+      "equal": true
+    }
+  ],
+  "scope": "Legacy ION ioctl numbers and struct sizes only; not runtime buffer lifetime/cache or complete video/display ABI",
+  "runtime_verified": false
+}

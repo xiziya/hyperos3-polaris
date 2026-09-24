@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "libvintf": {
+    "8": {
+      "commit": "0748000fca71d7ecea7184883fed4c23997f91b6",
+      "url": "https://android.googlesource.com/platform/system/libvintf/+archive/0748000fca71d7ecea7184883fed4c23997f91b6.tar.gz",
+      "archive_sha256": "8477a99e3b890cc492e892b86512f1f19da5253814817c510f3545eda5634c70"
+    },
+    "9": {
+      "commit": "70a7ec852fcefd15a4fb57f8f183a8b1c3aacb08",
+      "url": "https://android.googlesource.com/platform/system/libvintf/+archive/70a7ec852fcefd15a4fb57f8f183a8b1c3aacb08.tar.gz",
+      "archive_sha256": "18150664d793d2003b0009990ccea86765e728cbddeb91938a6a1c4558466c81"
+    }
+  },
+  "hidl_header": {
+    "commit": "a61c3e7eafd1c3ac523c105392a88c0165237394",
+    "url": "https://android.googlesource.com/platform/system/tools/hidl/+/a61c3e7eafd1c3ac523c105392a88c0165237394/metadata/include/hidl/metadata.h?format=TEXT",
+    "sha256": "0d35c81e55a77448221fb6ffd1ce7179f12cf62b4191eddd43835047f5dce98b",
+    "note": "Hash is of the decoded header input used locally; preserve its bytes. No fake HidlInterfaceMetadata::all implementation is provided."
+  }
+}

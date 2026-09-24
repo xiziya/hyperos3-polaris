@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Polaris has a rectangular 1080x2160 60 Hz LCD and rear fingerprint. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+    <string name="config_dozeComponent" translatable="false"></string>
+    <integer name="config_defaultRefreshRate">60</integer>
+    <integer name="config_defaultPeakRefreshRate">60</integer>
+    <integer-array name="config_udfps_sensor_props" />
+    <string name="config_mainBuiltInDisplayCutout" translatable="false"></string>
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation" translatable="false"></string>
+    <string name="config_mainDisplayShape" translatable="false"></string>
+    <dimen name="rounded_corner_radius">0px</dimen>
+    <dimen name="rounded_corner_radius_top">0px</dimen>
+    <dimen name="rounded_corner_radius_bottom">0px</dimen>
+    <dimen name="status_bar_height_default">24dp</dimen>
+    <dimen name="status_bar_height_portrait">24dp</dimen>
+</resources>

@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "codec_sha256": "e324087821f7dab1fe3340d3d13579347e9d7e9e9acbd01bc6792376d3c73ce5",
+  "dlopen_export_candidate_checks": [
+    {
+      "library": "libC2D2.so",
+      "reference_sha256": "f5a741bfc18c3f7e51b926dc668ce40d9cba862969ebfc85c72a42fa36d2a3bf",
+      "candidate_sha256": "ee7626f1e68dc46fd571bd0cfafb4ec479073093c7ed6f58978fe475ba7e85a6",
+      "reference_export_names_present_as_codec_strings": [
+        "c2dCreateSurface",
+        "c2dDestroySurface",
+        "c2dDraw",
+        "c2dFinish",
+        "c2dFlush",
+        "c2dMapAddr",
+        "c2dReadSurface",
+        "c2dUnMapAddr",
+        "c2dUpdateSurface",
+        "c2dWaitTimestamp"
+      ],
+      "missing_candidate_export_names": []
+    },
+    {
+      "library": "libadreno_utils.so",
+      "reference_sha256": "65d140d96ab9f775b93611d88aa1be66cd48cf42385fabe6cc5f7ad95c6010f0",
+      "candidate_sha256": "cd2d1533b1b4cba214568b314cfca0e496ca9cb57d2017c0a1cb68a52b649426",
+      "reference_export_names_present_as_codec_strings": [
+        "compute_fmt_aligned_width_and_height"
+      ],
+      "missing_candidate_export_names": []
+    }
+  ],
+  "graphicsenv_join_exported_by_platform_libbase": true,
+  "runtime_linker_namespace_verified": false,
+  "scope": "Conservative static dlopen string/export comparison; not execution or proof of all dlsym branches."
+}

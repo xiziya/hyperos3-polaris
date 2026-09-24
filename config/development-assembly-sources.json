@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "reference_vendor_sha256": "fff1b4d272f1be26a78e1d965645cb543a23eecf4e47a9572edd16491809669d",
+  "vendor2_sha256": "49016f848160f57bb0909abffe8480d827640fbc83aa70b60ffa5e828787d5ba",
+  "vendor3_sha256": "ccb31ff55e63ad4871c8eb0eae482beb65f67e2834fcd0f205bb82916a28ebd5",
+  "recipes": {
+    "integrate_reference_media.py": "bbc9828c81dda43fe90bebe90aa6c4060ebbda143fa094bb6fcf94efbad8f2c3",
+    "prepare_system_images.py": "3f918766e466837f992b92639b4213c90705838377413f30a647a31d054a1b2c",
+    "finalize_vendor_boot.py": "11837ed4c70c4eb0f065120ae497cac78703b13ac3adff23fe75b94611781acc",
+    "build_hardware_overlay.py": "244760b3de5cb35863e99873fbe6f450e0a114e71c49b2d7af03b73d9fec52ab",
+    "build_settings_overlay.py": "88e579d7a110c424e0bd68aee1e623519dae1ba517bbcf6195ba3eb12f1bcc05",
+    "run_vintf_core.py": "fd3ad788288b5d1ac2025494c65b971aaea49afa6c6daa9cfb07e60ae8bf1242",
+    "audit_reference_media_mix.py": "0d6b0089ee2232e2abc609c74ffd3cc6da694f2982ed491f1d5eca2d7f43d1c3",
+    "check_media_dlopen.py": "a7e666993d3425beb8cedf158a9fd60d57ef24d3ac41fd403b4975b2b041de81",
+    "check_ion_abi.py": "7d16db8ffea6aa4d6e829dd78e67da7a31df47c765826b794a248f58e17cb64c",
+    "check_video_display_abi.py": "13d49a770b734d1660013daca8beb793af2ca58befaafb9166bf9ab452cf4141",
+    "inspect_settings_identity.py": "1e12380ef6b76aeb5f18d63e3ce9a8d6bc5dd5837e23dce897a96ab170077ca5"
+  },
+  "aapt2_sha256": "c9f30b34c02fd48165251541125c3b7f21b98624e0f8341436fc65a84095e5d6",
+  "settings_apk_sha256": "d1b175eb115666fb2f8b62130648fd54641c98040d905f980fa30797c81f396e",
+  "note": "Recipes use local staged inputs documented in README, not a one-command clean build. Overlay signing key remains private and its APK hash changes when regenerated."
+}

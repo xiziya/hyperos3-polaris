@@ -1,6 +1,6 @@
 # 兼容性实现记录与未来 HyperOS 4 迁移方法
 
-更新：2026-09-25。本文是后续移植的技术参考，配合 [交接入口](porting-handoff.md)、[装配记录](integration.md) 和 [单项记录模板](porting-record-template.md) 使用。当前已生成工程候选，没有完成可刷 ROM 或真机启动验收。
+更新：2026-09-25。本文保留各阶段依据；**最新六镜像集成、VINTF/显示/Codec2、设置硬件能力、FBE 与 recovery CI 修复见 [首次开发镜像实现](development-integration.md)**，后文较早的“下一步”不能覆盖最新记录。配合 [交接入口](porting-handoff.md)、[装配记录](integration.md) 和 [单项记录模板](porting-record-template.md) 使用。没有真机启动或硬件验收结论。
 
 ## 当前实现与证据索引
 

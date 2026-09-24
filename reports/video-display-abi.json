@@ -1,0 +1,829 @@
+{
+  "schema": 1,
+  "reference_kernel_commit": "aa8adfe9bf212c6e93238a86980b4024da4f819a",
+  "selected_kernel_commit": "1f326a9202472e8228c2a08ebfd4fdb83da52675",
+  "checks": [
+    {
+      "arch": "arm64",
+      "common_constant_count": 420,
+      "struct_size_count": 10,
+      "differences": [
+        {
+          "expression": "DRM_IOCTL_MSM_WAIT_FENCE",
+          "reference": 1075340359,
+          "selected": 1075864647
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_IMG_GRID_DIMENSION",
+          "reference": 10035361,
+          "selected": 10035363
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_SET_PERF_LEVEL",
+          "reference": 10035329,
+          "selected": 10035333
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_AIR_MBS",
+          "reference": 10035330,
+          "selected": 10035334
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_AIR_REF",
+          "reference": 10035331,
+          "selected": 10035335
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_ALLOC_MODE_INPUT",
+          "reference": 10035270,
+          "selected": 10035272
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_CIR_MBS",
+          "reference": 10035332,
+          "selected": 10035336
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_CONFIG_QP",
+          "reference": 10035349,
+          "selected": 10035351
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_CONTINUE_DATA_TRANSFER",
+          "reference": 10035269,
+          "selected": 10035271
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_DEINTERLACE",
+          "reference": 10035338,
+          "selected": 10035340
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_DIVX_FORMAT",
+          "reference": 10035359,
+          "selected": 10035361
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_ENABLE_INITIAL_QP",
+          "reference": 10035342,
+          "selected": 10035344
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_ASSEMBLY",
+          "reference": 10035271,
+          "selected": 10035273
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_QP",
+          "reference": 10035362,
+          "selected": 10035364
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_QUALITY",
+          "reference": 10035360,
+          "selected": 10035329
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H263_LEVEL",
+          "reference": 10035357,
+          "selected": 10035359
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H264_NAL_SVC",
+          "reference": 10035346,
+          "selected": 10035348
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H264_PIC_ORDER_CNT",
+          "reference": 10035350,
+          "selected": 10035352
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H264_VUI_BITSTREAM_RESTRICT",
+          "reference": 10035337,
+          "selected": 10035339
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H264_VUI_TIMING_INFO",
+          "reference": 10035335,
+          "selected": 10035337
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_INITIAL_B_FRAME_QP",
+          "reference": 10035345,
+          "selected": 10035347
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_INITIAL_I_FRAME_QP",
+          "reference": 10035343,
+          "selected": 10035345
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_INITIAL_P_FRAME_QP",
+          "reference": 10035344,
+          "selected": 10035346
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_IR_MBS",
+          "reference": 10035213,
+          "selected": 10035366
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_MBI_STATISTICS_MODE",
+          "reference": 10035348,
+          "selected": 10035350
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_MB_ERROR_MAP_REPORTING",
+          "reference": 10035268,
+          "selected": 10035270
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_MPEG4_TIME_RESOLUTION",
+          "reference": 10035339,
+          "selected": 10035341
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_MVC_BUFFER_LAYOUT",
+          "reference": 10035352,
+          "selected": 10035354
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_NON_SECURE_OUTPUT2",
+          "reference": 10035354,
+          "selected": 10035356
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_PERF_MODE",
+          "reference": 10035347,
+          "selected": 10035349
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_POST_LOOP_DEBLOCKER_MODE",
+          "reference": 10035358,
+          "selected": 10035360
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_RATE_CONTROL_TIMESTAMP_MODE",
+          "reference": 10035341,
+          "selected": 10035343
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_REQUEST_SEQ_HEADER",
+          "reference": 10035340,
+          "selected": 10035342
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_SCS_THRESHOLD",
+          "reference": 10035351,
+          "selected": 10035353
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_SECURE_SCALING_THRESHOLD",
+          "reference": 10035353,
+          "selected": 10035355
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_VP8_MAX_QP",
+          "reference": 10035356,
+          "selected": 10035358
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_VP8_MIN_QP",
+          "reference": 10035355,
+          "selected": 10035357
+        }
+      ]
+    },
+    {
+      "arch": "arm32",
+      "common_constant_count": 420,
+      "struct_size_count": 10,
+      "differences": [
+        {
+          "expression": "DRM_IOCTL_MSM_WAIT_FENCE",
+          "reference": 1075340359,
+          "selected": 1075864647
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_IMG_GRID_DIMENSION",
+          "reference": 10035361,
+          "selected": 10035363
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_SET_PERF_LEVEL",
+          "reference": 10035329,
+          "selected": 10035333
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_AIR_MBS",
+          "reference": 10035330,
+          "selected": 10035334
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_AIR_REF",
+          "reference": 10035331,
+          "selected": 10035335
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_ALLOC_MODE_INPUT",
+          "reference": 10035270,
+          "selected": 10035272
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_CIR_MBS",
+          "reference": 10035332,
+          "selected": 10035336
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_CONFIG_QP",
+          "reference": 10035349,
+          "selected": 10035351
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_CONTINUE_DATA_TRANSFER",
+          "reference": 10035269,
+          "selected": 10035271
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_DEINTERLACE",
+          "reference": 10035338,
+          "selected": 10035340
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_DIVX_FORMAT",
+          "reference": 10035359,
+          "selected": 10035361
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_ENABLE_INITIAL_QP",
+          "reference": 10035342,
+          "selected": 10035344
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_ASSEMBLY",
+          "reference": 10035271,
+          "selected": 10035273
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_QP",
+          "reference": 10035362,
+          "selected": 10035364
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_QUALITY",
+          "reference": 10035360,
+          "selected": 10035329
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H263_LEVEL",
+          "reference": 10035357,
+          "selected": 10035359
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H264_NAL_SVC",
+          "reference": 10035346,
+          "selected": 10035348
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H264_PIC_ORDER_CNT",
+          "reference": 10035350,
+          "selected": 10035352
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H264_VUI_BITSTREAM_RESTRICT",
+          "reference": 10035337,
+          "selected": 10035339
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_H264_VUI_TIMING_INFO",
+          "reference": 10035335,
+          "selected": 10035337
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_INITIAL_B_FRAME_QP",
+          "reference": 10035345,
+          "selected": 10035347
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_INITIAL_I_FRAME_QP",
+          "reference": 10035343,
+          "selected": 10035345
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_INITIAL_P_FRAME_QP",
+          "reference": 10035344,
+          "selected": 10035346
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_IR_MBS",
+          "reference": 10035213,
+          "selected": 10035366
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_MBI_STATISTICS_MODE",
+          "reference": 10035348,
+          "selected": 10035350
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_MB_ERROR_MAP_REPORTING",
+          "reference": 10035268,
+          "selected": 10035270
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_MPEG4_TIME_RESOLUTION",
+          "reference": 10035339,
+          "selected": 10035341
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_MVC_BUFFER_LAYOUT",
+          "reference": 10035352,
+          "selected": 10035354
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_NON_SECURE_OUTPUT2",
+          "reference": 10035354,
+          "selected": 10035356
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_PERF_MODE",
+          "reference": 10035347,
+          "selected": 10035349
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_POST_LOOP_DEBLOCKER_MODE",
+          "reference": 10035358,
+          "selected": 10035360
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_RATE_CONTROL_TIMESTAMP_MODE",
+          "reference": 10035341,
+          "selected": 10035343
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_REQUEST_SEQ_HEADER",
+          "reference": 10035340,
+          "selected": 10035342
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_SCS_THRESHOLD",
+          "reference": 10035351,
+          "selected": 10035353
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_SECURE_SCALING_THRESHOLD",
+          "reference": 10035353,
+          "selected": 10035355
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_VP8_MAX_QP",
+          "reference": 10035356,
+          "selected": 10035358
+        },
+        {
+          "expression": "V4L2_CID_MPEG_VIDC_VIDEO_VP8_MIN_QP",
+          "reference": 10035355,
+          "selected": 10035357
+        }
+      ]
+    }
+  ],
+  "reference_macros_absent_in_selected": [
+    "V4L2_CID_MPEG_VIDC_VIDEO_INTRA_REFRESH_MODE",
+    "VIDIOC_RESERVED"
+  ],
+  "checked_expressions": [
+    "DRM_IOCTL_MSM_DEREGISTER_EVENT",
+    "DRM_IOCTL_MSM_GEM_CPU_FINI",
+    "DRM_IOCTL_MSM_GEM_CPU_PREP",
+    "DRM_IOCTL_MSM_GEM_INFO",
+    "DRM_IOCTL_MSM_GEM_MADVISE",
+    "DRM_IOCTL_MSM_GEM_NEW",
+    "DRM_IOCTL_MSM_GEM_SUBMIT",
+    "DRM_IOCTL_MSM_GET_PARAM",
+    "DRM_IOCTL_MSM_REGISTER_EVENT",
+    "DRM_IOCTL_MSM_RMFB2",
+    "DRM_IOCTL_MSM_WAIT_FENCE",
+    "V4L2_CID_MPEG_VIDC_IMG_GRID_DIMENSION",
+    "V4L2_CID_MPEG_VIDC_SET_PERF_LEVEL",
+    "V4L2_CID_MPEG_VIDC_VENC_HDR_INFO",
+    "V4L2_CID_MPEG_VIDC_VENC_MAX_CLL",
+    "V4L2_CID_MPEG_VIDC_VENC_MAX_DISP_LUM",
+    "V4L2_CID_MPEG_VIDC_VENC_MAX_FLL",
+    "V4L2_CID_MPEG_VIDC_VENC_MIN_DISP_LUM",
+    "V4L2_CID_MPEG_VIDC_VENC_PARAM_LAYER_BITRATE",
+    "V4L2_CID_MPEG_VIDC_VENC_PARAM_SAR_HEIGHT",
+    "V4L2_CID_MPEG_VIDC_VENC_PARAM_SAR_WIDTH",
+    "V4L2_CID_MPEG_VIDC_VENC_RGB_PRIMARY_00",
+    "V4L2_CID_MPEG_VIDC_VENC_RGB_PRIMARY_01",
+    "V4L2_CID_MPEG_VIDC_VENC_RGB_PRIMARY_10",
+    "V4L2_CID_MPEG_VIDC_VENC_RGB_PRIMARY_11",
+    "V4L2_CID_MPEG_VIDC_VENC_RGB_PRIMARY_20",
+    "V4L2_CID_MPEG_VIDC_VENC_RGB_PRIMARY_21",
+    "V4L2_CID_MPEG_VIDC_VENC_WHITEPOINT_X",
+    "V4L2_CID_MPEG_VIDC_VENC_WHITEPOINT_Y",
+    "V4L2_CID_MPEG_VIDC_VIDEO_AIR_MBS",
+    "V4L2_CID_MPEG_VIDC_VIDEO_AIR_REF",
+    "V4L2_CID_MPEG_VIDC_VIDEO_ALLOC_MODE_INPUT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_ALLOC_MODE_OUTPUT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_AU_DELIMITER",
+    "V4L2_CID_MPEG_VIDC_VIDEO_BASELAYER_ID",
+    "V4L2_CID_MPEG_VIDC_VIDEO_BFRAME_X_RANGE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_BFRAME_Y_RANGE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_BLUR_HEIGHT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_BLUR_WIDTH",
+    "V4L2_CID_MPEG_VIDC_VIDEO_BUFFER_SIZE_LIMIT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_B_FRAME_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_B_FRAME_QP_MAX",
+    "V4L2_CID_MPEG_VIDC_VIDEO_B_FRAME_QP_MIN",
+    "V4L2_CID_MPEG_VIDC_VIDEO_CIR_MBS",
+    "V4L2_CID_MPEG_VIDC_VIDEO_COLOR_SPACE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_CONCEAL_COLOR",
+    "V4L2_CID_MPEG_VIDC_VIDEO_CONCEAL_COLOR_10BIT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_CONCEAL_COLOR_8BIT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_CONFIG_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_CONTINUE_DATA_TRANSFER",
+    "V4L2_CID_MPEG_VIDC_VIDEO_DEINTERLACE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_DIVX_FORMAT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_DPB_COLOR_FORMAT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_ENABLE_INITIAL_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_EXTRADATA",
+    "V4L2_CID_MPEG_VIDC_VIDEO_FLIP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_ASSEMBLY",
+    "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_QUALITY",
+    "V4L2_CID_MPEG_VIDC_VIDEO_FRAME_RATE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_FULL_RANGE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_H263_LEVEL",
+    "V4L2_CID_MPEG_VIDC_VIDEO_H264_CABAC_MODEL",
+    "V4L2_CID_MPEG_VIDC_VIDEO_H264_NAL_SVC",
+    "V4L2_CID_MPEG_VIDC_VIDEO_H264_PIC_ORDER_CNT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_H264_TRANSFORM_8x8",
+    "V4L2_CID_MPEG_VIDC_VIDEO_H264_VUI_BITSTREAM_RESTRICT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_H264_VUI_TIMING_INFO",
+    "V4L2_CID_MPEG_VIDC_VIDEO_HEVC_PROFILE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_HEVC_TIER_LEVEL",
+    "V4L2_CID_MPEG_VIDC_VIDEO_HIER_B_NUM_LAYERS",
+    "V4L2_CID_MPEG_VIDC_VIDEO_HIER_P_NUM_LAYERS",
+    "V4L2_CID_MPEG_VIDC_VIDEO_HYBRID_HIERP_MODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_IDR_PERIOD",
+    "V4L2_CID_MPEG_VIDC_VIDEO_IFRAME_SIZE_TYPE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_IFRAME_X_RANGE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_IFRAME_Y_RANGE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_INITIAL_B_FRAME_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_INITIAL_I_FRAME_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_INITIAL_P_FRAME_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_IR_MBS",
+    "V4L2_CID_MPEG_VIDC_VIDEO_I_FRAME_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_I_FRAME_QP_MAX",
+    "V4L2_CID_MPEG_VIDC_VIDEO_I_FRAME_QP_MIN",
+    "V4L2_CID_MPEG_VIDC_VIDEO_KEEP_ASPECT_RATIO",
+    "V4L2_CID_MPEG_VIDC_VIDEO_LAYER_ID",
+    "V4L2_CID_MPEG_VIDC_VIDEO_LOWLATENCY_MODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_LTRCOUNT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_LTRMODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_MARKLTRFRAME",
+    "V4L2_CID_MPEG_VIDC_VIDEO_MATRIX_COEFFS",
+    "V4L2_CID_MPEG_VIDC_VIDEO_MAX_HIERP_LAYERS",
+    "V4L2_CID_MPEG_VIDC_VIDEO_MBI_STATISTICS_MODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_MB_ERROR_MAP_REPORTING",
+    "V4L2_CID_MPEG_VIDC_VIDEO_MPEG2_LEVEL",
+    "V4L2_CID_MPEG_VIDC_VIDEO_MPEG2_PROFILE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_MPEG4_TIME_RESOLUTION",
+    "V4L2_CID_MPEG_VIDC_VIDEO_MVC_BUFFER_LAYOUT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_NON_SECURE_OUTPUT2",
+    "V4L2_CID_MPEG_VIDC_VIDEO_NUM_B_FRAMES",
+    "V4L2_CID_MPEG_VIDC_VIDEO_NUM_P_FRAMES",
+    "V4L2_CID_MPEG_VIDC_VIDEO_OPERATING_RATE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_OUTPUT_ORDER",
+    "V4L2_CID_MPEG_VIDC_VIDEO_PERF_MODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_PFRAME_X_RANGE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_PFRAME_Y_RANGE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_PICTYPE_DEC_MODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_POST_LOOP_DEBLOCKER_MODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_PRESERVE_TEXT_QUALITY",
+    "V4L2_CID_MPEG_VIDC_VIDEO_PRIORITY",
+    "V4L2_CID_MPEG_VIDC_VIDEO_P_FRAME_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_P_FRAME_QP_MAX",
+    "V4L2_CID_MPEG_VIDC_VIDEO_P_FRAME_QP_MIN",
+    "V4L2_CID_MPEG_VIDC_VIDEO_QP_MASK",
+    "V4L2_CID_MPEG_VIDC_VIDEO_RATE_CONTROL",
+    "V4L2_CID_MPEG_VIDC_VIDEO_RATE_CONTROL_MBR_CFR",
+    "V4L2_CID_MPEG_VIDC_VIDEO_RATE_CONTROL_MBR_VFR",
+    "V4L2_CID_MPEG_VIDC_VIDEO_RATE_CONTROL_TIMESTAMP_MODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_REQUEST_IFRAME",
+    "V4L2_CID_MPEG_VIDC_VIDEO_REQUEST_SEQ_HEADER",
+    "V4L2_CID_MPEG_VIDC_VIDEO_ROTATION",
+    "V4L2_CID_MPEG_VIDC_VIDEO_SCS_THRESHOLD",
+    "V4L2_CID_MPEG_VIDC_VIDEO_SECURE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_SECURE_SCALING_THRESHOLD",
+    "V4L2_CID_MPEG_VIDC_VIDEO_STREAM_FORMAT",
+    "V4L2_CID_MPEG_VIDC_VIDEO_STREAM_OUTPUT_MODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_SYNC_FRAME_DECODE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_TME_LEVEL",
+    "V4L2_CID_MPEG_VIDC_VIDEO_TME_PAYLOAD_VERSION",
+    "V4L2_CID_MPEG_VIDC_VIDEO_TME_PROFILE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_TRANSFER_CHARS",
+    "V4L2_CID_MPEG_VIDC_VIDEO_USELTRFRAME",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VENC_BITRATE_TYPE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VP8_MAX_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VP8_MIN_QP",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VP8_PROFILE_LEVEL",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VP9_LEVEL",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VP9_PROFILE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VPE_CSC",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VPE_CSC_CUSTOM_MATRIX",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VPX_ERROR_RESILIENCE",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VQZIP_SEI",
+    "V4L2_CID_MPEG_VIDC_VIDEO_VUI_TIMING_INFO",
+    "V4L2_PIX_FMT_ABGR32",
+    "V4L2_PIX_FMT_ARGB32",
+    "V4L2_PIX_FMT_ARGB444",
+    "V4L2_PIX_FMT_ARGB555",
+    "V4L2_PIX_FMT_ARGB555X",
+    "V4L2_PIX_FMT_BGR24",
+    "V4L2_PIX_FMT_BGR32",
+    "V4L2_PIX_FMT_BGR666",
+    "V4L2_PIX_FMT_CIT_YYVYUY",
+    "V4L2_PIX_FMT_CPIA1",
+    "V4L2_PIX_FMT_DIVX",
+    "V4L2_PIX_FMT_DIVX_311",
+    "V4L2_PIX_FMT_DV",
+    "V4L2_PIX_FMT_ET61X251",
+    "V4L2_PIX_FMT_FLAG_PREMUL_ALPHA",
+    "V4L2_PIX_FMT_GREY",
+    "V4L2_PIX_FMT_H263",
+    "V4L2_PIX_FMT_H264",
+    "V4L2_PIX_FMT_H264_MVC",
+    "V4L2_PIX_FMT_H264_NO_SC",
+    "V4L2_PIX_FMT_HEVC",
+    "V4L2_PIX_FMT_HEVC_HYBRID",
+    "V4L2_PIX_FMT_HI240",
+    "V4L2_PIX_FMT_HM12",
+    "V4L2_PIX_FMT_JL2005BCD",
+    "V4L2_PIX_FMT_JPEG",
+    "V4L2_PIX_FMT_JPGL",
+    "V4L2_PIX_FMT_KONICA420",
+    "V4L2_PIX_FMT_M420",
+    "V4L2_PIX_FMT_MJPEG",
+    "V4L2_PIX_FMT_MPEG",
+    "V4L2_PIX_FMT_MPEG1",
+    "V4L2_PIX_FMT_MPEG2",
+    "V4L2_PIX_FMT_MPEG4",
+    "V4L2_PIX_FMT_MR97310A",
+    "V4L2_PIX_FMT_NV12",
+    "V4L2_PIX_FMT_NV12M",
+    "V4L2_PIX_FMT_NV12MT",
+    "V4L2_PIX_FMT_NV12MT_16X16",
+    "V4L2_PIX_FMT_NV12_512",
+    "V4L2_PIX_FMT_NV12_P010_UBWC",
+    "V4L2_PIX_FMT_NV12_TP10_UBWC",
+    "V4L2_PIX_FMT_NV12_UBWC",
+    "V4L2_PIX_FMT_NV16",
+    "V4L2_PIX_FMT_NV16M",
+    "V4L2_PIX_FMT_NV21",
+    "V4L2_PIX_FMT_NV21M",
+    "V4L2_PIX_FMT_NV24",
+    "V4L2_PIX_FMT_NV42",
+    "V4L2_PIX_FMT_NV61",
+    "V4L2_PIX_FMT_NV61M",
+    "V4L2_PIX_FMT_OV511",
+    "V4L2_PIX_FMT_OV518",
+    "V4L2_PIX_FMT_PAC207",
+    "V4L2_PIX_FMT_PAL8",
+    "V4L2_PIX_FMT_PJPG",
+    "V4L2_PIX_FMT_PRIV_MAGIC",
+    "V4L2_PIX_FMT_PWC1",
+    "V4L2_PIX_FMT_PWC2",
+    "V4L2_PIX_FMT_RGB24",
+    "V4L2_PIX_FMT_RGB32",
+    "V4L2_PIX_FMT_RGB332",
+    "V4L2_PIX_FMT_RGB444",
+    "V4L2_PIX_FMT_RGB555",
+    "V4L2_PIX_FMT_RGB555X",
+    "V4L2_PIX_FMT_RGB565",
+    "V4L2_PIX_FMT_RGB565X",
+    "V4L2_PIX_FMT_RGBA8888_UBWC",
+    "V4L2_PIX_FMT_S5C_UYVY_JPG",
+    "V4L2_PIX_FMT_SBGGR10",
+    "V4L2_PIX_FMT_SBGGR10ALAW8",
+    "V4L2_PIX_FMT_SBGGR10DPCM6",
+    "V4L2_PIX_FMT_SBGGR10DPCM8",
+    "V4L2_PIX_FMT_SBGGR10P",
+    "V4L2_PIX_FMT_SBGGR12",
+    "V4L2_PIX_FMT_SBGGR16",
+    "V4L2_PIX_FMT_SBGGR8",
+    "V4L2_PIX_FMT_SBGGRPLAIN16",
+    "V4L2_PIX_FMT_SDE_ABGR_1555",
+    "V4L2_PIX_FMT_SDE_ABGR_2101010",
+    "V4L2_PIX_FMT_SDE_ABGR_4444",
+    "V4L2_PIX_FMT_SDE_ABGR_8888",
+    "V4L2_PIX_FMT_SDE_ARGB_2101010",
+    "V4L2_PIX_FMT_SDE_BGRA_1010102",
+    "V4L2_PIX_FMT_SDE_BGRA_4444",
+    "V4L2_PIX_FMT_SDE_BGRA_5551",
+    "V4L2_PIX_FMT_SDE_BGRX_1010102",
+    "V4L2_PIX_FMT_SDE_BGRX_4444",
+    "V4L2_PIX_FMT_SDE_BGRX_5551",
+    "V4L2_PIX_FMT_SDE_BGR_565",
+    "V4L2_PIX_FMT_SDE_RGBA_1010102",
+    "V4L2_PIX_FMT_SDE_RGBA_1010102_UBWC",
+    "V4L2_PIX_FMT_SDE_RGBA_4444",
+    "V4L2_PIX_FMT_SDE_RGBA_5551",
+    "V4L2_PIX_FMT_SDE_RGBA_8888",
+    "V4L2_PIX_FMT_SDE_RGBX_1010102",
+    "V4L2_PIX_FMT_SDE_RGBX_1010102_UBWC",
+    "V4L2_PIX_FMT_SDE_RGBX_4444",
+    "V4L2_PIX_FMT_SDE_RGBX_5551",
+    "V4L2_PIX_FMT_SDE_RGBX_8888",
+    "V4L2_PIX_FMT_SDE_RGBX_8888_UBWC",
+    "V4L2_PIX_FMT_SDE_RGB_565_UBWC",
+    "V4L2_PIX_FMT_SDE_XBGR_1555",
+    "V4L2_PIX_FMT_SDE_XBGR_2101010",
+    "V4L2_PIX_FMT_SDE_XBGR_4444",
+    "V4L2_PIX_FMT_SDE_XBGR_8888",
+    "V4L2_PIX_FMT_SDE_XRGB_2101010",
+    "V4L2_PIX_FMT_SDE_Y_CBCR_H1V2",
+    "V4L2_PIX_FMT_SDE_Y_CBCR_H2V2_P010",
+    "V4L2_PIX_FMT_SDE_Y_CBCR_H2V2_P010_VENUS",
+    "V4L2_PIX_FMT_SDE_Y_CBCR_H2V2_TP10",
+    "V4L2_PIX_FMT_SDE_Y_CBCR_H2V2_VENUS",
+    "V4L2_PIX_FMT_SDE_Y_CRCB_H1V2",
+    "V4L2_PIX_FMT_SDE_Y_CRCB_H2V2_VENUS",
+    "V4L2_PIX_FMT_SDE_Y_CR_CB_GH2V2",
+    "V4L2_PIX_FMT_SE401",
+    "V4L2_PIX_FMT_SGBRG10",
+    "V4L2_PIX_FMT_SGBRG10ALAW8",
+    "V4L2_PIX_FMT_SGBRG10DPCM6",
+    "V4L2_PIX_FMT_SGBRG10DPCM8",
+    "V4L2_PIX_FMT_SGBRG10P",
+    "V4L2_PIX_FMT_SGBRG12",
+    "V4L2_PIX_FMT_SGBRG8",
+    "V4L2_PIX_FMT_SGBRGPLAIN16",
+    "V4L2_PIX_FMT_SGRBG10",
+    "V4L2_PIX_FMT_SGRBG10ALAW8",
+    "V4L2_PIX_FMT_SGRBG10DPCM6",
+    "V4L2_PIX_FMT_SGRBG10DPCM8",
+    "V4L2_PIX_FMT_SGRBG10P",
+    "V4L2_PIX_FMT_SGRBG12",
+    "V4L2_PIX_FMT_SGRBG8",
+    "V4L2_PIX_FMT_SGRBGPLAIN16",
+    "V4L2_PIX_FMT_SN9C10X",
+    "V4L2_PIX_FMT_SN9C2028",
+    "V4L2_PIX_FMT_SN9C20X_I420",
+    "V4L2_PIX_FMT_SPCA501",
+    "V4L2_PIX_FMT_SPCA505",
+    "V4L2_PIX_FMT_SPCA508",
+    "V4L2_PIX_FMT_SPCA561",
+    "V4L2_PIX_FMT_SQ905C",
+    "V4L2_PIX_FMT_SRGGB10",
+    "V4L2_PIX_FMT_SRGGB10ALAW8",
+    "V4L2_PIX_FMT_SRGGB10DPCM6",
+    "V4L2_PIX_FMT_SRGGB10DPCM8",
+    "V4L2_PIX_FMT_SRGGB10P",
+    "V4L2_PIX_FMT_SRGGB12",
+    "V4L2_PIX_FMT_SRGGB8",
+    "V4L2_PIX_FMT_SRGGBPLAIN16",
+    "V4L2_PIX_FMT_STV0680",
+    "V4L2_PIX_FMT_TM6000",
+    "V4L2_PIX_FMT_TME",
+    "V4L2_PIX_FMT_UV8",
+    "V4L2_PIX_FMT_UYVY",
+    "V4L2_PIX_FMT_VC1_ANNEX_G",
+    "V4L2_PIX_FMT_VC1_ANNEX_L",
+    "V4L2_PIX_FMT_VP8",
+    "V4L2_PIX_FMT_VP9",
+    "V4L2_PIX_FMT_VYUY",
+    "V4L2_PIX_FMT_WNVA",
+    "V4L2_PIX_FMT_XBGR32",
+    "V4L2_PIX_FMT_XRGB32",
+    "V4L2_PIX_FMT_XRGB444",
+    "V4L2_PIX_FMT_XRGB555",
+    "V4L2_PIX_FMT_XRGB555X",
+    "V4L2_PIX_FMT_XVID",
+    "V4L2_PIX_FMT_Y10",
+    "V4L2_PIX_FMT_Y10BPACK",
+    "V4L2_PIX_FMT_Y12",
+    "V4L2_PIX_FMT_Y12I",
+    "V4L2_PIX_FMT_Y16",
+    "V4L2_PIX_FMT_Y16_BE",
+    "V4L2_PIX_FMT_Y4",
+    "V4L2_PIX_FMT_Y41P",
+    "V4L2_PIX_FMT_Y6",
+    "V4L2_PIX_FMT_Y8I",
+    "V4L2_PIX_FMT_YUV32",
+    "V4L2_PIX_FMT_YUV410",
+    "V4L2_PIX_FMT_YUV411P",
+    "V4L2_PIX_FMT_YUV420",
+    "V4L2_PIX_FMT_YUV420M",
+    "V4L2_PIX_FMT_YUV422M",
+    "V4L2_PIX_FMT_YUV422P",
+    "V4L2_PIX_FMT_YUV444",
+    "V4L2_PIX_FMT_YUV444M",
+    "V4L2_PIX_FMT_YUV555",
+    "V4L2_PIX_FMT_YUV565",
+    "V4L2_PIX_FMT_YUYV",
+    "V4L2_PIX_FMT_YVU410",
+    "V4L2_PIX_FMT_YVU420",
+    "V4L2_PIX_FMT_YVU420M",
+    "V4L2_PIX_FMT_YVU422M",
+    "V4L2_PIX_FMT_YVU444M",
+    "V4L2_PIX_FMT_YVYU",
+    "V4L2_PIX_FMT_YYUV",
+    "V4L2_PIX_FMT_Z16",
+    "VIDIOC_CREATE_BUFS",
+    "VIDIOC_CROPCAP",
+    "VIDIOC_DBG_G_CHIP_INFO",
+    "VIDIOC_DBG_G_REGISTER",
+    "VIDIOC_DBG_S_REGISTER",
+    "VIDIOC_DECODER_CMD",
+    "VIDIOC_DQBUF",
+    "VIDIOC_DQEVENT",
+    "VIDIOC_DV_TIMINGS_CAP",
+    "VIDIOC_ENCODER_CMD",
+    "VIDIOC_ENUMAUDIO",
+    "VIDIOC_ENUMAUDOUT",
+    "VIDIOC_ENUMINPUT",
+    "VIDIOC_ENUMOUTPUT",
+    "VIDIOC_ENUMSTD",
+    "VIDIOC_ENUM_DV_TIMINGS",
+    "VIDIOC_ENUM_FMT",
+    "VIDIOC_ENUM_FRAMEINTERVALS",
+    "VIDIOC_ENUM_FRAMESIZES",
+    "VIDIOC_ENUM_FREQ_BANDS",
+    "VIDIOC_EXPBUF",
+    "VIDIOC_G_AUDIO",
+    "VIDIOC_G_AUDOUT",
+    "VIDIOC_G_CROP",
+    "VIDIOC_G_CTRL",
+    "VIDIOC_G_DV_TIMINGS",
+    "VIDIOC_G_EDID",
+    "VIDIOC_G_ENC_INDEX",
+    "VIDIOC_G_EXT_CTRLS",
+    "VIDIOC_G_FBUF",
+    "VIDIOC_G_FMT",
+    "VIDIOC_G_FREQUENCY",
+    "VIDIOC_G_INPUT",
+    "VIDIOC_G_JPEGCOMP",
+    "VIDIOC_G_MODULATOR",
+    "VIDIOC_G_OUTPUT",
+    "VIDIOC_G_PARM",
+    "VIDIOC_G_PRIORITY",
+    "VIDIOC_G_SELECTION",
+    "VIDIOC_G_SLICED_VBI_CAP",
+    "VIDIOC_G_STD",
+    "VIDIOC_G_TUNER",
+    "VIDIOC_LOG_STATUS",
+    "VIDIOC_OVERLAY",
+    "VIDIOC_PREPARE_BUF",
+    "VIDIOC_QBUF",
+    "VIDIOC_QUERYBUF",
+    "VIDIOC_QUERYCAP",
+    "VIDIOC_QUERYCTRL",
+    "VIDIOC_QUERYMENU",
+    "VIDIOC_QUERYSTD",
+    "VIDIOC_QUERY_DV_TIMINGS",
+    "VIDIOC_QUERY_EXT_CTRL",
+    "VIDIOC_REQBUFS",
+    "VIDIOC_STREAMOFF",
+    "VIDIOC_STREAMON",
+    "VIDIOC_SUBSCRIBE_EVENT",
+    "VIDIOC_S_AUDIO",
+    "VIDIOC_S_AUDOUT",
+    "VIDIOC_S_CROP",
+    "VIDIOC_S_CTRL",
+    "VIDIOC_S_DV_TIMINGS",
+    "VIDIOC_S_EDID",
+    "VIDIOC_S_EXT_CTRLS",
+    "VIDIOC_S_FBUF",
+    "VIDIOC_S_FMT",
+    "VIDIOC_S_FREQUENCY",
+    "VIDIOC_S_HW_FREQ_SEEK",
+    "VIDIOC_S_INPUT",
+    "VIDIOC_S_JPEGCOMP",
+    "VIDIOC_S_MODULATOR",
+    "VIDIOC_S_OUTPUT",
+    "VIDIOC_S_PARM",
+    "VIDIOC_S_PRIORITY",
+    "VIDIOC_S_SELECTION",
+    "VIDIOC_S_STD",
+    "VIDIOC_S_TUNER",
+    "VIDIOC_TRY_DECODER_CMD",
+    "VIDIOC_TRY_ENCODER_CMD",
+    "VIDIOC_TRY_EXT_CTRLS",
+    "VIDIOC_TRY_FMT",
+    "VIDIOC_UNSUBSCRIBE_EVENT",
+    "sizeof(struct v4l2_buffer)",
+    "sizeof(struct v4l2_plane)",
+    "sizeof(struct v4l2_format)",
+    "sizeof(struct v4l2_requestbuffers)",
+    "sizeof(struct v4l2_ext_control)",
+    "sizeof(struct v4l2_ext_controls)",
+    "sizeof(struct drm_msm_gem_new)",
+    "sizeof(struct drm_msm_gem_info)",
+    "sizeof(struct drm_msm_gem_cpu_prep)",
+    "sizeof(struct drm_msm_gem_submit)"
+  ],
+  "scope": "Common UAPI ioctl/control/pixel constants and selected struct sizes; not control semantics, offsets, firmware or full driver compatibility",
+  "runtime_verified": false
+}

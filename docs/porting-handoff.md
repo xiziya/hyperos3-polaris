@@ -4,9 +4,9 @@
 
 ## 当前结论
 
-目标为 MIX 2S / polaris 6/128 的 **中国版 HyperOS 3 / Android 15**。已真实编译纯净内核和 API35 Lights HAL，已生成 boot/vendor 工程候选，已取得现有系统的实机分区与节点读数。**尚无完整可刷 ROM；没有启动、硬件或功耗验收通过结论。**
+目标为 MIX 2S / polaris 6/128 的 **中国版 HyperOS 3 / Android 15**。已真实编译纯净内核和 API35 Lights HAL，已装配 boot/vendor/system/system_ext/product/mi_ext 六镜像并逐项离线检查；首次开发 ZIP 已生成，全部镜像通过解压哈希回读。包长 5,596,345,065 字节，完整包哈希见 `reports/development-package.json`。**没有启动、硬件或功耗验收通过结论。**
 
-主线候选使用 Civi 2 国行系统镜像，以及官方 Lineage 22.2 polaris Android 15 vendor/ODM；后者原本配套 4.9.337，不能据同机型就认定兼容指定的 4.19。旧 OS4 vendor 的 SDK36 APEX、202504 SELinux 映射和 Binder 符号问题见兼容文档，现作为历史对照。
+主线候选使用 Civi 2 国行系统镜像，以及官方 Lineage 22.2 polaris Android 15 vendor/ODM。针对原配套 4.9 的视频控制 ABI，显示/Codec2 已成组改为旧 OS4 参考中与 4.19 配套的 legacy 硬件子系统；未搬 SDK36 APEX 或 202504 policy。参考文件的导入闭包、标签/服务和 VINTF 已检查，但 namespace、ioctl 使用和硬件运行仍待验证，见 `docs/development-integration.md`。
 
 ## 固定要求
 
@@ -25,11 +25,12 @@
 
 ## 接下来从哪里继续
 
-1. 完成真正按版本、实例及合并矩阵检查的 VINTF 审计。现有名称清单和 FCM5/6 的 4.19 配置条目检查不能代替完整 checkvintf。研究中的 AOSP libvintf host 驱动尚未完成，不标通过。
-2. 检查 Android 15 polaris HAL 对指定 4.19 的图形、ION/KGSL、WLAN、音频等 ABI，以及 linker namespace、dlopen、32 位依赖与服务唯一性。
-3. 整理系统/product/system_ext 的 polaris 属性与设备资源，接入有界诊断；核对 perf/thermal/millet 是否竞争控制节点。
-4. 重新生成与最终 vendor 同步的 boot，确认真实启动链、fstab、数据加密迁移和 recovery/回退方式。
-5. 无已知静态致命阻断后才生成保留现有分区表的完整安装包；开发包与稳定验收分开标记。
+1. 核对开发 ZIP 最终报告与实际 SHA；若无 `reports/development-package.json`，先完成封装回读。保留静态布局，boot 最后写，不运行旧 9008 分区脚本。
+2. VINTF 已用锁定的真实 AOSP libvintf core 进行两向矩阵/版本/实例和真实内核配置检查，并验证缺失必需 HAL 的负对照失败；它不是完整 checkvintf CLI 或运行注册验收。
+3. 真机连接恢复后验证 recovery、清刷方案与首启。用户已拔线去充电/休息，本轮不能假装仍有 ADB；也不自动刷写或清数据。
+4. 最终 ext4 fstab 使用软件 AES-XTS/CTS FBEv2；A17→A15 初次需用户明确备份/清刷，Keymaster3 与旧4之间不承诺密钥迁移。安装器不格式化，recovery 解密和回退需实测。
+5. “设置→我的设备”按 MIX 2S/SDM845 修正；只清理不支持的硬件入口（5G 蜂窝、FOD、AOD/120Hz/挖孔、Wi-Fi6），保留后置指纹/4G/NFC/5GHz Wi-Fi。支持但未适配好的功能继续修，不以“不支持”删除。
+6. 橙狐首次 CI 因上游脚本依赖工作目录而失败，内核已编译成功。修复已推送 `b4432e6`，重跑 [36059950820](https://github.com/xiziya/hyperos3-polaris/actions/runs/36059950820)；不能预先称 recovery 成功。
 
 当前候选尺寸在实机已有静态分区容量以内，**没有发现必须重新 9008 分区的容量理由**。这尚不能证明 recovery 安装路径可用，不能直接套刷机匣旧 rawprogram/flash_all。
 
