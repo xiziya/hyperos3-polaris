@@ -1,0 +1,9 @@
+{
+  "file": "ziyi-ota_full-OS3.0.6.0.VLLCNXM-user-15.0-f6ef5f9254.zip",
+  "bytes": 6275771344,
+  "md5": "f6ef5f9254950ce364273bad8a5b9cab",
+  "sha256": "4821f8f281817aafb930cadf38e1d5b34fa0cf82bc2c1dda79567a548b8f707d",
+  "zip_crc": "pass",
+  "metadata": "ota-property-files=payload_metadata.bin:4399:240994,payload.bin:4399:6275763273,payload_properties.txt:6275767730:156,apex_info.pb:2176:1313,care_map.pb:3536:796,metadata:69:679,metadata.pb:816:1312                        \nota-required-cache=0\nota-streaming-property-files=payload.bin:4399:6275763273,payload_properties.txt:6275767730:156,apex_info.pb:2176:1313,care_map.pb:3536:796,metadata:69:679,metadata.pb:816:1312                          \nota-type=AB\npost-build=Xiaomi/ziyi/ziyi:15/AQ3A.250226.002/OS3.0.6.0.VLLCNXM:user/release-keys\npost-build-incremental=OS3.0.6.0.VLLCNXM\npost-sdk-level=35\npost-security-patch-level=2026-08-01\npost-timestamp=1787132080\npre-device=ziyi\n",
+  "ota_signature_verified": false
+}

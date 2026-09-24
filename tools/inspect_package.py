@@ -5,6 +5,7 @@ import hashlib
 import json
 import struct
 import xml.etree.ElementTree as ET
+import zlib
 from pathlib import Path
 
 
@@ -41,10 +42,43 @@ def image_info(path):
     return result
 
 
+def gpt_info(path, sector=4096):
+    """Read package GPT geometry without exporting disk or partition GUIDs."""
+    data = path.read_bytes()
+    header = data[sector:sector + 512]
+    if header[:8] != b'EFI PART':
+        raise ValueError(f'{path.name}: GPT signature missing')
+    length, checksum = struct.unpack_from('<II', header, 12)
+    if not 92 <= length <= len(header):
+        raise ValueError('Invalid GPT header size')
+    checked = bytearray(header[:length])
+    checked[16:20] = b'\0' * 4
+    if zlib.crc32(checked) != checksum:
+        raise ValueError(f'{path.name}: GPT header checksum mismatch')
+    lba, count, entry_size, crc = struct.unpack_from('<QIII', header, 72)
+    if entry_size < 128 or count > 4096:
+        raise ValueError('Invalid GPT entry layout')
+    entries = data[lba * sector:lba * sector + count * entry_size]
+    if len(entries) != count * entry_size or zlib.crc32(entries) != crc:
+        raise ValueError(f'{path.name}: GPT entry checksum mismatch')
+    result = []
+    for i in range(count):
+        e = entries[i * entry_size:(i + 1) * entry_size]
+        if e[:16] == b'\0' * 16:
+            continue
+        first, last = struct.unpack_from('<QQ', e, 32)
+        result.append({'label': e[56:128].decode('utf-16le').split('\0')[0],
+                       'first_lba': first, 'last_lba': last,
+                       'bytes': (last - first + 1) * sector if last >= first else None,
+                       'extent_valid_without_edl_patching': last >= first})
+    return {'file': path.name, 'crc_valid': True, 'partitions': result}
+
+
 def inspect(folder):
     images = folder / 'images' if (folder / 'images').is_dir() else folder
     result = {'schema': 1, 'evidence': 'package-only-not-device', 'partitions': [],
               'images': [], 'missing_program_files': [], 'protected_program_entries': []}
+    result['gpt'] = [gpt_info(path) for path in sorted(images.glob('gpt_main*.bin'))]
     protected = {'modemst1', 'modemst2', 'fsg', 'fsc', 'persist', 'persistbak',
                  'frp', 'devinfo', 'sec', 'PrimaryGPT', 'BackupGPT'}
     for xml in sorted(images.glob('rawprogram*.xml')):

@@ -1,0 +1,287 @@
+{
+  "block_size": 4096,
+  "minor_version": 0,
+  "partitions": [
+    {
+      "name": "abl",
+      "bytes": 204800,
+      "sha256": "5bc451c84816e706ed41f7fc2bc129dc13c92010fd4e33e9e801dede8b2b0ca5",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "aop",
+      "bytes": 245760,
+      "sha256": "d75c34a65230198fbaf41ba2aca68747bd6e95e8730e82c2ef89b7bc03d5562f",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "aop_config",
+      "bytes": 12288,
+      "sha256": "3d92574b029f5effe6320ae29e63d384b34fceef23f6f0a463a76c84965d302d",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "bluetooth",
+      "bytes": 2764800,
+      "sha256": "59793fffa77fd334cc33c8e3452d9c5159d0f3e00d968eb1e41692c2d16a3628",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "boot",
+      "bytes": 201326592,
+      "sha256": "2e55554ff25aff645430aa19bb8284ee44158b875e6471eaa5fed3fddabddd26",
+      "operations": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "cpucp",
+      "bytes": 176128,
+      "sha256": "f458974bebdd005c18aa710deea44f567054af31e2e55bfecd7a700504f62e93",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "devcfg",
+      "bytes": 49152,
+      "sha256": "4c10386b833c61897dbf031e8367031cef5808c4209f0307cb430188a5c22a1a",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "dsp",
+      "bytes": 67108864,
+      "sha256": "51bd0809210f5a2a691d95dc2a497bc4ae4f8312d03b311dc448850728464c8d",
+      "operations": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "dtbo",
+      "bytes": 24117248,
+      "sha256": "8931b1c16495f84145caf24ce78709de7023e7f1612a1ba131d77b6eb45c3302",
+      "operations": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "featenabler",
+      "bytes": 98304,
+      "sha256": "29326e5decfb25d14ecce91dbdd0fa281a8e4a93b8c63219c5e0f04bdd610c8a",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "hyp",
+      "bytes": 1187840,
+      "sha256": "8b1ec3692fef47f49337c039d04266c2c8a7cdf0a40a9c9560c3d3371583be5e",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "imagefv",
+      "bytes": 6299648,
+      "sha256": "f7d9487dceee635e48b94dbdc86df4e1fae996c75989dc7b520de7377abe804f",
+      "operations": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "keymaster",
+      "bytes": 352256,
+      "sha256": "afd33f0ee83c410b95d185c3fb9d5d66b731346c1c2f5d966986496cfe887f33",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "modem",
+      "bytes": 278753280,
+      "sha256": "b8dd31799934dab8a90c9c624f038ae526069103cd89c9c852c55799f686f376",
+      "operations": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "odm",
+      "bytes": 18030592,
+      "sha256": "31436e452290b565d4b19801f2f442759a1f10811af4759079440612939020eb",
+      "operations": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "product",
+      "bytes": 4604280832,
+      "sha256": "bba0a24fee3038b59132dfd5cfb8cad9c2f346600fad1d9a671ab68344bdebb9",
+      "operations": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "qupfw",
+      "bytes": 53248,
+      "sha256": "0d27ef626f35b38b29e4a3fc9c25ee873f22b1d2d59d2dbb1a0c9e7dd8d0081a",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "recovery",
+      "bytes": 104857600,
+      "sha256": "baf48326f3acfab3e035a1c96db542de27d575a6e0ac9ae2f4f72abf225492ed",
+      "operations": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "shrm",
+      "bytes": 69632,
+      "sha256": "1173d7c7027b0c8534c79ea1e398dff11bd70d6fd73e1291549be7750131a6b5",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "system",
+      "bytes": 760332288,
+      "sha256": "6315d4404e6addb1a3b83bb44c191566a9950516f3f40d41a4e64bc23b7994a9",
+      "operations": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "system_ext",
+      "bytes": 771305472,
+      "sha256": "6fa4cc0f9e8ad1c44a39e3bdfc4cb06332df154170a1396b128be30d8d311ca1",
+      "operations": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "tz",
+      "bytes": 3444736,
+      "sha256": "f9737aa023b2729362f38aaee1a4950d8a8f752646e2b4782466f83f22e8a0c2",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "uefi",
+      "bytes": 2826240,
+      "sha256": "cdd5b880e430ea9bcbcaf50d2206d3315bcae87f24cee0fe739cbb2442ce8dc4",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "uefisecapp",
+      "bytes": 172032,
+      "sha256": "41a128a1329f88dfcb27ec1e2438adc19b9180a0120e3f8a3353affa65300ae6",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "vbmeta",
+      "bytes": 8192,
+      "sha256": "4add3ff7ccef2ae35abed5dd26b151d1ae5b99fc675fdd71c88b08a3fb496b0a",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "vbmeta_system",
+      "bytes": 4096,
+      "sha256": "bd374a759b4f6fdc1c2d91e9f7aba978596e7b3ee429ce14507edb5aadb5c688",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "vendor",
+      "bytes": 1743527936,
+      "sha256": "1e74a199970bb2f0efaaf0b2756b33131324b64575907558567abe53dfc8c110",
+      "operations": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "name": "vendor_boot",
+      "bytes": 100663296,
+      "sha256": "33bf9cc0a655f3a071fae7bca006d6c3fa9c00e3799113adac830efcb26a5837",
+      "operations": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "vendor_dlkm",
+      "bytes": 30380032,
+      "sha256": "1db78837df9abd7d652ec621276730b8c920e7f21858710179dd1da7a8ad7492",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "xbl",
+      "bytes": 1155072,
+      "sha256": "01cb783e92adcd537013bf9e24d2dd351dbcbe330fe6f594fd9aeb8c43bf1bd1",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "xbl_config",
+      "bytes": 212992,
+      "sha256": "91085c7093caeb9bb163c95bc1a98e139df09478cddc5c3c40b87348e2d1ef67",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "xbl_ramdump",
+      "bytes": 827392,
+      "sha256": "77e91d375833ed856e2db156517679d294405f4d73fb44cc7988517bde853db8",
+      "operations": [
+        8
+      ]
+    },
+    {
+      "name": "mi_ext",
+      "bytes": 147456,
+      "sha256": "3403a8eec40ee9615f64d28853931958c8ab3e9708a7fb7fe9b4ee52951c3f96",
+      "operations": [
+        8
+      ]
+    }
+  ]
+}

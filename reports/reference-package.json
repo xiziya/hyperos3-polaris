@@ -1181,6 +1181,660 @@
     "PrimaryGPT",
     "BackupGPT"
   ],
+  "gpt": [
+    {
+      "file": "gpt_main0.bin",
+      "crc_valid": true,
+      "partitions": [
+        {
+          "label": "switch",
+          "first_lba": 6,
+          "last_lba": 9,
+          "bytes": 16384,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "ssd",
+          "first_lba": 10,
+          "last_lba": 17,
+          "bytes": 32768,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk01",
+          "first_lba": 18,
+          "last_lba": 127,
+          "bytes": 450560,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk02",
+          "first_lba": 128,
+          "last_lba": 191,
+          "bytes": 262144,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk03",
+          "first_lba": 192,
+          "last_lba": 255,
+          "bytes": 262144,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "keystore",
+          "first_lba": 256,
+          "last_lba": 383,
+          "bytes": 524288,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "frp",
+          "first_lba": 384,
+          "last_lba": 511,
+          "bytes": 524288,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk04",
+          "first_lba": 512,
+          "last_lba": 1023,
+          "bytes": 2097152,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "misc",
+          "first_lba": 1024,
+          "last_lba": 2047,
+          "bytes": 4194304,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "logfs",
+          "first_lba": 2048,
+          "last_lba": 4095,
+          "bytes": 8388608,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "oops",
+          "first_lba": 4096,
+          "last_lba": 8191,
+          "bytes": 16777216,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "devinfo",
+          "first_lba": 8192,
+          "last_lba": 12287,
+          "bytes": 16777216,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk05",
+          "first_lba": 12288,
+          "last_lba": 16383,
+          "bytes": 16777216,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "persist",
+          "first_lba": 16384,
+          "last_lba": 32767,
+          "bytes": 67108864,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "persistbak",
+          "first_lba": 32768,
+          "last_lba": 49151,
+          "bytes": 67108864,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "logdump",
+          "first_lba": 49152,
+          "last_lba": 65535,
+          "bytes": 67108864,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "minidump",
+          "first_lba": 65536,
+          "last_lba": 98303,
+          "bytes": 134217728,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "recovery",
+          "first_lba": 98304,
+          "last_lba": 114687,
+          "bytes": 67108864,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "cache",
+          "first_lba": 114688,
+          "last_lba": 180223,
+          "bytes": 268435456,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "product",
+          "first_lba": 180224,
+          "last_lba": 1490943,
+          "bytes": 5368709120,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "userdata",
+          "first_lba": 1490944,
+          "last_lba": 1490943,
+          "bytes": null,
+          "extent_valid_without_edl_patching": false
+        }
+      ]
+    },
+    {
+      "file": "gpt_main1.bin",
+      "crc_valid": true,
+      "partitions": [
+        {
+          "label": "xbl_config_a",
+          "first_lba": 6,
+          "last_lba": 133,
+          "bytes": 524288,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "xbl_a",
+          "first_lba": 134,
+          "last_lba": 1925,
+          "bytes": 7340032,
+          "extent_valid_without_edl_patching": true
+        }
+      ]
+    },
+    {
+      "file": "gpt_main2.bin",
+      "crc_valid": true,
+      "partitions": [
+        {
+          "label": "xbl_config_b",
+          "first_lba": 6,
+          "last_lba": 133,
+          "bytes": 524288,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "xbl_b",
+          "first_lba": 134,
+          "last_lba": 1925,
+          "bytes": 7340032,
+          "extent_valid_without_edl_patching": true
+        }
+      ]
+    },
+    {
+      "file": "gpt_main3.bin",
+      "crc_valid": true,
+      "partitions": [
+        {
+          "label": "bk31",
+          "first_lba": 6,
+          "last_lba": 13,
+          "bytes": 32768,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "cdt",
+          "first_lba": 14,
+          "last_lba": 45,
+          "bytes": 131072,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk32",
+          "first_lba": 46,
+          "last_lba": 261,
+          "bytes": 884736,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "ddr",
+          "first_lba": 262,
+          "last_lba": 517,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk33",
+          "first_lba": 518,
+          "last_lba": 773,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        }
+      ]
+    },
+    {
+      "file": "gpt_main4.bin",
+      "crc_valid": true,
+      "partitions": [
+        {
+          "label": "sec",
+          "first_lba": 6,
+          "last_lba": 13,
+          "bytes": 32768,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "limits",
+          "first_lba": 14,
+          "last_lba": 21,
+          "bytes": 32768,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk41",
+          "first_lba": 22,
+          "last_lba": 63,
+          "bytes": 172032,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "qupfw_a",
+          "first_lba": 64,
+          "last_lba": 95,
+          "bytes": 131072,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "qupfw_b",
+          "first_lba": 96,
+          "last_lba": 127,
+          "bytes": 131072,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "apdp",
+          "first_lba": 128,
+          "last_lba": 191,
+          "bytes": 262144,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "msadp",
+          "first_lba": 192,
+          "last_lba": 255,
+          "bytes": 262144,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "vbmeta",
+          "first_lba": 256,
+          "last_lba": 287,
+          "bytes": 131072,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk42",
+          "first_lba": 288,
+          "last_lba": 319,
+          "bytes": 131072,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "storsec_a",
+          "first_lba": 320,
+          "last_lba": 351,
+          "bytes": 131072,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "storsec_b",
+          "first_lba": 352,
+          "last_lba": 383,
+          "bytes": 131072,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "devcfg_a",
+          "first_lba": 384,
+          "last_lba": 447,
+          "bytes": 262144,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "devcfg_b",
+          "first_lba": 448,
+          "last_lba": 511,
+          "bytes": 262144,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "aop_a",
+          "first_lba": 512,
+          "last_lba": 639,
+          "bytes": 524288,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "aop_b",
+          "first_lba": 640,
+          "last_lba": 767,
+          "bytes": 524288,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk43",
+          "first_lba": 768,
+          "last_lba": 895,
+          "bytes": 524288,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk44",
+          "first_lba": 896,
+          "last_lba": 1023,
+          "bytes": 524288,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "cmnlib_a",
+          "first_lba": 1024,
+          "last_lba": 1279,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "cmnlib_b",
+          "first_lba": 1280,
+          "last_lba": 1535,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "cmnlib64_a",
+          "first_lba": 1536,
+          "last_lba": 1791,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "cmnlib64_b",
+          "first_lba": 1792,
+          "last_lba": 2047,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "keymaster_a",
+          "first_lba": 2048,
+          "last_lba": 2303,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "keymaster_b",
+          "first_lba": 2304,
+          "last_lba": 2559,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bluetooth",
+          "first_lba": 2560,
+          "last_lba": 2815,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk45",
+          "first_lba": 2816,
+          "last_lba": 3071,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "hyp_a",
+          "first_lba": 3072,
+          "last_lba": 3327,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "hyp_b",
+          "first_lba": 3328,
+          "last_lba": 3583,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "dip",
+          "first_lba": 3584,
+          "last_lba": 3839,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk46",
+          "first_lba": 3840,
+          "last_lba": 4095,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "sti",
+          "first_lba": 4096,
+          "last_lba": 4607,
+          "bytes": 2097152,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "toolsfv",
+          "first_lba": 4608,
+          "last_lba": 5119,
+          "bytes": 2097152,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "abl_a",
+          "first_lba": 5120,
+          "last_lba": 5631,
+          "bytes": 2097152,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "abl_b",
+          "first_lba": 5632,
+          "last_lba": 6143,
+          "bytes": 2097152,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "tz_a",
+          "first_lba": 6144,
+          "last_lba": 7167,
+          "bytes": 4194304,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "tz_b",
+          "first_lba": 7168,
+          "last_lba": 8191,
+          "bytes": 4194304,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "fsg",
+          "first_lba": 8192,
+          "last_lba": 10239,
+          "bytes": 8388608,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "dtbo",
+          "first_lba": 10240,
+          "last_lba": 12287,
+          "bytes": 8388608,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk47",
+          "first_lba": 12288,
+          "last_lba": 14335,
+          "bytes": 8388608,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "spunvm",
+          "first_lba": 14336,
+          "last_lba": 16383,
+          "bytes": 8388608,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk48",
+          "first_lba": 16384,
+          "last_lba": 20479,
+          "bytes": 16777216,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk49",
+          "first_lba": 20480,
+          "last_lba": 24575,
+          "bytes": 16777216,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "splash",
+          "first_lba": 24576,
+          "last_lba": 32767,
+          "bytes": 33554432,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "logo",
+          "first_lba": 32768,
+          "last_lba": 40959,
+          "bytes": 33554432,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "dsp",
+          "first_lba": 40960,
+          "last_lba": 49151,
+          "bytes": 33554432,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "boot",
+          "first_lba": 49152,
+          "last_lba": 65535,
+          "bytes": 67108864,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "modem",
+          "first_lba": 65536,
+          "last_lba": 114687,
+          "bytes": 201326592,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "vendor",
+          "first_lba": 114688,
+          "last_lba": 376831,
+          "bytes": 1073741824,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "system",
+          "first_lba": 376832,
+          "last_lba": 796159,
+          "bytes": 1717567488,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "system_ext",
+          "first_lba": 796160,
+          "last_lba": 1163263,
+          "bytes": 1503657984,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "mi_ext",
+          "first_lba": 1163264,
+          "last_lba": 1163329,
+          "bytes": 270336,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "mi_product",
+          "first_lba": 1163330,
+          "last_lba": 1163393,
+          "bytes": 262144,
+          "extent_valid_without_edl_patching": true
+        }
+      ]
+    },
+    {
+      "file": "gpt_main5.bin",
+      "crc_valid": true,
+      "partitions": [
+        {
+          "label": "fsc",
+          "first_lba": 6,
+          "last_lba": 69,
+          "bytes": 262144,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk51",
+          "first_lba": 70,
+          "last_lba": 255,
+          "bytes": 761856,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk52",
+          "first_lba": 256,
+          "last_lba": 511,
+          "bytes": 1048576,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "ImageFv",
+          "first_lba": 512,
+          "last_lba": 1023,
+          "bytes": 2097152,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "bk53",
+          "first_lba": 1024,
+          "last_lba": 2047,
+          "bytes": 4194304,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "modemst1",
+          "first_lba": 2048,
+          "last_lba": 4095,
+          "bytes": 8388608,
+          "extent_valid_without_edl_patching": true
+        },
+        {
+          "label": "modemst2",
+          "first_lba": 4096,
+          "last_lba": 6143,
+          "bytes": 8388608,
+          "extent_valid_without_edl_patching": true
+        }
+      ]
+    }
+  ],
   "xml_sha256": {
     "partition.xml": "e4442e28e9b3921a95a785587997d3a025cf4bfbb28c9b6288ebadc603d63b2d",
     "patch0.xml": "844936ac68453d440fd62c0ba4c5f1a3a7d04be57854641717a65e45953dc067",

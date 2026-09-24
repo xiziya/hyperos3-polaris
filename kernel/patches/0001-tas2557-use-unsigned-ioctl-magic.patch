@@ -1,0 +1,13 @@
+diff --git a/techpack/audio/asoc/codecs/tas2557/tas2557-misc.h b/techpack/audio/asoc/codecs/tas2557/tas2557-misc.h
+index 99a240c16..b9c86dd29 100755
+--- a/techpack/audio/asoc/codecs/tas2557/tas2557-misc.h
++++ b/techpack/audio/asoc/codecs/tas2557/tas2557-misc.h
+@@ -41,7 +41,7 @@
+ #define	TIAUDIO_CMD_SPEAKER				11
+ #define	TIAUDIO_CMD_FW_RELOAD			12
+ 
+-#define	TAS2557_MAGIC_NUMBER	0x32353537	/* '2557' */
++#define	TAS2557_MAGIC_NUMBER	0x32353537U	/* '2557' */
+ 
+ #define	SMARTPA_SPK_DAC_VOLUME				_IOWR(TAS2557_MAGIC_NUMBER, 1, unsigned long)
+ #define	SMARTPA_SPK_POWER_ON				_IOWR(TAS2557_MAGIC_NUMBER, 2, unsigned long)

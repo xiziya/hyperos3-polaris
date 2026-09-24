@@ -17,7 +17,7 @@ jobs:
       - name: Check script syntax
         run: |
           python3 -m compileall -q tools tests
-          bash -n tools/build_kernel.sh tools/download_donor.sh
+          bash -n tools/build_kernel.sh tools/download_donor.sh tools/build_recovery_ci.sh recovery/polaris/vendorsetup.sh device/polaris/diagnostics/system/bin/logcatlog.sh
       - name: Validate configuration and no accidental firmware or private logs
         run: |
           python3 - <<'PY'

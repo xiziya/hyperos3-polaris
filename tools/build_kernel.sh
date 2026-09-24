@@ -6,10 +6,21 @@ repo_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 : "${KERNEL_OUT:?Set KERNEL_OUT to a new or dedicated build directory}"
 : "${CLANG_BIN:?Set CLANG_BIN to a compatible Android clang toolchain bin directory}"
 export PATH="$CLANG_BIN:$PATH"
+expected_toolchain=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["toolchain"]["commit"])' "$repo_root/config/sources.json")
+actual_toolchain=$(git -C "$CLANG_BIN" rev-parse HEAD)
+[[ "$actual_toolchain" == "$expected_toolchain" ]] || { echo 'Toolchain commit does not match lock'; exit 1; }
+[[ -z "$(git -C "$CLANG_BIN" status --porcelain)" ]] || { echo 'Toolchain checkout must be clean'; exit 1; }
 expected=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["kernel"]["commit"])' "$repo_root/config/sources.json")
 actual=$(git -C "$KERNEL_SOURCE" rev-parse HEAD)
 [[ "$actual" == "$expected" ]] || { echo 'Kernel commit does not match lock'; exit 1; }
 [[ -z "$(git -C "$KERNEL_SOURCE" status --porcelain)" ]] || { echo 'Kernel checkout must be clean'; exit 1; }
+patches=("$repo_root"/kernel/patches/*.patch)
+if [[ -f "${patches[0]}" ]]; then
+    git -C "$KERNEL_SOURCE" apply --check "${patches[@]}"
+    git -C "$KERNEL_SOURCE" apply "${patches[@]}"
+    # Source is a clean dedicated checkout; reverse only this exact patch set.
+    trap 'git -C "$KERNEL_SOURCE" apply --reverse "${patches[@]}"' EXIT
+fi
 for executable in clang ld.lld llvm-ar llvm-nm llvm-objcopy llvm-objdump llvm-strip make python3; do
     command -v "$executable" >/dev/null || { echo "Missing $executable"; exit 1; }
 done
@@ -41,6 +52,10 @@ fi
 {
     echo "kernel_commit=$actual"
     echo "project_commit=$(git -C "$repo_root" rev-parse HEAD)"
+    echo "project_worktree_dirty=$(git -C "$repo_root" status --porcelain | wc -l)"
+    echo "toolchain_commit=$actual_toolchain"
+    sha256sum "$repo_root/tools/build_kernel.sh" "$repo_root/kernel/polaris-pure.config" "$repo_root/config/sources.json"
+    if [[ -f "${patches[0]}" ]]; then sha256sum "${patches[@]}"; fi
     clang --version
     ld.lld --version
     sha256sum "$KERNEL_OUT/.config"

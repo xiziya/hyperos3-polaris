@@ -1,0 +1,3398 @@
+{
+  "validation": "inventory-only",
+  "checkvintf_pass": false,
+  "target_level": "6",
+  "required": [],
+  "optional": [
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.atrace",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.audio",
+      "format": "hidl",
+      "versions": [
+        "6.0",
+        "7.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.audio.effect",
+      "format": "hidl",
+      "versions": [
+        "6.0",
+        "7.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.authsecret",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.authsecret",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.automotive.audiocontrol",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.automotive.can",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.automotive.evs",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.automotive.occupant_awareness",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.automotive.sv",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.automotive.vehicle",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.biometrics.face",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.biometrics.face",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.biometrics.fingerprint",
+      "format": "hidl",
+      "versions": [
+        "2.1-3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.biometrics.fingerprint",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.bluetooth",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.bluetooth.audio",
+      "format": "hidl",
+      "versions": [
+        "2.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.boot",
+      "format": "hidl",
+      "versions": [
+        "1.2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.broadcastradio",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.broadcastradio",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.camera.provider",
+      "format": "hidl",
+      "versions": [
+        "2.4-7"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.cas",
+      "format": "hidl",
+      "versions": [
+        "1.1-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.confirmationui",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.contexthub",
+      "format": "hidl",
+      "versions": [
+        "1.2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.drm",
+      "format": "hidl",
+      "versions": [
+        "1.3-4"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.dumpstate",
+      "format": "hidl",
+      "versions": [
+        "1.1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.gatekeeper",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.gnss",
+      "format": "hidl",
+      "versions": [
+        "2.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.gnss",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.graphics.allocator",
+      "format": "hidl",
+      "versions": [
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.graphics.composer",
+      "format": "hidl",
+      "versions": [
+        "2.1-4"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.graphics.mapper",
+      "format": "hidl",
+      "versions": [
+        "2.1",
+        "3.0",
+        "4.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.health",
+      "format": "hidl",
+      "versions": [
+        "2.1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.health.storage",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.identity",
+      "format": "aidl",
+      "versions": [
+        "1-3"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.input.classifier",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.ir",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.keymaster",
+      "format": "hidl",
+      "versions": [
+        "3.0",
+        "4.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.keymaster",
+      "format": "hidl",
+      "versions": [
+        "4.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.light",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.media.c2",
+      "format": "hidl",
+      "versions": [
+        "1.0-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.media.c2",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.media.omx",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.memtrack",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.neuralnetworks",
+      "format": "hidl",
+      "versions": [
+        "1.0-3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.neuralnetworks",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.nfc",
+      "format": "hidl",
+      "versions": [
+        "1.2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.oemlock",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.oemlock",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.power",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.power.stats",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.radio",
+      "format": "hidl",
+      "versions": [
+        "1.6"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.radio",
+      "format": "hidl",
+      "versions": [
+        "1.2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.radio.config",
+      "format": "hidl",
+      "versions": [
+        "1.1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.radio.config",
+      "format": "hidl",
+      "versions": [
+        "1.3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.rebootescrow",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.renderscript",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.secure_element",
+      "format": "hidl",
+      "versions": [
+        "1.0-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.security.keymint",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.security.keymint",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.security.secureclock",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.security.sharedsecret",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.sensors",
+      "format": "hidl",
+      "versions": [
+        "1.0",
+        "2.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.soundtrigger",
+      "format": "hidl",
+      "versions": [
+        "2.3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.tetheroffload.config",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.tetheroffload.control",
+      "format": "hidl",
+      "versions": [
+        "1.1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.thermal",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.tv.cec",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.tv.input",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.tv.tuner",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.usb",
+      "format": "hidl",
+      "versions": [
+        "1.0-3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.usb.gadget",
+      "format": "hidl",
+      "versions": [
+        "1.0-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.vibrator",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.vibrator",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.weaver",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.weaver",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.wifi",
+      "format": "hidl",
+      "versions": [
+        "1.3-5"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.wifi.hostapd",
+      "format": "hidl",
+      "versions": [
+        "1.0-3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "android.hardware.wifi.supplicant",
+      "format": "hidl",
+      "versions": [
+        "1.2-4"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "vendor.dolby.hardware.dms",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "name": "vendor.dolby_3_12.hardware.dms",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.automotive.evs",
+      "format": "hidl",
+      "versions": [
+        "1.1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.gnss",
+      "format": "hidl",
+      "versions": [
+        "1.0-1",
+        "2.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.graphics.allocator",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.media.c2",
+      "format": "hidl",
+      "versions": [
+        "1.0",
+        "1.1",
+        "1.2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.media.c2",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.media.c2",
+      "format": "hidl",
+      "versions": [
+        "1.2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.media.c2",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.media.c2",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.nfc",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.nfc",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.radio",
+      "format": "hidl",
+      "versions": [
+        "1.0-4"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.radio.config",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.tetheroffload",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.hardware.wifi.supplicant",
+      "format": "hidl",
+      "versions": [
+        "1.0-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "android.se.omapi",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.android.ozoaudio.notify",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.dsi.ant",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.fingerprints.extension",
+      "format": "hidl",
+      "versions": [
+        "3.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.fingerprints.extension",
+      "format": "hidl",
+      "versions": [
+        "3.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.fingerprints.extension3",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.fingerprints.fpc.extension",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.qualcomm.qti.dpm.api",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.qualcomm.qti.imscmservice",
+      "format": "hidl",
+      "versions": [
+        "2.0-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.qualcomm.qti.uceservice",
+      "format": "hidl",
+      "versions": [
+        "2.0-1",
+        "2.2",
+        "2.3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.quicinc.cne.api",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "com.quicinc.cne.server",
+      "format": "hidl",
+      "versions": [
+        "2.0-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.aks.gamepad",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.display.color",
+      "format": "hidl",
+      "versions": [
+        "1.0-7"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.display.config",
+      "format": "hidl",
+      "versions": [
+        "1.0-15",
+        "2.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.display.postproc",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.dolby.dms",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.dolby.hardware.dms",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.nxp.hardware.nfc",
+      "format": "hidl",
+      "versions": [
+        "1.0-1",
+        "2.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.nxp.nxpnfc_aidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.nxp.nxpnfclegacy",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.ImsRtpService",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.MemHal",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.automotive.qcarcam",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.data.dmapconsent",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.data.factory",
+      "format": "hidl",
+      "versions": [
+        "1.0",
+        "2.0-8"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.data.factoryservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.data.ntn",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.data.txpwrservice",
+      "format": "aidl",
+      "versions": [
+        "1-7"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.diaghal",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.diaghal",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.esepowermanager",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.gnss",
+      "format": "hidl",
+      "versions": [
+        "1.0-2",
+        "2.0-1",
+        "3.0",
+        "4.0-3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.gnss",
+      "format": "aidl",
+      "versions": [
+        "1-7"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.AGMIPC",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.ListenSoundModel",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.ListenSoundModelAidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.agm",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.alarm",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.alarm",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.bluetooth.xpanprovider",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.bluetooth_audio",
+      "format": "hidl",
+      "versions": [
+        "2.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.bluetooth_fmd",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.bluetooth_sar",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.bluetooth_sar",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.btconfigstore",
+      "format": "hidl",
+      "versions": [
+        "1.0",
+        "2.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.bttpi",
+      "format": "aidl",
+      "versions": [
+        "1-3"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.c2pa",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.cacert",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.cacertaidlservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.camera.aon",
+      "format": "hidl",
+      "versions": [
+        "1.0-4"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.camera.aon",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.camera.offlinecamera",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.camera.postproc",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.camera.postproc",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.capabilityconfigstore",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.capabilityconfigstore",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.cryptfshw",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.cvp",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.data.connection",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.data.connectionaidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.data.connectionfactory",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.data.iwlan",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.data.iwlandata",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.data.latency",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.debugutils",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.debugutils",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.aiqe",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.allocator",
+      "format": "hidl",
+      "versions": [
+        "1.0",
+        "3.0",
+        "4.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.color",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.composer",
+      "format": "hidl",
+      "versions": [
+        "2.0-1",
+        "3.0",
+        "3.1",
+        "3.2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.composer3",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.config",
+      "format": "aidl",
+      "versions": [
+        "1-12"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.demura",
+      "format": "hidl",
+      "versions": [
+        "1.0",
+        "2.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.demura",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.mapper",
+      "format": "hidl",
+      "versions": [
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.display.postproc",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.dpmaidlservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.dpmservice",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.dsp",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.dsp",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.eid",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.embmssl",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.embmssl",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.factory",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.factory",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.fingerprint",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.fingerprint",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.fm",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.fm",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.fstman",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.hexlp",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.improvetouch.touchcompanion",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.iop",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.limits",
+      "format": "hidl",
+      "versions": [
+        "1.0-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.minkipcbinder",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.mwqemadapter",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.mwqemadapteraidlservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.pal",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.pal",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.paleventnotifier",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.perf",
+      "format": "hidl",
+      "versions": [
+        "2.0-3"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.perf2",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.power.powermodule",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.power.powermodule",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qasr",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qccvndhal",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qconfig",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qconfig",
+      "format": "aidl",
+      "versions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qdutils_disp",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qseecom",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qseecom",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qspa",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qteeconnector",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qteeconnector",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.qxr",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.am",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.am",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.atcmdfwd",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.atfwd",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.ims",
+      "format": "hidl",
+      "versions": [
+        "1.0-9"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.ims",
+      "format": "aidl",
+      "versions": [
+        "1-16"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.internal.deviceinfo",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.internal.deviceinfo",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.lpa",
+      "format": "hidl",
+      "versions": [
+        "1.0-3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.lpa",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.qcrilhook",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.qcrilhook",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.qtiradio",
+      "format": "hidl",
+      "versions": [
+        "1.0",
+        "2.0-7"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.qtiradio",
+      "format": "aidl",
+      "versions": [
+        "1-16"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.qtiradioconfig",
+      "format": "aidl",
+      "versions": [
+        "1-6"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.uim",
+      "format": "hidl",
+      "versions": [
+        "1.1-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.uim",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.uim_remote_client",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.uim_remote_client",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.uim_remote_server",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.radio.uim_remote_server",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.scve.objecttracker",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.scve.panorama",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.seccam",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.secureprocessor.device",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.secureprocessor.device",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.sensorscalibrate",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.sensorscalibrate",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.servicetracker",
+      "format": "hidl",
+      "versions": [
+        "1.0-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.servicetrackeraidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.slmadapter",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.soter",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.soter",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.sxrhal",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.systemhelper",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.systemhelperaidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.trustedui",
+      "format": "hidl",
+      "versions": [
+        "1.0-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.trustedui",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.tui_comm",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.vpp",
+      "format": "hidl",
+      "versions": [
+        "1.1-3",
+        "2.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.vpp",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifi.hostapd",
+      "format": "hidl",
+      "versions": [
+        "1.0-3"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifi.supplicant",
+      "format": "hidl",
+      "versions": [
+        "2.0-3"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifi.supplicant",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifi.wificfr",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifi.wificfr",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifi.wifilearner",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifi.wifilearner",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifi.wifimyftm",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifi.wifimyftm",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifidisplaysession",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wifidisplaysession_aidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wigig.netperftuner",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wigig.supptunnel",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.hardware.wipower",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.ims.callinfo",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.ims.datachannelservice",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.ims.factory",
+      "format": "hidl",
+      "versions": [
+        "1.0-1",
+        "2.0-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.ims.factoryaidlservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.ims.imscmaidlservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.ims.uceaidlservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.imsrtpservice",
+      "format": "hidl",
+      "versions": [
+        "3.0",
+        "3.1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.memory.pasrmanager",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.memory.pasrmanager",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.mstatservice",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.power.pasrmanager",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qccsyshal_aidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qccvndhal_aidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qegahal",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qepi",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qesdhal",
+      "format": "hidl",
+      "versions": [
+        "1.0-4"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qesdhalaidl",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qspmhal",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qspmhal",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qvirt",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.qvirtvendor",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.sec.cloudagent",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.sec.datamanager",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.sec.featuremanager",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.sec.provisioningmanager",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.sla.service",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.sla.service",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.snapdragonServices",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.snapdragonServices.qape",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.snapdragonServices.sanityService",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.snapdragonServices.sanityService",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.qti.syshealthmon",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.rongcard.hardware.eid",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.aidl.minet",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.aidl.miwill",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.cit.bluetooth",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.cit.bluetooth",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.cit.wifi",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.cit.wifi",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.cit.wifi",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.aek",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.aidl.intentaware",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.aidlbgservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.aon",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.batteryantiaging",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.bdShortMsg",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.bgservice",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.bgservice",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.blackbox",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.camera.mivimessage",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.camera.observer",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.camera.synthetic",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.campostproc",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.cld",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.cld_aidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.cstransfer",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.display.mihwcextension",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.displayfeature",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.displayfeature_aidl",
+      "format": "aidl",
+      "versions": [
+        "2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.dtool",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.dtool1",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.fbo",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.fbo",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.fingerprintextension",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.fingerprintextension",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.framecapturemanager",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.framemaster",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.fx.tunnel",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.fx.tunnel",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.keyboardnanoapp",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.keyboardnanoapp_aidl",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mediaeventgatherservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mfidoca",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.micharge",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.micharge",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.micharge",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.micharge",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.midevauth",
+      "format": "hidl",
+      "versions": [
+        "1.0",
+        "2.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mimd",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mimd",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mimd2",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.miperf",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.miperf2",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.misight",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.misys",
+      "format": "hidl",
+      "versions": [
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.misys.common",
+      "format": "aidl",
+      "versions": [
+        "1-3"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.misys.core",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mitrustedui",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mitrustedui",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mlipay",
+      "format": "hidl",
+      "versions": [
+        "1.0-1"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mtdservice",
+      "format": "hidl",
+      "versions": [
+        "1.0-3"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.mtkblackbox",
+      "format": "aidl",
+      "versions": [
+        "1-3"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.otrpagent",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.otrpagent",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.postprocservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.quickcamera",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.quickcamera",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.satellite",
+      "format": "aidl",
+      "versions": [
+        "1-2"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.seaaudio",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.smc",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.swap",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.swap",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.tidaservice",
+      "format": "hidl",
+      "versions": [
+        "1.0-2"
+      ],
+      "provider_name_present": true
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.videoservice",
+      "format": "aidl",
+      "versions": [
+        "1-9"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hardware.vsimapp",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hidl.minet",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hidl.miwill",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.hw.touchfeature",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.modem.qms",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.modem.qms",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.sensor.camera",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.sensor.citsensorservice",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.sensor.citsensorservice",
+      "format": "hidl",
+      "versions": [
+        "1.1"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.sensor.citsensorservice",
+      "format": "hidl",
+      "versions": [
+        "2.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.device.xml",
+      "name": "vendor.xiaomi.sensor.communicate",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.knock.xml",
+      "name": "xiaomi.knock.algorithm",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.xml",
+      "name": "vendor.xiaomi.hardware.micrtk",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.xml",
+      "name": "vendor.xiaomi.hardware.miface",
+      "format": "hidl",
+      "versions": [
+        "1.0"
+      ],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.xml",
+      "name": "vendor.xiaomi.hardware.mikeybag",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.xml",
+      "name": "vendor.xiaomi.hardware.misauth",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.xml",
+      "name": "vendor.xiaomi.hardware.misecmedia",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.xml",
+      "name": "vendor.xiaomi.hardware.mrm",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.xml",
+      "name": "vendor.xiaomi.hardware.mrm",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.xml",
+      "name": "vendor.xiaomi.hardware.mrm",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    },
+    {
+      "matrix": "compatibility_matrix.xml",
+      "name": "vendor.xiaomi.hardware.seccam",
+      "format": "aidl",
+      "versions": [],
+      "provider_name_present": false
+    }
+  ],
+  "kernel_entries": [
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "4.19.191",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "4.19.191",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "4.19.191",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "4.19.191",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "4.19.191",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "4.19.191",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "4.19.191",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "4.19.191",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.4.86",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.4.86",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.4.86",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.4.86",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.4.86",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.4.86",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.4.86",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.4.86",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.4.86",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.10.43",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.10.43",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.10.43",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.10.43",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.10.43",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.10.43",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.10.43",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.10.43",
+      "level": "6"
+    },
+    {
+      "matrix": "compatibility_matrix.6.xml",
+      "version": "5.10.43",
+      "level": "6"
+    }
+  ],
+  "note": "Name presence does not verify version, transport, instance, framework-to-vendor matrix, SEPolicy or runtime registration."
+}

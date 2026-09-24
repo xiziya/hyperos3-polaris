@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "kernel_commit": "1f326a9202472e8228c2a08ebfd4fdb83da52675",
+  "kernel_version": "4.19.325",
+  "toolchain_commit": "54220fd601050b350b2af7adc913089ebf0e7aed",
+  "project_base_commit": "3240ba5cd52cc2715bd227987bd84ef683f8231e",
+  "project_had_uncommitted_changes": true,
+  "patch_sha256": "2444cd63702abbb54989254dbcf2a4cf2e529c5c1b01a7f8d2262a3dffaa7c68",
+  "image_name": "Image.gz-dtb",
+  "image_sha256": "abc27340b7a895171aee82ede6f3d657c086fcf562be1cd33911f2fc0593fccc",
+  "config_sha256": "6ea8da5e2a113bfefc57ff515a49c83d7882298f600a11eca0ec4c966db69e88",
+  "embedded_ikconfig_matches_build_config": true,
+  "pure_config_check_passed": true,
+  "source_restored_clean_after_build": true,
+  "build_passed": true,
+  "boot_tested": false,
+  "note": "Standalone kernel only. No boot image or ROM release. Later tooling adds stricter toolchain/provenance checks; this report records the completed local build."
+}

@@ -1,0 +1,56 @@
+name: Build OrangeFox development recovery
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: recovery-dev
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    env:
+      GIT_AUTHOR_NAME: polaris-build
+      GIT_AUTHOR_EMAIL: polaris-build@users.noreply.github.com
+      GIT_COMMITTER_NAME: polaris-build
+      GIT_COMMITTER_EMAIL: polaris-build@users.noreply.github.com
+      GIT_CONFIG_COUNT: 2
+      GIT_CONFIG_KEY_0: user.name
+      GIT_CONFIG_VALUE_0: polaris-build
+      GIT_CONFIG_KEY_1: user.email
+      GIT_CONFIG_VALUE_1: polaris-build@users.noreply.github.com
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Prepare disposable hosted runner
+        shell: bash
+        run: |
+          test "$GITHUB_ACTIONS" = true
+          test "$RUNNER_ENVIRONMENT" = github-hosted
+          # These are preinstalled SDKs on this ephemeral runner, never local user paths.
+          sudo rm -rf /usr/local/lib/android /opt/ghc /usr/share/dotnet /opt/hostedtoolcache
+          sudo apt-get update -qq
+          sudo apt-get install -y bc bison build-essential flex git libssl-dev libelf-dev lz4 cpio rsync zip unzip curl python3 protobuf-compiler libncurses-dev libxml2-utils xsltproc gperf lib32z1 lib32stdc++6 zlib1g-dev lzop pngcrush schedtool imagemagick openjdk-11-jdk
+          mkdir -p "$RUNNER_TEMP/bin"
+          curl --fail --location https://storage.googleapis.com/git-repo-downloads/repo -o "$RUNNER_TEMP/bin/repo"
+          chmod +x "$RUNNER_TEMP/bin/repo"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+          test "$(df --output=avail -BG "$RUNNER_TEMP" | tail -1 | tr -dc 0-9)" -ge 60
+          df -h
+      - name: Build locked pure kernel and adapted recovery
+        shell: bash
+        run: |
+          mkdir -p build/recovery-evidence
+          export RECOVERY_WORK="$RUNNER_TEMP/polaris-recovery"
+          bash tools/build_recovery_ci.sh 2>&1 | tee build/recovery-evidence/build-output.txt
+      - name: Save development evidence and image if produced
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: orangefox-polaris-UNTESTED-${{ github.sha }}
+          path: build/recovery-evidence/
+          retention-days: 14
+          if-no-files-found: warn

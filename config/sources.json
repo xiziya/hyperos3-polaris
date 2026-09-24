@@ -1,11 +1,29 @@
 {
+  "target": {
+    "device": "polaris",
+    "ram_gb": 6,
+    "storage_gb": 128,
+    "os": "HyperOS 3",
+    "android": 15,
+    "region": "China"
+  },
   "kernel": {
     "url": "https://github.com/xiziya/114514_kernel_xiaomi_sdm845.git",
     "branch": "lineage-23.2_xiaomi",
     "commit": "1f326a9202472e8228c2a08ebfd4fdb83da52675",
     "version": "4.19.325",
-    "configs": ["vendor/sdm845-perf_defconfig", "vendor/xiaomi/sdm845-common.config", "vendor/xiaomi/polaris.config"],
-    "build_verified": false
+    "configs": [
+      "vendor/sdm845-perf_defconfig",
+      "vendor/xiaomi/sdm845-common.config",
+      "vendor/xiaomi/polaris.config"
+    ],
+    "build_verified": true
+  },
+  "toolchain": {
+    "url": "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git",
+    "commit": "54220fd601050b350b2af7adc913089ebf0e7aed",
+    "version": "Android clang 12.0.5 r416183b (7284624)",
+    "basis": "kernel build.config.common names clang-r416183b"
   },
   "device_reference": {
     "url": "https://github.com/LineageOS/android_device_xiaomi_polaris.git",
@@ -24,11 +42,37 @@
     "soc": "Snapdragon 7 Gen 1",
     "selection": "candidate-awaiting-binary-and-VINTF-audit",
     "catalog": "https://mirom.ezbox.idv.tw/en/phone/ziyi/roms-cn-stable/",
-    "urls": ["https://bigota.d.miui.com/OS3.0.6.0.VLLCNXM/ziyi-ota_full-OS3.0.6.0.VLLCNXM-user-15.0-f6ef5f9254.zip", "https://hugeota.d.miui.com/OS3.0.6.0.VLLCNXM/ziyi-ota_full-OS3.0.6.0.VLLCNXM-user-15.0-f6ef5f9254.zip"],
+    "urls": [
+      "https://bigota.d.miui.com/OS3.0.6.0.VLLCNXM/ziyi-ota_full-OS3.0.6.0.VLLCNXM-user-15.0-f6ef5f9254.zip",
+      "https://hugeota.d.miui.com/OS3.0.6.0.VLLCNXM/ziyi-ota_full-OS3.0.6.0.VLLCNXM-user-15.0-f6ef5f9254.zip",
+      "https://cdnorg.d.miui.com/OS3.0.6.0.VLLCNXM/ziyi-ota_full-OS3.0.6.0.VLLCNXM-user-15.0-f6ef5f9254.zip"
+    ],
     "bytes": 6275771344,
-    "sha256": null,
+    "sha256": "4821f8f281817aafb930cadf38e1d5b34fa0cf82bc2c1dda79567a548b8f707d",
     "download_referer": "https://www.mi.com/",
-    "allowed_roles": ["framework-candidate", "system-apps-candidate"],
-    "forbidden_roles": ["modem", "bootloader", "vendor", "kernel", "dtb", "thermal", "powerhal"]
+    "allowed_roles": [
+      "framework-candidate",
+      "system-apps-candidate"
+    ],
+    "forbidden_roles": [
+      "modem",
+      "bootloader",
+      "vendor",
+      "kernel",
+      "dtb",
+      "thermal",
+      "powerhal"
+    ],
+    "md5": "f6ef5f9254950ce364273bad8a5b9cab"
+  },
+  "recovery_candidate": {
+    "source": "user-supplied Android 17 package: images/recovery.img",
+    "name": "OrangeFox unofficial polaris",
+    "bytes": 67108864,
+    "sha256": "e5eeedfc49f23c02e5315655634d0219b1ccd46cb7eca289c43f0f1946f7e283",
+    "target_android": 15,
+    "status": "requires-layout-filesystem-and-decryption-adaptation",
+    "report": "reports/recovery-inspection.json",
+    "tested_on_device": false
   }
 }

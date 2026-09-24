@@ -1,0 +1,722 @@
+{
+  "schema": 1,
+  "file": "recovery.img",
+  "sha256": "e5eeedfc49f23c02e5315655634d0219b1ccd46cb7eca289c43f0f1946f7e283",
+  "bytes": 67108864,
+  "boot_header": 1,
+  "page_size": 4096,
+  "ramdisk_compression": "gzip",
+  "target_android": 15,
+  "fstabs": {
+    "system/etc/recovery-dynamic.fstab": {
+      "sha256": "8e89e2cd74516c3ac0b50a52d6ad88bf05db79d376610f978fbca22c9116ef2b",
+      "rows": [
+        {
+          "device": "system",
+          "mount": "/system",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,logical,first_stage_mount"
+        },
+        {
+          "device": "system_ext",
+          "mount": "/system_ext",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,logical,first_stage_mount"
+        },
+        {
+          "device": "product",
+          "mount": "/product",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,logical,first_stage_mount"
+        },
+        {
+          "device": "vendor",
+          "mount": "/vendor",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,logical,first_stage_mount"
+        },
+        {
+          "device": "odm",
+          "mount": "/odm",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,logical,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/userdata",
+          "mount": "/data",
+          "fs": "f2fs",
+          "options": "noatime,nosuid,nodev,discard,background_gc=off,fsync_mode=nobarrier latemount,wait,check,fileencryption=ice,quota,formattable,reservedsize=128M"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/userdata",
+          "mount": "/data",
+          "fs": "ext4",
+          "options": "noatime,nosuid,nodev,barrier=0,noauto_da_alloc latemount,wait,check,fileencryption=ice,quota"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modem",
+          "mount": "/vendor/firmware_mnt",
+          "fs": "vfat",
+          "options": "ro,shortname=lower,uid=0,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/dsp",
+          "mount": "/vendor/dsp",
+          "fs": "ext4",
+          "options": "ro,nosuid,nodev,barrier=1 wait"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/bluetooth",
+          "mount": "/vendor/bt_firmware",
+          "fs": "vfat",
+          "options": "ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/cache",
+          "mount": "/cache",
+          "fs": "f2fs",
+          "options": "noatime,nosuid,nodev,fsync_mode=nobarrier wait"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/cache",
+          "mount": "/cache",
+          "fs": "ext4",
+          "options": "noatime,nosuid,nodev,barrier=1 wait"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/misc",
+          "mount": "/misc",
+          "fs": "emmc",
+          "options": "defaults defaults"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/boot",
+          "mount": "/boot",
+          "fs": "emmc",
+          "options": "defaults recoveryonly"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/recovery",
+          "mount": "/recovery",
+          "fs": "emmc",
+          "options": "defaults recoveryonly"
+        }
+      ]
+    },
+    "system/etc/recovery-non-dynamic.fstab": {
+      "sha256": "3dbdc6cf99a80f66c2605b6ee8efe504df8a1ad65c9fb8f1020775fd0db76620",
+      "rows": [
+        {
+          "device": "/dev/block/bootdevice/by-name/cache",
+          "mount": "/cache",
+          "fs": "ext4",
+          "options": "noatime,nosuid,nodev,barrier=1 wait"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/misc",
+          "mount": "/misc",
+          "fs": "emmc",
+          "options": "defaults defaults"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/system",
+          "mount": "/system",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/system",
+          "mount": "/system",
+          "fs": "erofs",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/cust",
+          "mount": "/system_ext",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/cust",
+          "mount": "/system_ext",
+          "fs": "erofs",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vendor",
+          "mount": "/vendor",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vendor",
+          "mount": "/vendor",
+          "fs": "erofs",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/userdata",
+          "mount": "/data",
+          "fs": "ext4",
+          "options": "noatime,nosuid,nodev,barrier=0,noauto_da_alloc latemount,wait,check,fileencryption=ice,quota"
+        }
+      ]
+    },
+    "system/etc/recovery.fstab": {
+      "sha256": "d89d431e66ab0e066a6cfee56861c38cd0dc3a387f0deb0ee5f14de12e31ba36",
+      "rows": [
+        {
+          "device": "/dev/block/bootdevice/by-name/misc",
+          "mount": "/misc",
+          "fs": "emmc",
+          "options": "defaults defaults"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/system",
+          "mount": "/system",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/system",
+          "mount": "/system",
+          "fs": "erofs",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/mi_ext",
+          "mount": "/mi_ext",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/mi_ext",
+          "mount": "/mi_ext",
+          "fs": "erofs",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vendor",
+          "mount": "/vendor",
+          "fs": "ext4",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vendor",
+          "mount": "/vendor",
+          "fs": "erofs",
+          "options": "ro,barrier=1,discard wait,first_stage_mount"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/userdata",
+          "mount": "/data",
+          "fs": "ext4",
+          "options": "noatime,nosuid,nodev,barrier=0,noauto_da_alloc latemount,wait,check,fileencryption=ice,quota"
+        }
+      ]
+    },
+    "system/etc/twrp-dynamic.flags": {
+      "sha256": "83f74b5d9e10b4a3e7e98aa0d291fef782dd7d6fe8f820863319fb14c167dd4c",
+      "rows": [
+        {
+          "device": "/dev/block/bootdevice/by-name/cache",
+          "mount": "/cache",
+          "fs": "ext4",
+          "options": ""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/boot",
+          "mount": "/boot",
+          "fs": "emmc",
+          "options": ""
+        },
+        {
+          "device": "/data/media/0",
+          "mount": "/storage",
+          "fs": "ext4",
+          "options": "flags=display=\"Internal Storage\";usermrf;backup=1;fsflags=\"bind,utf8\";removable"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/recovery",
+          "mount": "/recovery",
+          "fs": "emmc",
+          "options": "flags=backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/persist",
+          "mount": "/persist_image",
+          "fs": "emmc",
+          "options": "flags=display=\"Persist(Image)\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/persist",
+          "mount": "/persist",
+          "fs": "ext4",
+          "options": "flags=display=\"Persist\";backup=0"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modem",
+          "mount": "/firmware",
+          "fs": "vfat",
+          "options": "flags=display=\"Firmware\";mounttodecrypt"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/misc",
+          "mount": "/misc",
+          "fs": "emmc",
+          "options": ""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modem",
+          "mount": "/modem",
+          "fs": "emmc",
+          "options": "flags=backup=1;display=\"Modem\""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/bluetooth",
+          "mount": "/bluetooth",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/modem"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/dsp",
+          "mount": "/dsp",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/modem"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modemst1",
+          "mount": "/efs1",
+          "fs": "emmc",
+          "options": "flags=backup=1;display=EFS"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modemst2",
+          "mount": "/efs2",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/efs1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/fsc",
+          "mount": "/efsc",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/efs1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/fsg",
+          "mount": "/efsg",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/efs1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/keystore",
+          "mount": "/keystore",
+          "fs": "emmc",
+          "options": ""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/splash",
+          "mount": "/splash",
+          "fs": "emmc",
+          "options": "flags=display=\"splash\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/logo",
+          "mount": "/logo",
+          "fs": "emmc",
+          "options": "flags=display=\"logo\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/misc",
+          "mount": "/misc",
+          "fs": "emmc",
+          "options": ""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vbmeta",
+          "mount": "/vbmeta_image",
+          "fs": "emmc",
+          "options": "flags=display=\"Vbmeta\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/sdg1",
+          "mount": "/usb_otg",
+          "fs": "auto",
+          "options": "/dev/block/sdg flags=fsflags=utf8;display=\"USB-Storage\";storage;wipeingui;removable"
+        }
+      ]
+    },
+    "system/etc/twrp-non-dynamic.flags": {
+      "sha256": "c3acd1adadc3bb040ec862bc0fb4f6a23a9285806cc3356232a9c8250a6669d3",
+      "rows": [
+        {
+          "device": "/dev/block/bootdevice/by-name/boot",
+          "mount": "/boot",
+          "fs": "emmc",
+          "options": ""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/system",
+          "mount": "/system_image",
+          "fs": "emmc",
+          "options": "flags=display=\"System_image\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vendor",
+          "mount": "/vendor_image",
+          "fs": "emmc",
+          "options": "flags=display=\"Vendor_image\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/system",
+          "mount": "/system_root",
+          "fs": "ext4",
+          "options": "flags=display=\"System\";backup=0;wipeingui"
+        },
+        {
+          "device": "/data/media/0",
+          "mount": "/storage",
+          "fs": "ext4",
+          "options": "flags=display=\"Internal Storage\";usermrf;backup=1;fsflags=\"bind,utf8\";removable"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/recovery",
+          "mount": "/recovery",
+          "fs": "emmc",
+          "options": "flags=backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vendor",
+          "mount": "/vendor",
+          "fs": "ext4",
+          "options": "flags=display=\"Vendor\";backup=0;wipeingui"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/userdata",
+          "mount": "/data",
+          "fs": "ext4",
+          "options": "flags=encryptable=footer;length=-16384;fileencryption=ice:aes-256-cts:aes-256-heh"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modem",
+          "mount": "/firmware",
+          "fs": "vfat",
+          "options": "flags=display=\"Firmware\";mounttodecrypt"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/cust",
+          "mount": "/system_ext",
+          "fs": "ext4",
+          "options": "flags=backup=0;display=\"System_Ext\";wipeingui"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/cust",
+          "mount": "/system_ext_image",
+          "fs": "emmc",
+          "options": "flags=display=\"System_Ext_Image\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/persist",
+          "mount": "/persist_image",
+          "fs": "emmc",
+          "options": "flags=display=\"Persist_Image\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/persist",
+          "mount": "/persist",
+          "fs": "ext4",
+          "options": "flags=display=\"Persist\";backup=0"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modem",
+          "mount": "/modem",
+          "fs": "emmc",
+          "options": "flags=backup=1;display=\"Modem\""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/misc",
+          "mount": "/misc",
+          "fs": "emmc",
+          "options": ""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/bluetooth",
+          "mount": "/bluetooth",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/modem"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/dsp",
+          "mount": "/dsp",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/modem"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modemst1",
+          "mount": "/efs1",
+          "fs": "emmc",
+          "options": "flags=backup=1;display=EFS"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modemst2",
+          "mount": "/efs2",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/efs1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/fsc",
+          "mount": "/efsc",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/efs1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/fsg",
+          "mount": "/efsg",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/efs1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vbmeta",
+          "mount": "/vbmeta_image",
+          "fs": "emmc",
+          "options": "flags=display=\"Vbmeta\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/sdg1",
+          "mount": "/usb_otg",
+          "fs": "auto",
+          "options": "/dev/block/sdg flags=fsflags=utf8;display=\"USB-Storage\";storage;wipeingui;removable"
+        }
+      ]
+    },
+    "system/etc/twrp.flags": {
+      "sha256": "62897c72ad36ce29f28e6983a0185a56e000d613ce9bd92a40bd40e9908eab41",
+      "rows": [
+        {
+          "device": "/dev/block/bootdevice/by-name/boot",
+          "mount": "/boot",
+          "fs": "emmc",
+          "options": ""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/system",
+          "mount": "/system_image",
+          "fs": "emmc",
+          "options": "flags=display=\"System_image\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vendor",
+          "mount": "/vendor_image",
+          "fs": "emmc",
+          "options": "flags=display=\"Vendor_image\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/system",
+          "mount": "/system_root",
+          "fs": "ext4",
+          "options": "flags=display=\"System\";backup=0;wipeingui"
+        },
+        {
+          "device": "/data/media/0",
+          "mount": "/storage",
+          "fs": "ext4",
+          "options": "flags=display=\"Internal Storage\";usermrf;backup=1;fsflags=\"bind\";removable"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/recovery",
+          "mount": "/recovery",
+          "fs": "emmc",
+          "options": "flags=backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vendor",
+          "mount": "/vendor",
+          "fs": "ext4",
+          "options": "flags=display=\"Vendor\";backup=0;wipeingui"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/userdata",
+          "mount": "/data",
+          "fs": "ext4",
+          "options": "flags=encryptable=footer;length=-16384;fileencryption=ice:aes-256-cts:aes-256-heh"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modem",
+          "mount": "/firmware",
+          "fs": "vfat",
+          "options": "flags=display=\"Firmware\";mounttodecrypt"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/mi_ext",
+          "mount": "/mi_ext",
+          "fs": "ext4",
+          "options": "flags=display=\"Mi_ext\";backup=1;wipeingui"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/persist",
+          "mount": "/persist_image",
+          "fs": "emmc",
+          "options": "flags=display=\"Persist_Image\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/persist",
+          "mount": "/persist",
+          "fs": "ext4",
+          "options": "flags=display=\"Persist\";backup=0"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modem",
+          "mount": "/modem",
+          "fs": "emmc",
+          "options": "flags=backup=1;display=\"Modem\""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/misc",
+          "mount": "/misc",
+          "fs": "emmc",
+          "options": ""
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/bluetooth",
+          "mount": "/bluetooth",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/modem"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/dsp",
+          "mount": "/dsp",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/modem"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modemst1",
+          "mount": "/efs1",
+          "fs": "emmc",
+          "options": "flags=backup=1;display=EFS"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/modemst2",
+          "mount": "/efs2",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/efs1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/fsc",
+          "mount": "/efsc",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/efs1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/fsg",
+          "mount": "/efsg",
+          "fs": "emmc",
+          "options": "flags=backup=1;subpartitionof=/efs1"
+        },
+        {
+          "device": "/dev/block/bootdevice/by-name/vbmeta",
+          "mount": "/vbmeta_image",
+          "fs": "emmc",
+          "options": "flags=display=\"Vbmeta\";backup=1;flashimg=1"
+        },
+        {
+          "device": "/dev/block/sdg1",
+          "mount": "/usb_otg",
+          "fs": "auto",
+          "options": "/dev/block/sdg flags=display=\"USB-Storage\";storage;wipeingui;removable"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "system/etc/fox.cfg": {
+      "ro.build.date.utc_fox": "1780761754",
+      "ro.bootimage.build.date.utc_fox": "1780761754",
+      "ro.build.fox_id": "be9f336f-4c98-47b8-a12a-ba59ab93197c"
+    },
+    "system/etc/ramdisk/build.prop": {
+      "ro.product.bootimage.brand": "Xiaomi",
+      "ro.product.bootimage.device": "polaris",
+      "ro.product.bootimage.manufacturer": "Xiaomi",
+      "ro.product.bootimage.model": "Mi Mix 2S",
+      "ro.product.bootimage.name": "twrp_polaris",
+      "ro.bootimage.build.date": "Sat Jun  6 23:56:30 CST 2026",
+      "ro.bootimage.build.date.utc": "1780761390",
+      "ro.bootimage.build.fingerprint": "Xiaomi/twrp_polaris/polaris:99.87.36/SP2A.220405.004/luo06062356:eng/test-keys",
+      "ro.bootimage.build.id": "SP2A.220405.004",
+      "ro.bootimage.build.tags": "test-keys",
+      "ro.bootimage.build.type": "eng",
+      "ro.bootimage.build.version.incremental": "eng.luo.20260606.235729",
+      "ro.bootimage.build.version.release": "99.87.36",
+      "ro.bootimage.build.version.release_or_codename": "99.87.36",
+      "ro.bootimage.build.version.sdk": "32"
+    }
+  },
+  "script_references": [
+    {
+      "file": "sbin/foxstart.sh",
+      "line": 431,
+      "text": "local p1=/dev/block/by-name/product"
+    },
+    {
+      "file": "sbin/foxstart.sh",
+      "line": 432,
+      "text": "local p2=/dev/block/bootdevice/by-name/product"
+    },
+    {
+      "file": "system/bin/factory.sh",
+      "line": 42,
+      "text": "mke2fs -t ext4 -b 4096 /dev/block/bootdevice/by-name/cust;"
+    },
+    {
+      "file": "system/bin/factory.sh",
+      "line": 43,
+      "text": "[ \"$?\" = \"0\" ] && e2fsdroid -e -S /file_contexts -a /metadata /dev/block/bootdevice/by-name/cust;"
+    },
+    {
+      "file": "system/bin/fix_dynamic_static.sh",
+      "line": 94,
+      "text": "local src_fstab=\"/system/etc/recovery-non-dynamic.fstab\";"
+    },
+    {
+      "file": "system/bin/fix_dynamic_static.sh",
+      "line": 95,
+      "text": "local src_flags=\"/system/etc/twrp-non-dynamic.flags\";"
+    },
+    {
+      "file": "system/bin/fix_dynamic_static.sh",
+      "line": 109,
+      "text": "src_fstab=\"/system/etc/recovery-dynamic.fstab\";"
+    },
+    {
+      "file": "system/bin/fix_dynamic_static.sh",
+      "line": 110,
+      "text": "src_flags=\"/system/etc/twrp-dynamic.flags\";"
+    }
+  ],
+  "filesystem_helpers": [],
+  "boot_tested": false,
+  "mount_tested": false,
+  "decrypt_tested": false,
+  "note": "Offline evidence only. Properties and kernel version strings may be spoofed.",
+  "kernel_config_available": true,
+  "kernel_config_sha256": "d549072233f0b5decce16cb2891628e48f87ab5dc4ae2a5d03aa9f29e2186026",
+  "kernel_relevant_options": [
+    "CONFIG_EXT4_FS=y",
+    "CONFIG_EXT4_USE_FOR_EXT2=y",
+    "# CONFIG_EXT4_FS_POSIX_ACL is not set",
+    "CONFIG_EXT4_FS_SECURITY=y",
+    "CONFIG_EXT4_ENCRYPTION=y",
+    "CONFIG_EXT4_FS_ENCRYPTION=y",
+    "CONFIG_EXT4_FS_ICE_ENCRYPTION=y",
+    "# CONFIG_EXT4_DEBUG is not set",
+    "CONFIG_F2FS_FS=y",
+    "CONFIG_F2FS_STAT_FS=y",
+    "CONFIG_F2FS_FS_XATTR=y",
+    "CONFIG_F2FS_FS_POSIX_ACL=y",
+    "CONFIG_F2FS_FS_SECURITY=y",
+    "# CONFIG_F2FS_CHECK_FS is not set",
+    "CONFIG_F2FS_FS_ENCRYPTION=y",
+    "# CONFIG_F2FS_FAULT_INJECTION is not set",
+    "CONFIG_FS_ENCRYPTION=y"
+  ]
+}

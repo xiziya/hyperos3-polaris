@@ -1,7 +1,9 @@
 import importlib.util
+import gzip
 import struct
 import tempfile
 import unittest
+import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,9 +18,57 @@ def module(name):
 
 inspect_package = module('inspect_package')
 kernel = module('check_kernel_config')
+recovery = module('inspect_recovery')
+sepolicy = module('audit_sepolicy')
 
 
 class SafetyTests(unittest.TestCase):
+    def test_recovery_truncated_archive_rejected(self):
+        name = b'etc/recovery.fstab\0'
+        fields = [0, 0o100644, 0, 0, 1, 0, 128, 0, 0, 0, 0, len(name), 0]
+        archive = b'070701' + b''.join(f'{x:08x}'.encode() for x in fields) + name
+        archive += b'\0' * (-len(archive) % 4)
+        with self.assertRaisesRegex(ValueError, 'Truncated'):
+            list(recovery.cpio_entries(archive))
+
+    def test_recovery_decompression_limit(self):
+        data = gzip.compress(b'x' * 1024)
+        with self.assertRaisesRegex(ValueError, 'limit'):
+            recovery.unpack_gzip(data, 512)
+
+    def test_missing_policy_mapping_cannot_pass(self):
+        with tempfile.TemporaryDirectory() as d:
+            roots = {name: Path(d) / name for name in ('system', 'system_ext', 'product', 'vendor')}
+            for path in roots.values():
+                path.mkdir()
+            (roots['vendor'] / 'plat_sepolicy_vers.txt').write_text('202504\n')
+            report = sepolicy.audit(roots)
+            self.assertFalse(report['compile_passed'])
+            self.assertFalse(report['precompiled_usable_by_hash'])
+            self.assertIn('system/mapping/202504.cil', report['missing'])
+
+    def test_gpt_crc_and_capacity(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / 'gpt_main0.bin'
+            data = bytearray(3 * 4096)
+            entry = bytearray(128)
+            entry[0] = 1
+            struct.pack_into('<QQ', entry, 32, 100, 109)
+            entry[56:70] = 'product'.encode('utf-16le')
+            data[8192:8320] = entry
+            header = bytearray(92)
+            header[:8] = b'EFI PART'
+            struct.pack_into('<I', header, 12, 92)
+            struct.pack_into('<QIII', header, 72, 2, 1, 128, zlib.crc32(entry))
+            struct.pack_into('<I', header, 16, zlib.crc32(header))
+            data[4096:4188] = header
+            p.write_bytes(data)
+            self.assertEqual(inspect_package.gpt_info(p)['partitions'][0]['bytes'], 40960)
+            data[8192] ^= 1
+            p.write_bytes(data)
+            with self.assertRaises(ValueError):
+                inspect_package.gpt_info(p)
+
     def test_sparse_size_uses_expansion_not_compressed_length(self):
         with tempfile.TemporaryDirectory() as d:
             image = Path(d) / 'system.img'

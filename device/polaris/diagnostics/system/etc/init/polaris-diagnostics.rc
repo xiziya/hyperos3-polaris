@@ -1,0 +1,7 @@
+# Staged overlay. Requires the donor's logcatlog service and policy to pass QA.
+# Set persist.sys.polaris.diag=1 in the development product only.
+on property:sys.boot_completed=1 && property:persist.sys.polaris.diag=1
+    start logcatlog
+
+on property:persist.sys.polaris.diag=0
+    stop logcatlog

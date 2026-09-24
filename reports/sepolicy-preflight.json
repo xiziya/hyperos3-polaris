@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "vendor_policy_version": "202504",
+  "inputs": [
+    {
+      "file": "system/plat_sepolicy.cil",
+      "bytes": 2245273,
+      "sha256": "f80e3aeb841ca64757daf019cc157eb414cd10eed7c6607ae25b083e43c16df2"
+    },
+    {
+      "file": "system_ext/system_ext_sepolicy.cil",
+      "bytes": 554499,
+      "sha256": "3fb349c3bf36ebe2188b115e95d34345b7cf719684b52a75e8a10cddab8f0afe"
+    },
+    {
+      "file": "product/product_sepolicy.cil",
+      "bytes": 68679,
+      "sha256": "e9559e3b496d6ded6e24a5be0175eb6eab474cc9182c539fa1f413635018b0b5"
+    },
+    {
+      "file": "vendor/plat_pub_versioned.cil",
+      "bytes": 401359,
+      "sha256": "44852fb92f96f7d7f687b3375348f45e32a65bb59293a03a3923a9cbfaf525fa"
+    },
+    {
+      "file": "vendor/vendor_sepolicy.cil",
+      "bytes": 1021911,
+      "sha256": "c235eaa21fe80075776f46d50c26e7de36dc1a08cc58e27364db375684a1935d"
+    }
+  ],
+  "missing": [
+    "system/mapping/202504.cil",
+    "system_ext/mapping/202504.cil",
+    "product/mapping/202504.cil"
+  ],
+  "precompiled_hash_matches": {
+    "system": false,
+    "system_ext": false,
+    "product": false
+  },
+  "compile_passed": false,
+  "runtime_enforcing_verified": false,
+  "precompiled_usable_by_hash": false,
+  "compile_status": "blocked-missing-inputs",
+  "note": "Preflight/host compilation does not prove runtime permissions. Do not rename policy versions or bypass enforcing."
+}

@@ -6,7 +6,8 @@ from pathlib import Path
 
 REQUIRED = ('MACH_XIAOMI_D5X', 'MACH_XIAOMI_SDM845', 'QCA_CLD_WLAN',
             'THERMAL', 'THERMAL_TSENS', 'PSTORE', 'PSTORE_RAM', 'PSTORE_CONSOLE',
-            'PSTORE_PMSG', 'ANDROID_BINDER_IPC', 'EXT4_FS', 'F2FS_FS', 'EROFS_FS')
+            'PSTORE_PMSG', 'ANDROID_BINDER_IPC', 'EXT4_FS', 'F2FS_FS', 'EROFS_FS',
+            'BPF', 'BPF_SYSCALL', 'BPF_JIT', 'CGROUP_BPF', 'NET_CLS_BPF', 'NET_ACT_BPF')
 ROOT_OPTION = re.compile(r'^CONFIG_(?:KSU(?:_|$)|KERNELSU(?:_|$)|SUKISU(?:_|$)|SUSFS(?:_|$)|KPM(?:_|$)|APATCH(?:_|$))')
 
 

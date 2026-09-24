@@ -1,0 +1,14 @@
+{
+  "branch": "fox_12.1",
+  "target_android": 15,
+  "build_verified": false,
+  "device_tested": false,
+  "sync": {"url": "https://gitlab.com/OrangeFox/sync.git", "commit": "3e41adcb5df569a811bd2232a3bb1e547482b3b0"},
+  "recovery": {"url": "https://gitlab.com/OrangeFox/bootable/Recovery.git", "commit": "cbcc4f713dbef98d76d6d2cfd019b1ebfd9418e9"},
+  "vendor": {"url": "https://gitlab.com/OrangeFox/vendor/recovery.git", "commit": "cea00cabf2e8ce50fc9f0b5cda99b5801855847a"},
+  "common": {"url": "https://gitlab.com/OrangeFox/device/sdm845-common.git", "commit": "4145d071ae1e86a245354215638946e85711204a"},
+  "polaris_reference": {"url": "https://gitlab.com/OrangeFox/device/polaris.git", "commit": "8c0c8350c34c926658fa4ff0bbafbdac60b9b651"},
+  "qcom_common": {"url": "https://github.com/TeamWin/android_device_qcom_common.git", "commit": "2cf934339972feb6f711e5ad182b82157269c7f3"},
+  "qcom_twrp_common": {"url": "https://github.com/TeamWin/android_device_qcom_twrp-common.git", "commit": "98506f7919102378c8d52ee7d6a94a867f1b4c55"},
+  "note": "Base Android manifest is resolved by the official locked sync script; save repo manifest -r and project diffs with each build. Custom tree is recovery/polaris."
+}

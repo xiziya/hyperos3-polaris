@@ -2,7 +2,11 @@
 
 ## 已知设备信息与边界
 
+本项目目标明确为 **中国版 HyperOS 3 / Android 15**。Android 17 旧包仅供硬件层与分区调查，不改变目标版本。用户选择旧包 OrangeFox 作为候选，调查与独立验收要求见 [recovery.md](recovery.md)。
+
 用户报告：MIX 2S 6 GB / 128 GB、BL 已解锁；现有第三方 Android 17 / OS4 通过 9008 刷入，刷入前硬件正常，USB/ADB 可用。当前开发机 `adb devices` 尚未发现设备。因此分区信息来自用户给定离线包，**不是实机读回结果**。
+
+用户进一步确认：刷机工具是刷机匣，使用刷机匣官方通用 845 引导，再经 9008 刷入。实机的引导、GPT、fstab 必须与包内资料分开核对，不能假定实际运行的是包内 bootloader 或包内 GPT。后续安装器默认保留现有引导，不调用通用 9008 刷写脚本。
 
 现有包的内核字符串显示 5.15.221，IKCONFIG 标题显示 5.15.207。用户已明确说明实际为 4.19、这些版本号是作者伪装；不能据此判定 ABI 或内核世代。实际兼容性以源代码、驱动接口、符号、VINTF/SELinux 和启动实测为准。现有内核配置启用了 KSU，故不能作为本项目的纯净内核产物。
 
@@ -69,7 +73,7 @@ bash tools/download_donor.sh /path/with/free-space
 KERNEL_SOURCE=/linux/kernel KERNEL_OUT=/linux/build CLANG_BIN=/toolchain/bin bash tools/build_kernel.sh
 ```
 
-纯净配置保留 pstore/ramoops、IKCONFIG 与崩溃排查能力；不改变 ramoops 物理地址。设备端持续日志尚未集成：需先核实 donor logd/logpersistd 的 rc/SELinux，采用只记录 crash 的有界环形日志；稳定版默认关闭调试模式，避免高频写盘与功耗。tombstones、ANR、DropBox、pstore 作为事件型诊断，日志不进入公开 CI artifact。
+纯净配置保留 pstore/ramoops、IKCONFIG 与崩溃排查能力；不改变 ramoops 物理地址。已核对 donor 的 logcatlog rc 和 SELinux 标签，并写出 `device/polaris/diagnostics` overlay：复用已有域与路径，仅 crash、约 5 MiB 轮换、可开关。它尚未集成进 ROM，需验证 enforcing 权限和灭屏功耗；稳定版默认关闭调试模式。tombstones、ANR、DropBox、pstore 作为事件型诊断，日志不进入公开 CI artifact。
 
 ## stable 验收
 
