@@ -58,6 +58,8 @@ export FOX_BUILD_DEVICE=polaris
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL=C
 export USE_CCACHE=0
+python3 "$project/tools/check_recovery_image_config.py" build/make/core/board_config.mk \
+    | tee "$project/build/recovery-evidence/image-config-check.json"
 # AOSP envsetup depends on unset variables and non-zero probes.
 set +eu
 source build/envsetup.sh

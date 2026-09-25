@@ -1,0 +1,16 @@
+{
+  "failed_run": 36084115031,
+  "failed_job": 107912102015,
+  "stage": "lunch / dumpvars",
+  "cause": "TARGET_COPY_OUT_PRODUCT is product but no BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE was defined",
+  "source_download_and_kernel_succeeded": true,
+  "fixed_types": {"vendor": "ext4", "product": "erofs", "system_ext": "erofs"},
+  "android_image_builds_disabled": ["vendor", "product", "system_ext"],
+  "local_rules_source": "https://raw.githubusercontent.com/TeamWin/android_build/android-12.1/core/board_config.mk",
+  "image_config_passed": true,
+  "negative_controls": {"PRODUCT_missing_type_rejected": true, "SYSTEM_EXT_missing_type_rejected": true},
+  "ci_repeats_check_against_actual_synced_source": true,
+  "full_lunch_verified": false,
+  "recovery_build_verified": false,
+  "device_modified": false
+}

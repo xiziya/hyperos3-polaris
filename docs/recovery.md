@@ -2,6 +2,8 @@
 
 ## 当前路线：自行编译
 
+最新 CI [36084115031](https://github.com/xiziya/hyperos3-polaris/actions/runs/36084115031) 已通过锁定源码缓存、内核构建、Android 同步和设备树 staging，在 `lunch` 的 `board_config.mk:616` 失败：独立 `TARGET_COPY_OUT_PRODUCT=product` 缺少 image filesystem type。随后“Device polaris not found”是 dumpvars 失败导致的自动检索，不是设备树目录缺失。补齐 vendor/ext4、product/EROFS、system_ext/EROFS 的构建元数据，并显式关闭这三个 Android 镜像的构建，仍只构建 recovery。`check_recovery_image_config.py` 对真实 AOSP Make 规则执行正向检查及 product/system_ext 缺失类型的负对照；不是完整 lunch/Soong 或真机验证。fstab、GPT、手机分区和现有 ROM 镜像不因此改变。
+
 用户已决定自行编译适合本项目的 OrangeFox。`recovery/polaris` 是新的静态布局设备树；旧包镜像只保留为对比证据。使用官方 `fox_12.1`（官方文档推荐用于 Android 12 及以后设备），不把 recovery 的编译平台版本当作被恢复 ROM 的 Android 版本。
 
 新树使用本项目从指定源码构建的纯净 4.19 内核；支持 ext4/F2FS/EROFS，但本 ROM 的 userdata 默认明确为 ext4、软件 AES-XTS/CTS FBE v2。QCOM Keymaster 服务、接口声明和构建属性统一为主线 A15 vendor 的 3.0，独立映射 system_ext/product，logdump 仅作为 metadata。移除通用动态分区转换、格式化辅助脚本、Magisk addon 和自动 boot/AVB/加密修改。实机静态布局已只读确认，见 `reports/live-layout.json`；**仍是待编译、待真机验收的开发配置**，不能声称解密已成功，也不能承诺保留旧 Android 17 数据降级。

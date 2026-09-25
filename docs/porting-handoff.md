@@ -30,7 +30,7 @@
 3. 真机连接恢复后验证 recovery、清刷方案与首启。用户已拔线去充电/休息，本轮不能假装仍有 ADB；也不自动刷写或清数据。
 4. 最终 ext4 fstab 使用软件 AES-XTS/CTS FBEv2；A17→A15 初次需用户明确备份/清刷，Keymaster3 与旧4之间不承诺密钥迁移。安装器不格式化，recovery 解密和回退需实测。
 5. “设置→我的设备”按 MIX 2S/SDM845 修正；只清理不支持的硬件入口（5G 蜂窝、FOD、AOD/120Hz/挖孔、Wi-Fi6），保留后置指纹/4G/NFC/5GHz Wi-Fi。支持但未适配好的功能继续修，不以“不支持”删除。
-6. 橙狐 CI 的内核和 Android 基础同步已成功，但 [36059950820](https://github.com/xiziya/hyperos3-polaris/actions/runs/36059950820) 在 GitLab recovery 源码 HTTP 503 处失败，尚未进入 recovery 编译。下一版会在内核前有限重试并缓存锁定的 recovery/vendor/common 源码，再执行自己的 polaris 设备树和 4.19 内核适配；不能预先称 recovery 成功。
+6. 橙狐 [36084115031](https://github.com/xiziya/hyperos3-polaris/actions/runs/36084115031) 已通过下载、内核和源码 staging；在 lunch 检查缺失 product image filesystem type 时失败。已补齐独立 vendor/product/system_ext 的类型并关闭对应 Android 镜像构建，真实 Make 检查和两个缺失类型负对照通过；完整 recovery 编译仍待 CI。源码 503 的缓存修复本次已生效。
 
 当前候选尺寸在实机已有静态分区容量以内，**没有发现必须重新 9008 分区的容量理由**。这尚不能证明 recovery 安装路径可用，不能直接套刷机匣旧 rawprogram/flash_all。
 

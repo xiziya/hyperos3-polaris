@@ -13,6 +13,10 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Mi MIX 2S
 PRODUCT_SHIPPING_API_LEVEL := 27
+# Describe partition types without building replacement Android system images.
+PRODUCT_BUILD_VENDOR_IMAGE := false
+PRODUCT_BUILD_PRODUCT_IMAGE := false
+PRODUCT_BUILD_SYSTEM_EXT_IMAGE := false
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH) $(SDM845_COMMON_PATH) vendor/qcom/opensource/commonsys-intf/display
 PRODUCT_PACKAGES += qcom_decrypt qcom_decrypt_fbe android.hardware.keymaster@3.0.vendor android.system.keystore2 android.hardware.usb@1.0-service
 TARGET_RECOVERY_DEVICE_MODULES += libion vendor.display.config@1.0 vendor.display.config@2.0 libdisplayconfig.qti

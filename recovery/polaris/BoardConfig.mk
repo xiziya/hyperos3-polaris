@@ -43,6 +43,11 @@ TARGET_USERIMAGES_USE_EROFS := true
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+# Separate output paths require image metadata even for recovery-only builds.
+# Actual on-device mounts remain defined by recovery.fstab.
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := erofs
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 TARGET_RECOVERY_DEVICE_DIRS += device/qcom/twrp-common
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
