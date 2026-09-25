@@ -25,11 +25,11 @@
 
 ## 接下来从哪里继续
 
-用户最新要求先放宽原 ROM 的 recovery 识别。安装器已核验实际 recovery 服务/进程/fstab，不再要求品牌版本属性，实机通过该项；旧橙狐解压原包超过 4 GB 的 product 镜像哈希通过。r3 包只替换安装器和封装说明，见 `reports/development-package-r3.json`。Data ext4 缺少 encrypt 特性仍阻止安装，真实 userdata 尚未修改；独立维护脚本必须另获机主明确授权。见 `docs/installer-revision-r3.md`。
+用户最新要求先放宽原 ROM 的 recovery 识别。安装器已核验实际 recovery 服务/进程/fstab，不再要求品牌版本属性，实机通过该项；旧橙狐解压原包超过 4 GB 的 product 镜像哈希通过。r3 包只替换安装器和封装说明，见 `reports/development-package-r3.json`。机主随后明确授权在旧 recovery 补齐 Data encrypt 特性；已卸载 userdata、检查文件系统、启用特性、复检并重新挂载，见 `reports/data-encrypt-feature.json`。没有格式化、刷写 ROM 或重启。详见 `docs/installer-revision-r3.md`。
 
 1. 核对开发 ZIP 最终报告与实际 SHA；若无 `reports/development-package.json`，先完成封装回读。保留静态布局，boot 最后写，不运行旧 9008 分区脚本。
 2. VINTF 已用锁定的真实 AOSP libvintf core 进行两向矩阵/版本/实例和真实内核配置检查，并验证缺失必需 HAL 的负对照失败；它不是完整 checkvintf CLI 或运行注册验收。
-3. 真机连接恢复后验证 recovery、清刷方案与首启。用户已拔线去充电/休息，本轮不能假装仍有 ADB；也不自动刷写或清数据。
+3. 最近实机处于旧 unofficial OrangeFox，ADB 正常；Data 特性已按明确授权补齐。后续每次仍需重新确认连接状态，不自动刷写、重启或清数据。ROM 首启和硬件验收仍未完成。
 4. 最终 ext4 fstab 使用软件 AES-XTS/CTS FBEv2；A17→A15 初次需用户明确备份/清刷，Keymaster3 与旧4之间不承诺密钥迁移。安装器不格式化，recovery 解密和回退需实测。
 5. “设置→我的设备”按 MIX 2S/SDM845 修正；只清理不支持的硬件入口（5G 蜂窝、FOD、AOD/120Hz/挖孔、Wi-Fi6），保留后置指纹/4G/NFC/5GHz Wi-Fi。支持但未适配好的功能继续修，不以“不支持”删除。
 6. 橙狐 [36084115031](https://github.com/xiziya/hyperos3-polaris/actions/runs/36084115031) 已通过下载、内核和源码 staging；在 lunch 检查缺失 product image filesystem type 时失败。已补齐独立 vendor/product/system_ext 的类型并关闭对应 Android 镜像构建，真实 Make 检查和两个缺失类型负对照通过；完整 recovery 编译仍待 CI。源码 503 的缓存修复本次已生效。

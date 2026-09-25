@@ -11,3 +11,9 @@
 可选的 `tools/enable_data_encrypt_feature.sh` 独立于安装器，必须由机主另行明确同意才用于真实 userdata。它要求 recovery、polaris、精确 userdata 映射/大小/起点、Data 和内部存储已卸载且没有 mapper holder；先执行只读 fsck，成功后仅 `tune2fs -O encrypt`，再只读 fsck 和特性回读。不执行格式化、自动修复、ROM 刷写或重启。当前仅在 recovery `/tmp` 的 RAM 临时镜像上验证过相关工具，真实 userdata 未修改。这不是 FBEv2/Keymaster 或 recovery 解密已验证的结论。
 
 首启和硬件验收仍未完成；稳定发布门槛保持未通过。
+
+## 后续实机处理：已获明确授权并完成
+
+补齐后，r3 安装器源码的 `--preflight-only` 已在当前旧橙狐完成全部检查并返回 0：目标分区映射/容量/起点/挂载状态和六个解压镜像的长度、SHA256 全部通过。读取的是手机原包（其六个镜像与 r3 相同），没有执行安装写入阶段；手机上原 ZIP 内嵌安装器仍旧，正式测试须使用完整 r3 包。
+
+机主随后明确要求在旧 recovery 中补齐特性。执行 `twrp unmount /data` 后确认 userdata 在 `/data` 和 `/sdcard` 的挂载均已解除；维护脚本检查实际分区和只读 fsck，通过后执行 `tune2fs -O encrypt`，再执行只读 fsck，均成功。私有 superblock 回读显示 incompat 从 `0x42` 变为 `0x10042`，增加 encrypt 位。重新挂载 Data/内部存储后可见原 ROM ZIP。见 `reports/data-encrypt-feature.json`。没有格式化、刷写 ROM 或重启；这不等于首启后的 FBEv2/Keymaster/解密已验收。旧 recovery 再次 Format Data 可能重新丢失该特性，因此不要重复格式化。
