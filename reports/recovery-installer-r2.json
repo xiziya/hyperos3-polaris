@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "device": "polaris",
+  "observation": "Live unofficial OrangeFox reports empty ro.twrp.version, ro.orangefox.version and ro.fox.version",
+  "recovery_service": "running",
+  "recovery_executable": "/system/bin/recovery",
+  "recovery_fstab_present": true,
+  "old_error_before_partition_write": true,
+  "revised_detection_live_passed": true,
+  "preflight_result": "blocked: freshly formatted ext4 userdata lacks encrypt feature",
+  "preflight_before_blocker": ["recovery", "device", "required tools", "ZIP manifest read", "userdata layout", "userdata ext4 mount", "old Android data/key path absence"],
+  "ram_scratch_test": {
+    "image_bytes": 33554432,
+    "recovery_e2fsprogs": "1.45.4",
+    "mke2fs_default_encrypt": false,
+    "tune2fs_enable_encrypt_success": true,
+    "readonly_e2fsck_success": true
+  },
+  "userdata_modified_by_agent": false,
+  "rom_partition_writes_by_agent": false,
+  "full_zip_phone_readback": false,
+  "first_boot_verified": false,
+  "note": "Scratch image resides in recovery /tmp RAM. Enabling a filesystem feature is not proof of FBEv2 keymaster or recovery decryption support. Userdata modification requires separate explicit owner authorization."
+}

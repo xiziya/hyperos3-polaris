@@ -2,6 +2,12 @@
 
 目标：中国版 HyperOS 3 / Android 15，真实 4.19.325 纯净内核。此包只适用于已只读采集的 **polaris 静态分区布局**，没有完成首启或硬件验收，不是 stable。不含 KSU/SukiSU，也未开启内核版本伪装。
 
+## 当前 recovery 实测阻断（r2）
+
+机主 unofficial OrangeFox 的 TWRP/Fox 版本属性为空。首包错误提示 `Run only in TWRP/OrangeFox recovery` 发生在任何分区写入之前。r2 改为核验 init 的 recovery 服务、实际 recovery 进程路径及 `/etc/recovery.fstab`，并提供显式 `--preflight-only` 模式；通过检测不代表解密能力已通过。
+
+实机只读预检已通过 recovery、机型、工具、ZIP manifest、userdata 布局/挂载/旧数据检查，但发现格式化后的 ext4 缺少 `encrypt` 特性。旧 recovery 的 mke2fs 配置不默认启用该特性。**不要因此反复 Format Data，也不要删掉加密检查继续刷。** 需要先另行确认可用的格式化或离线文件系统特性修复方案；r2 不自动修改 userdata，不会绕过此阻断。
+
 ## 安装路线
 
 沿用现有分区，不需要为了容量重新 9008 分区，不使用刷机匣的通用 rawprogram/flash_all。包仅包含 system、system_ext、product、mi_ext、vendor、boot；boot 最后写入。不写 GPT、引导链、recovery、vbmeta、modem、EFS、persist、userdata。

@@ -7,6 +7,7 @@ PATH=/system/bin:/sbin:/bin
 export PATH
 OUTFD=${2:-}
 ZIP=${3:-}
+MODE=${4:-install}
 say() {
     printf 'ui_print %s\nui_print\n' "$*" > "/proc/self/fd/$OUTFD"
 }
@@ -14,7 +15,23 @@ abort() { say "ERROR: $*"; exit 1; }
 case "$OUTFD" in ''|*[!0-9]*) exit 1;; esac
 [ -r "$ZIP" ] || abort 'ZIP is not readable.'
 [ "$(id -u)" = 0 ] || abort 'Recovery root is required.'
-[ -n "$(getprop ro.twrp.version)$(getprop ro.orangefox.version)" ] || abort 'Run only in TWRP/OrangeFox recovery.'
+# BEGIN recovery detection
+# Unofficial OrangeFox may omit all TWRP/Fox version properties. Validate the
+# active init service and its real executable instead of relying on branding.
+recovery_environment_valid() {
+    [ "$(getprop init.svc.recovery)" = running ] || return 1
+    [ -f /etc/recovery.fstab ] || return 1
+    for recovery_pid in $(pidof recovery); do
+        recovery_exe=$(readlink -f "/proc/$recovery_pid/exe") || continue
+        case "$recovery_exe" in
+            /system/bin/recovery|/sbin/recovery) return 0 ;;
+        esac
+    done
+    return 1
+}
+# END recovery detection
+recovery_environment_valid || abort 'Run only in an active custom recovery (recovery service, executable and fstab required).'
+case "$MODE" in install|--preflight-only) ;; *) abort 'Invalid installer mode.';; esac
 device_ok=0
 for key in ro.product.device ro.product.vendor.device ro.build.product; do
     [ "$(getprop "$key")" != polaris ] || device_ok=1
@@ -75,6 +92,11 @@ while read -r name capacity start block bytes hash; do
     actual_hash=$(unzip -p "$ZIP" "images/$name.img" | sha256sum | awk '{print $1}') || abort "Cannot hash image: $name"
     [ "$actual_hash" = "$hash" ] || abort "Image digest differs: $name"
 done < "$TASK_TMP/manifest.tsv"
+
+if [ "$MODE" = --preflight-only ]; then
+    say 'Read-only preflight passed. No partitions were written.'
+    exit 0
+fi
 
 say 'Preflight passed. Writing system partitions; boot is written last.'
 while read -r name capacity start block bytes hash; do

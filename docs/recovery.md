@@ -14,6 +14,8 @@
 
 2026-09-25 CI 修复：首次运行 [36037703003](https://github.com/xiziya/hyperos3-polaris/actions/runs/36037703003) 已完成纯净内核编译，但在 OrangeFox 同步入口退出。锁定的上游脚本用 `BASE_DIR="$PWD"` 查找 patches；原调用从本工程根目录执行，找错 `patches/patch-manifest-fox_12.1.diff`。`tools/run_recovery_sync.sh` 改为先检查真实 patch，再在 sync checkout 内执行，两个回归测试覆盖异目录调用和缺失 patch 的提前失败。内核配置和 provenance 现在在同步 Android 源码之前保存，即使同步失败也有证据。此修复不等于 recovery 已编译或启动成功。
 
+修复后运行 [36059950820](https://github.com/xiziya/hyperos3-polaris/actions/runs/36059950820) 时，内核和 minimal Android manifest 同步均成功；失败发生在 OrangeFox recovery 源码克隆，GitLab 连续返回 HTTP 503，尚未进入 recovery 编译。新的 CI 会在昂贵内核构建前拉取并校验锁定的 recovery/vendor/common 源码，使用有限退避重试；同步脚本随后从这些已锁定的本地缓存克隆 recovery/vendor，避免同一次构建末尾再次因临时 503 丢失进度。
+
 项目目标是 **HyperOS 3 China / Android 15**。现有 Android 17 移植包中的 unofficial OrangeFox 是用户指定的候选，不等于 Android 17 recovery，也不因 unofficial 标签而直接判定不可用。
 
 ## 可复现调查
