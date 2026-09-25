@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "owner_requested_dual_imei_backup": true,
+  "environment": "newly built OrangeFox recovery on polaris",
+  "backed_up": ["modemst1", "modemst2", "fsg", "fsc", "persist"],
+  "backup_sizes_and_device_sha256_twice_verified": true,
+  "previous_backup_preserved": true,
+  "imei1_imei2_plain_values_available": false,
+  "device_identifiers_or_backup_contents_published": false,
+  "device_partition_write_performed": false,
+  "restore_tested": false
+}

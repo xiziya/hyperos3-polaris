@@ -4,6 +4,8 @@
 
 ## 当前结论
 
+最新根因已定位：新 recovery 已启动，pstore 显示 ROM 二阶段 init 因 `persist.radio.imei` 重复 prefix 在 PropertyInit 崩溃；共五个 donor/vendor 重复属性，已准备 r4 Vendor 镜像，消除重复并保留 rild 对 donor 标签的访问。SELinux neverallow 编译、文件回读/标签/fsck 和 23 项测试通过，尚待用户刷 Vendor 后验证下一次启动。详见 `docs/first-boot-property-fix.md`、`reports/vendor-property-fix-r4.json`。新 recovery 的电量 UI 感叹号单独待修。机主要求的本机双卡 EFS 底层备份已刷新并两次校验，仅本地 private，Recovery 未读到 IMEI 明文。
+
 最新实机：用户自行安装 r3 后出现 MI 标志并自动回到旧橙狐；六个 ROM 分区全部读回哈希正确。旧 recovery 的 `/proc/filesystems` 无 EROFS，因此 system 挂载 `No such device`，误报系统为空。不能用这个提示代替早期启动失败诊断，真正回退原因尚未确定。新橙狐 CI `36086198843` 已成功，64MiB 镜像本地解析和 SHA 验证通过，已仅传到手机 `/sdcard/recovery-polaris-a15-cb727d1.img` 并校验，未由助手刷写或重启。下一步由用户安装到 Recovery 并重启 Recovery，验证新环境以采集系统启动证据。详见 `reports/first-boot-recovery-return.json`；不重复格式化 Data。
 
 目标为 MIX 2S / polaris 6/128 的 **中国版 HyperOS 3 / Android 15**。已真实编译纯净内核和 API35 Lights HAL，已装配 boot/vendor/system/system_ext/product/mi_ext 六镜像并逐项离线检查；首次开发 ZIP 已生成，全部镜像通过解压哈希回读。包长 5,596,345,065 字节，完整包哈希见 `reports/development-package.json`。**没有启动、硬件或功耗验收通过结论。**

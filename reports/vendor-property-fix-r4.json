@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "source_vendor_sha256": "efa196838c791381920ba75c50c42bccdb0761bf9f85a9e3cf53a4ca2269e55e",
+  "image": "vendor-polaris-a15-r4-property-fix.img",
+  "bytes": 805306368,
+  "sha256": "c49b2664d91991b163f4a9ae028787a24c93242ddfe41ca7cdbab52153c58538",
+  "property_duplicates_before": 5,
+  "property_duplicates_after": 0,
+  "donor_labels_preserved": true,
+  "rild_access_bridge_only": true,
+  "neverallow_enabled": true,
+  "selinux_compile_passed": true,
+  "vendor_fsck_passed": true,
+  "file_readbacks": [
+    {
+      "path": "/etc/selinux/vendor_property_contexts",
+      "sha256": "19df316b15ffb96a40261f7fd420e0f0a683af220defca1ef377387619f7734a",
+      "metadata_verified": true
+    },
+    {
+      "path": "/etc/selinux/vendor_sepolicy.cil",
+      "sha256": "8327d514054407e0847a76b33747a5f7d810382ff821eb2355d7588cec014466",
+      "metadata_verified": true
+    }
+  ],
+  "phone_flash_performed_by_agent": false,
+  "boot_tested": false
+}
