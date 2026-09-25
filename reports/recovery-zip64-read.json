@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "device": "polaris",
+  "environment": "existing unofficial OrangeFox",
+  "source_package_sha256": "5f7775157bcc22909b466d3cfdfb003f05ba6ea89141584c11d5eb6797c8c1c4",
+  "member": "images/product.img",
+  "expected_bytes": 4493500416,
+  "actual_decompressed_sha256": "b4097c742a826963fbabc6fc5da376923751079524757be0498bb42b25d472f9",
+  "hash_matches_validated_image": true,
+  "command": "set -o pipefail; unzip -p <owner-local-original-rom.zip> images/product.img | sha256sum",
+  "exit_code": 0,
+  "device_partition_writes": false,
+  "complete_installer_preflight_passed": false,
+  "remaining_preflight_blocker": "userdata ext4 lacks encrypt feature"
+}

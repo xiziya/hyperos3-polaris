@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "device": "polaris",
+  "ram_gib": 6,
+  "marketed_storage_gb": 128,
+  "target": "HyperOS 3 China / Android 15",
+  "status": "first-boot-development",
+  "runtime_verified": false,
+  "stable": false,
+  "kernel_root_frameworks": false,
+  "images": [
+    {
+      "name": "system.img",
+      "bytes": 746143744,
+      "sha256": "2d36af6f17fdb7491dedf3dffe4ff1aef8626f486275283801c88bb1dd169433"
+    },
+    {
+      "name": "system_ext.img",
+      "bytes": 756944896,
+      "sha256": "65fe98b58fc42480e84b36037cdbaec5d784fc55fa3558def251c27a5aa0dc22"
+    },
+    {
+      "name": "product.img",
+      "bytes": 4493500416,
+      "sha256": "b4097c742a826963fbabc6fc5da376923751079524757be0498bb42b25d472f9"
+    },
+    {
+      "name": "mi_ext.img",
+      "bytes": 126976,
+      "sha256": "00692a21a091ce0f87e765dbc8afbcd9ed87dbbd9d670178c16d313db80ad06b"
+    },
+    {
+      "name": "vendor.img",
+      "bytes": 805306368,
+      "sha256": "efa196838c791381920ba75c50c42bccdb0761bf9f85a9e3cf53a4ca2269e55e"
+    },
+    {
+      "name": "boot.img",
+      "bytes": 29417472,
+      "sha256": "8386301e30128e107dfe7a47d02e118f83e08d828e1bc0b21bc83f471f73b256"
+    }
+  ],
+  "installer": "recovery; existing measured static layout; boot last",
+  "data_policy": "Explicit user backup and Format Data required; installer never formats. ext4 software FBEv2, runtime/recovery decryption untested.",
+  "untouched": [
+    "GPT",
+    "bootloader",
+    "recovery",
+    "vbmeta",
+    "modem",
+    "EFS",
+    "persist",
+    "userdata"
+  ],
+  "hardware_tests_required": [
+    "display/touch",
+    "radio/IMEI/dual SIM/4G/IMS",
+    "Wi-Fi/Bluetooth",
+    "storage/FBE/reboot",
+    "charging/thermal/suspend",
+    "video encode/decode",
+    "camera/audio",
+    "Xiaomi account/cloud",
+    "recovery/rollback"
+  ],
+  "installer_revision": "r3-active-recovery-check",
+  "installer_sha256": "c83ef385e6cd9d20b58dd8f018fcbe087394505aed7d3e05ac342b830cc1b335",
+  "supersedes_package_sha256": "5f7775157bcc22909b466d3cfdfb003f05ba6ea89141584c11d5eb6797c8c1c4",
+  "package": {
+    "file": "HyperOS3-Polaris-A15-China-dev-20260925-r3.zip",
+    "bytes": 5596345917,
+    "sha256": "f4eece6188ea8420a7ae6576fb846219f66a02e4eaf3de81aa01d64fbc56e105",
+    "zip_image_roundtrip": true
+  }
+}

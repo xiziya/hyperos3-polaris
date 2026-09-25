@@ -7,6 +7,7 @@
 本地产物：`HyperOS3-Polaris-A15-China-dev-20260925.zip`，5,596,345,065 字节；SHA256：`5f7775157bcc22909b466d3cfdfb003f05ba6ea89141584c11d5eb6797c8c1c4`。仓库不托管厂商镜像；此报告用于核对机主本地测试包。
 
 - `dev`：日常开发，工具、来源锁定、兼容性调查。
+- 旧 unofficial 橙狐的安装器识别修订及剩余 Data 阻断见 [r3 修订说明](docs/installer-revision-r3.md)；r3 完整包哈希单独记录于 `reports/development-package-r3.json`，六个镜像与首包一致。
 - `stable`：稳定发布入口。只有完成设备验收的版本才可发布；初始分支仅包含项目说明。
 - 公开仓库只有所有者具有写权限；其他人可以读取、fork、提交建议，不能直接修改本仓库。
 

@@ -25,6 +25,8 @@
 
 ## 接下来从哪里继续
 
+用户最新要求先放宽原 ROM 的 recovery 识别。安装器已核验实际 recovery 服务/进程/fstab，不再要求品牌版本属性，实机通过该项；旧橙狐解压原包超过 4 GB 的 product 镜像哈希通过。r3 包只替换安装器和封装说明，见 `reports/development-package-r3.json`。Data ext4 缺少 encrypt 特性仍阻止安装，真实 userdata 尚未修改；独立维护脚本必须另获机主明确授权。见 `docs/installer-revision-r3.md`。
+
 1. 核对开发 ZIP 最终报告与实际 SHA；若无 `reports/development-package.json`，先完成封装回读。保留静态布局，boot 最后写，不运行旧 9008 分区脚本。
 2. VINTF 已用锁定的真实 AOSP libvintf core 进行两向矩阵/版本/实例和真实内核配置检查，并验证缺失必需 HAL 的负对照失败；它不是完整 checkvintf CLI 或运行注册验收。
 3. 真机连接恢复后验证 recovery、清刷方案与首启。用户已拔线去充电/休息，本轮不能假装仍有 ADB；也不自动刷写或清数据。
