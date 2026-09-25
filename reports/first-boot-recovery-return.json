@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "device": "polaris",
+  "owner_observation": "MI logo followed by automatic return to old OrangeFox after ROM installation",
+  "installer_log_six_writes_and_readbacks_succeeded": true,
+  "live_partition_readback_matches_final_images": ["boot", "system", "system_ext", "product", "mi_ext", "vendor"],
+  "old_recovery_erofs_in_proc_filesystems": false,
+  "old_recovery_mount_error": "Failed to mount /system_root (No such device), filesystem erofs",
+  "system_empty_warning_cause": "Old recovery lacks EROFS support; system contents are present and match the built image",
+  "misc_first_2048_bytes_zero": true,
+  "old_recovery_pstore_and_last_kmsg_available": false,
+  "early_system_boot_failure_root_cause": "not yet determined",
+  "new_recovery_ci": "https://github.com/xiziya/hyperos3-polaris/actions/runs/36086198843",
+  "new_recovery_ci_success": true,
+  "new_recovery_bytes": 67108864,
+  "new_recovery_sha256": "f54fef5177f516696873b1ab8a444eb2006fe3a6c2b84a59b9ca665d303eb0b1",
+  "new_recovery_local_inspection_passed": true,
+  "new_recovery_erofs_and_pstore_config_enabled": true,
+  "new_recovery_transferred_to_internal_storage_and_hash_verified": true,
+  "new_recovery_flashed_by_agent": false,
+  "new_recovery_boot_verified": false,
+  "raw_logs_remain_private": true
+}

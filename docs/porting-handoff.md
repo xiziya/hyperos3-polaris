@@ -4,6 +4,8 @@
 
 ## 当前结论
 
+最新实机：用户自行安装 r3 后出现 MI 标志并自动回到旧橙狐；六个 ROM 分区全部读回哈希正确。旧 recovery 的 `/proc/filesystems` 无 EROFS，因此 system 挂载 `No such device`，误报系统为空。不能用这个提示代替早期启动失败诊断，真正回退原因尚未确定。新橙狐 CI `36086198843` 已成功，64MiB 镜像本地解析和 SHA 验证通过，已仅传到手机 `/sdcard/recovery-polaris-a15-cb727d1.img` 并校验，未由助手刷写或重启。下一步由用户安装到 Recovery 并重启 Recovery，验证新环境以采集系统启动证据。详见 `reports/first-boot-recovery-return.json`；不重复格式化 Data。
+
 目标为 MIX 2S / polaris 6/128 的 **中国版 HyperOS 3 / Android 15**。已真实编译纯净内核和 API35 Lights HAL，已装配 boot/vendor/system/system_ext/product/mi_ext 六镜像并逐项离线检查；首次开发 ZIP 已生成，全部镜像通过解压哈希回读。包长 5,596,345,065 字节，完整包哈希见 `reports/development-package.json`。**没有启动、硬件或功耗验收通过结论。**
 
 主线候选使用 Civi 2 国行系统镜像，以及官方 Lineage 22.2 polaris Android 15 vendor/ODM。针对原配套 4.9 的视频控制 ABI，显示/Codec2 已成组改为旧 OS4 参考中与 4.19 配套的 legacy 硬件子系统；未搬 SDK36 APEX 或 202504 policy。参考文件的导入闭包、标签/服务和 VINTF 已检查，但 namespace、ioctl 使用和硬件运行仍待验证，见 `docs/development-integration.md`。
