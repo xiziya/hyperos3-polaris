@@ -25,6 +25,8 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
+      - name: Test recovery runtime fixes before expensive synchronization
+        run: python3 -m unittest discover -s tests -p 'test_recovery_runtime_fixes.py' -v
       - name: Prepare disposable hosted runner
         shell: bash
         run: |

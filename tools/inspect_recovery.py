@@ -88,6 +88,7 @@ def inspect(path):
               'boot_header': version, 'page_size': page, 'ramdisk_compression': compression,
               'target_android': 15, 'fstabs': {}, 'properties': {}, 'script_references': [],
               'filesystem_helpers': [],
+              'runtime_fixes': {'bcb_verified_reboot_guard': False, 'pstore_snapshot': False},
               'boot_tested': False, 'mount_tested': False, 'decrypt_tested': False,
               'note': 'Offline evidence only. Properties and kernel version strings may be spoofed.'}
     digest = hashlib.sha256()
@@ -101,6 +102,11 @@ def inspect(path):
             report['filesystem_helpers'].append(name)
         if not stat.S_ISREG(mode):
             continue
+        if name in ('system/bin/recovery', 'sbin/recovery') and payload.startswith(b'\x7fELF'):
+            report['runtime_fixes']['bcb_verified_reboot_guard'] = b'Polaris: BCB cleared and verified before system reboot.' in payload
+        if name.endswith('/polaris-pstore-snapshot.sh'):
+            report['runtime_fixes']['pstore_snapshot'] = True
+            report['runtime_fixes']['pstore_script_sha256'] = hashlib.sha256(payload).hexdigest()
         if 'fstab' in name or name.endswith('.flags'):
             text = payload.decode('utf-8', 'replace')
             report['fstabs'][name] = {'sha256': hashlib.sha256(payload).hexdigest(), 'rows': fstab_rows(text)}
@@ -124,7 +130,7 @@ def inspect(path):
         config = unpack_gzip(kernel[start + 8:end], 4 * 1024**2).decode()
         report['kernel_config_sha256'] = hashlib.sha256(config.encode()).hexdigest()
         report['kernel_relevant_options'] = [line for line in config.splitlines()
-            if re.match(r'(?:# )?CONFIG_(?:KSU|KERNELSU|SUKISU|SUSFS|KPM|APATCH|EROFS|EXT4|F2FS|FS_ENCRYPTION)', line)]
+            if re.match(r'(?:# )?CONFIG_(?:KSU|KERNELSU|SUKISU|SUSFS|KPM|APATCH|EROFS|EXT4|F2FS|FS_ENCRYPTION|PSTORE)', line)]
     return report
 
 
@@ -132,11 +138,24 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('image', type=Path)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--target-android', type=int, default=15)
+    parser.add_argument('--require-polaris-runtime-fixes', action='store_true')
     args = parser.parse_args()
     report = inspect(args.image)
+    report['target_android'] = args.target_android
+    if args.require_polaris_runtime_fixes:
+        if not all(report['runtime_fixes'].get(key) for key in ('bcb_verified_reboot_guard', 'pstore_snapshot')):
+            raise SystemExit('Recovery image does not contain the compiled reboot guard and pstore snapshot')
+        for ending in ('recovery.fstab', 'twrp.fstab'):
+            matches = [data for name, data in report['fstabs'].items() if name.endswith('/' + ending) or name == ending]
+            if len(matches) != 1 or not any(row['mount'] == '/misc' and row['device'] == '/dev/block/bootdevice/by-name/misc' for row in matches[0]['rows']):
+                raise SystemExit('Missing or ambiguous misc mapping in ' + ending)
+        config = set(report.get('kernel_relevant_options', []))
+        if not {'CONFIG_EROFS_FS=y','CONFIG_PSTORE=y','CONFIG_PSTORE_RAM=y','CONFIG_PSTORE_CONSOLE=y','CONFIG_PSTORE_PMSG=y'} <= config:
+            raise SystemExit('Actual embedded kernel lacks EROFS/pstore')
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
-    print(f'Recovery inspected: {report["sha256"]}. Android 15 compatibility remains untested.')
+    print(f'Recovery inspected: {report["sha256"]}. Android {args.target_android} compatibility remains untested.')
 
 
 if __name__ == '__main__':

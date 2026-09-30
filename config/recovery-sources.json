@@ -1,6 +1,6 @@
 {
   "branch": "fox_12.1",
-  "target_android": 15,
+  "target_android": 17,
   "build_verified": false,
   "device_tested": false,
   "sync": {"url": "https://gitlab.com/OrangeFox/sync.git", "commit": "3e41adcb5df569a811bd2232a3bb1e547482b3b0"},

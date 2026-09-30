@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 if [[ "${FOX_BUILD_DEVICE:-}" == polaris ]]; then
     export FOX_BUILD_TYPE=Unofficial
-    export FOX_VARIANT=polaris-static-a15-test
+    export FOX_VARIANT=polaris-static-os4-bcb1-test
     export FOX_KERNEL=4.19
     export FOX_VANILLA_BUILD=1
     export FOX_DELETE_MAGISK_ADDON=1

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "scope": "OrangeFox polaris static OS4 diagnostic recovery only",
+  "target_android": 17,
+  "variant": "polaris-static-os4-bcb1-test",
+  "source_recovery_commit": "cbcc4f713dbef98d76d6d2cfd019b1ebfd9418e9",
+  "kernel_commit": "1f326a9202472e8228c2a08ebfd4fdb83da52675",
+  "observed_bcb_command": "boot-recovery",
+  "observed_battery_sysfs_readable": true,
+  "observed_pstore_mounted": true,
+  "observed_saved_pstore_files": 0,
+  "host_tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "environment": "WSL Ubuntu",
+    "passed": 27,
+    "failed": 0,
+    "skipped": 0,
+    "includes_compiled_cpp_reboot_guard_with_fake_io": true,
+    "locked_upstream_patch_anchors_verified": true
+  },
+  "syntax_and_diff_checks_passed": true,
+  "full_build_verified": false,
+  "fixed_recovery_device_tested": false,
+  "android_bootloop_root_cause": "not yet determined",
+  "android17_decryption_verified": false,
+  "phone_flash_actions_by_agent": 0,
+  "phone_reboots_by_agent": 0,
+  "raw_evidence_uploaded": false,
+  "owner_authorized_recovery_ci": true,
+  "status": "host-validated-pending-remote-build-and-device-test",
+  "details": "docs/recovery-os4-runtime-fixes.md"
+}

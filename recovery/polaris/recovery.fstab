@@ -8,6 +8,8 @@
 /product       ext4  /dev/block/bootdevice/by-name/product flags=display="Product";backup=0
 /mi_ext        erofs /dev/block/bootdevice/by-name/mi_ext flags=display="Mi Ext";backup=0
 /mi_ext        ext4  /dev/block/bootdevice/by-name/mi_ext flags=display="Mi Ext";backup=0
+/mi_product    erofs /dev/block/bootdevice/by-name/mi_product flags=display="Mi Product";backup=0;wipeingui=0
+/vendor        erofs /dev/block/bootdevice/by-name/vendor flags=display="Vendor";backup=0
 /vendor        ext4  /dev/block/bootdevice/by-name/vendor flags=display="Vendor";backup=0
 /metadata      ext4  /dev/block/bootdevice/by-name/logdump flags=display="Metadata";backup=0;fsflags=ro;mounttodecrypt
 /data          ext4  /dev/block/bootdevice/by-name/userdata flags=display="Data";backup=1;fileencryption=aes-256-xts:aes-256-cts:v2
@@ -15,6 +17,8 @@
 /persist       ext4  /dev/block/bootdevice/by-name/persist flags=display="Persist";backup=0;fsflags=ro;mounttodecrypt
 /boot          emmc  /dev/block/bootdevice/by-name/boot flags=backup=1;flashimg=1
 /recovery      emmc  /dev/block/bootdevice/by-name/recovery flags=backup=1;flashimg=1
+# BCB discovery only: never expose misc as a wipe/backup/image-flash target.
+/misc          emmc  /dev/block/bootdevice/by-name/misc flags=backup=0;flashimg=0;wipeingui=0
 /system_image  emmc  /dev/block/bootdevice/by-name/system flags=display="System Image";backup=1;flashimg=1
 /system_ext_image emmc /dev/block/bootdevice/by-name/system_ext flags=display="System Ext Image";backup=1;flashimg=1
 /product_image emmc /dev/block/bootdevice/by-name/product flags=display="Product Image";backup=1;flashimg=1

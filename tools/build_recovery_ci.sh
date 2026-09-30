@@ -50,6 +50,8 @@ python3 "$project/tools/stage_recovery.py" "$RECOVERY_WORK/android" "$RECOVERY_W
 # Enable ext4 encrypt in the recovery's explicit Format Data path.
 python3 "$project/recovery/patches/enable_ext4_encrypt.py" \
     "$RECOVERY_WORK/android/bootable/recovery/partition.cpp"
+python3 "$project/recovery/patches/fix_polaris_system_reboot.py" \
+    "$RECOVERY_WORK/android/bootable/recovery/twrp-functions.cpp"
 git -C "$RECOVERY_WORK/android/bootable/recovery" diff > "$project/build/recovery-evidence/recovery-source-changes.patch"
 cd "$RECOVERY_WORK/android"
 repo manifest -r -o "$project/build/recovery-evidence/android-manifest.xml"
@@ -71,7 +73,8 @@ make -j4 recoveryimage
 image="$RECOVERY_WORK/android/out/target/product/polaris/recovery.img"
 test -s "$image"
 [[ $(stat -c %s "$image") -le 67108864 ]]
-python3 "$project/tools/inspect_recovery.py" "$image" --output "$project/build/recovery-evidence/recovery-inspection.json"
-cp "$image" "$project/build/recovery-evidence/recovery-UNTESTED-polaris-static-a15.img"
-sha256sum "$image" > "$project/build/recovery-evidence/SHA256SUMS.txt"
+python3 "$project/tools/inspect_recovery.py" "$image" --target-android 17 --require-polaris-runtime-fixes \
+    --output "$project/build/recovery-evidence/recovery-inspection.json"
+cp "$image" "$project/build/recovery-evidence/recovery-UNTESTED-polaris-static-os4-bcb1.img"
+(cd "$project/build/recovery-evidence" && sha256sum recovery-UNTESTED-polaris-static-os4-bcb1.img > SHA256SUMS.txt)
 echo 'UNTESTED development recovery. No stable release or installation is authorized by build success.' > "$project/build/recovery-evidence/STATUS.txt"

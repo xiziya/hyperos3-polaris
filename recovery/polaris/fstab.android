@@ -1,0 +1,18 @@
+# Android libfs_mgr/BCB format. UI-only options live in /etc/twrp.fstab.
+# No first_stage_mount/formattable: this is a recovery, not Android boot fstab.
+/dev/block/bootdevice/by-name/misc       /misc        emmc  defaults                       defaults
+/dev/block/bootdevice/by-name/system     /system_root erofs ro                             wait
+/dev/block/bootdevice/by-name/system     /system_root ext4  ro                             wait
+/dev/block/bootdevice/by-name/system_ext /system_ext  erofs ro                             wait
+/dev/block/bootdevice/by-name/system_ext /system_ext  ext4  ro                             wait
+/dev/block/bootdevice/by-name/product    /product     erofs ro                             wait
+/dev/block/bootdevice/by-name/product    /product     ext4  ro                             wait
+/dev/block/bootdevice/by-name/vendor     /vendor      erofs ro                             wait
+/dev/block/bootdevice/by-name/vendor     /vendor      ext4  ro                             wait
+/dev/block/bootdevice/by-name/mi_ext     /mi_ext      erofs ro                             wait
+/dev/block/bootdevice/by-name/mi_ext     /mi_ext      ext4  ro                             wait
+/dev/block/bootdevice/by-name/mi_product /mi_product  erofs ro                             wait
+/dev/block/bootdevice/by-name/logdump    /metadata    ext4  ro                             wait
+/dev/block/bootdevice/by-name/userdata   /data        ext4  noatime,nosuid,nodev,discard    wait,fileencryption=aes-256-xts:aes-256-cts:v2
+/dev/block/bootdevice/by-name/modem      /firmware    vfat  ro                             wait
+/dev/block/bootdevice/by-name/persist    /persist     ext4  ro                             wait

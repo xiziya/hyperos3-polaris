@@ -1,5 +1,9 @@
 # OrangeFox 候选与 Android 15 验收
 
+> 2026-09-30：当前 recovery 目标为 OS4 / Android 17 诊断。最新电量、BCB、
+> 双格式 fstab 和 pstore 修复见 [专项记录](recovery-os4-runtime-fixes.md)。
+> 下文是旧 A15 阶段记录，不代表当前系统启动或 A17 数据解密通过。
+
 ## 当前路线：自行编译
 
 最新 CI [36084115031](https://github.com/xiziya/hyperos3-polaris/actions/runs/36084115031) 已通过锁定源码缓存、内核构建、Android 同步和设备树 staging，在 `lunch` 的 `board_config.mk:616` 失败：独立 `TARGET_COPY_OUT_PRODUCT=product` 缺少 image filesystem type。随后“Device polaris not found”是 dumpvars 失败导致的自动检索，不是设备树目录缺失。补齐 vendor/ext4、product/EROFS、system_ext/EROFS 的构建元数据，并显式关闭这三个 Android 镜像的构建，仍只构建 recovery。`check_recovery_image_config.py` 对真实 AOSP Make 规则执行正向检查及 product/system_ext 缺失类型的负对照；不是完整 lunch/Soong 或真机验证。fstab、GPT、手机分区和现有 ROM 镜像不因此改变。

@@ -1,5 +1,15 @@
 # 移植交接入口
 
+## 2026-09-30 recovery 专项更新（优先于下方历史记录）
+
+当前用户测试目标已是 OS4 / Android 17，ROM 本体在新本地工具箱中，未在本次上传。
+本仓库这次只提交 recovery 修复并按用户明确要求触发 CI：电量 sysfs、双格式 fstab、
+重启系统前 BCB 读回校验、EROFS vendor/mi_product 和 pstore 的 RAM 快照。
+详见 [实现与验收边界](recovery-os4-runtime-fixes.md)。系统卡米根因仍未定位；
+不要把下方旧 A15 属性冲突结论套用于本次 OS4，也不要重复清 Data。
+用户安排：刷修复 recovery → 重启 Recovery 核验 → 尝试系统 → 回 recovery 抓日志。
+
+
 更新：2026-09-25。本文是后续协作者与自动化助手的仓库内上下文；它能随仓库读取，不依赖聊天记忆。
 
 ## 当前结论

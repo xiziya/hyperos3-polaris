@@ -25,10 +25,12 @@ def main():
         raise SystemExit('Built project kernel required')
     shutil.copytree(project / 'recovery/polaris', destination)
     root = destination / 'recovery/root'
+    (root / 'etc').mkdir(parents=True, exist_ok=True)
+    shutil.copy2(destination / 'recovery.fstab', root / 'etc/twrp.fstab')
     upstream = common / 'recovery/root'
     shutil.copytree(upstream / 'vendor/lib64', root / 'vendor/lib64')
     # No factory/format/dynamic-conversion scripts from the generic device tree.
-    (root / 'system/bin').mkdir(parents=True)
+    (root / 'system/bin').mkdir(parents=True, exist_ok=True)
     for name in ('qseecomd', 'android.hardware.keymaster@3.0-service-qti',
                  'android.hardware.gatekeeper@1.0-service-qti'):
         shutil.copy2(upstream / 'system/bin' / name, root / 'system/bin' / name)

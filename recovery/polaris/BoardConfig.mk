@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Derived from OrangeFox polaris/sdm845-common (2019-2026 OrangeFox Project).
-# Custom static layout for the HyperOS 3 Android 15 bring-up candidate.
+# Custom static layout, retained for the HyperOS 4 Android 17 diagnostic candidate.
 DEVICE_PATH := device/xiaomi/polaris
 SDM845_COMMON_PATH := device/xiaomi/sdm845-common
 TARGET_ARCH := arm64
@@ -48,7 +48,8 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := erofs
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+# Android libfs_mgr requires its five-column format; the UI gets /etc/twrp.fstab.
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab.android
 TARGET_RECOVERY_DEVICE_DIRS += device/qcom/twrp-common
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist metadata
@@ -63,6 +64,10 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := zh_CN
+# The polaris 4.19 driver exposes these nodes; no recovery health HAL is staged.
+# Set both: upstream tests the legacy flag BEFORE processing the custom path.
+TW_USE_LEGACY_BATTERY_SERVICES := true
+TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 4095

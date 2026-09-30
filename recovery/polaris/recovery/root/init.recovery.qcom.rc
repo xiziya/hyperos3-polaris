@@ -6,3 +6,12 @@ on fs
 
 on boot
     setprop sys.usb.config adb
+    start polaris_pstore_snapshot
+
+# Read-only evidence snapshot to RAM; never unlink pstore or mount/format Data.
+service polaris_pstore_snapshot /system/bin/sh /system/bin/polaris-pstore-snapshot.sh
+    disabled
+    oneshot
+    user root
+    group root
+    seclabel u:r:recovery:s0
