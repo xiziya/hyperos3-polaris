@@ -22,7 +22,8 @@ matched the candidate. Those are separate observations from different boots.
 
 1. **BCB discovery:** `fstab.android` supplies the five-column Android libfs_mgr
    format as `/etc/recovery.fstab`. Staging installs the UI-specific legacy
-   format as `/etc/twrp.fstab`, which the locked OrangeFox selects first. Both
+   format as `/system/etc/twrp.fstab`, visible through `/etc -> /system/etc`,
+   which the locked OrangeFox selects first. Both
    describe the same static nodes. `/misc` is not a backup, image-flash or wipe
    menu target. This avoids feeding four-column TWRP options into libfs_mgr.
 2. **Explicit system reboot:** the source-locked patch adds a guard in the
@@ -54,9 +55,29 @@ matched the candidate. Those are separate observations from different boots.
 
 The first CI attempt after this change failed at the final ramdisk rsync because
 staging had created `recovery/root/etc` as a real directory. OrangeFox's locked
-image step creates that path as a symlink to its system etc tree. The staging
-directory is now left untouched; the device fstab is consumed by the normal
-OrangeFox image step, so the fix does not change the runtime layout.
+image step creates that path as a symlink to its system etc tree.
+
+Run `36704611125` (commit `5607929`) subsequently completed compilation, but
+strict image inspection rejected `Missing or ambiguous misc mapping in
+twrp.fstab`. Removing the conflicting directory had also removed the only copy
+of the UI fstab. The prior fix was incomplete: the normal image recipe installs
+only `fstab.android` as `system/etc/recovery.fstab`; it does not automatically
+install our UI fstab. Staging now explicitly copies the latter into
+`recovery/root/system/etc/twrp.fstab`, leaving `root/etc` to Android's symlink.
+
+The regression test now runs the real staging function with fixture HAL/kernel
+files (only the locked upstream commit query is mocked), performs the actual
+`rsync -a` ramdisk merge, and verifies both fstab files through the resulting
+`etc` link, including the UI misc restrictions. It replaces the insufficient
+source-text test that merely checked that `root/etc` was not created. Image
+inspection gates remain strict, and their report is now saved before rejection
+so subsequent failures retain the discovered file mappings. No rejected image
+is copied to the downloadable image artifact.
+
+After this correction, the WSL Ubuntu test suite passed all 28 tests without
+skips, including the compiled C++ BCB fault cases and real ramdisk merge.
+Python and shell syntax checks and `git diff --check` also passed. A new full
+remote build is still required; these host results are not an image or boot test.
 
 ## Validation and limits
 

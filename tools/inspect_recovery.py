@@ -143,6 +143,10 @@ def main():
     args = parser.parse_args()
     report = inspect(args.image)
     report['target_android'] = args.target_android
+    # Preserve actual inspection evidence even if the strict release gate fails.
+    # The build script still copies the image only AFTER this tool succeeds.
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     if args.require_polaris_runtime_fixes:
         if not all(report['runtime_fixes'].get(key) for key in ('bcb_verified_reboot_guard', 'pstore_snapshot')):
             raise SystemExit('Recovery image does not contain the compiled reboot guard and pstore snapshot')
@@ -153,8 +157,6 @@ def main():
         config = set(report.get('kernel_relevant_options', []))
         if not {'CONFIG_EROFS_FS=y','CONFIG_PSTORE=y','CONFIG_PSTORE_RAM=y','CONFIG_PSTORE_CONSOLE=y','CONFIG_PSTORE_PMSG=y'} <= config:
             raise SystemExit('Actual embedded kernel lacks EROFS/pstore')
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print(f'Recovery inspected: {report["sha256"]}. Android {args.target_android} compatibility remains untested.')
 
 

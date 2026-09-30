@@ -1,21 +1,64 @@
 """Compile the exact reboot guard with fake BCB I/O; never touch devices."""
 import importlib.util
+import json
 import shutil
 import subprocess
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('reboot_patch', ROOT/'recovery/patches/fix_polaris_system_reboot.py')
 patch = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(patch)
+stage_spec = importlib.util.spec_from_file_location('stage_recovery', ROOT/'tools/stage_recovery.py')
+staging = importlib.util.module_from_spec(stage_spec)
+stage_spec.loader.exec_module(staging)
 
 class RecoveryRuntimeTests(unittest.TestCase):
-    def test_staging_does_not_shadow_orangefox_system_etc_symlink(self):
-        stage = (ROOT/'tools/stage_recovery.py').read_text()
-        self.assertNotIn("root / 'etc'", stage)
-        self.assertNotIn("root / \"etc\"", stage)
+    @unittest.skipUnless(shutil.which('rsync'), 'Linux rsync required for ramdisk assembly regression')
+    def test_staged_ui_fstab_survives_actual_ramdisk_merge(self):
+        lock = json.loads((ROOT/'config/recovery-sources.json').read_text())
+        with tempfile.TemporaryDirectory() as temp:
+            tmp = Path(temp)
+            android = tmp/'android'
+            common = android/'device/xiaomi/sdm845-common'
+            (common/'recovery/root/vendor/lib64').mkdir(parents=True)
+            (common/'recovery/root/vendor/lib64/fixture.so').write_bytes(b'fixture, not a real HAL')
+            (common/'recovery/root/system/bin').mkdir(parents=True)
+            for name in ('qseecomd', 'android.hardware.keymaster@3.0-service-qti', 'android.hardware.gatekeeper@1.0-service-qti'):
+                (common/'recovery/root/system/bin'/name).write_bytes(b'fixture')
+            (common/'recovery/kernel_419').mkdir(parents=True)
+            (common/'recovery/kernel_419/init.recovery.usb.rc').write_text('# fixture\n')
+            kernel = tmp/'Image.gz-dtb'
+            kernel.write_bytes(b'fixture, not a real kernel')
+            # Only the upstream commit lookup is simulated; execute the real staging.
+            with mock.patch.object(staging.subprocess, 'check_output', return_value=lock['common']['commit']+'\n'):
+                device = staging.stage(ROOT, android, kernel)
+            staged = device/'recovery/root'
+            self.assertFalse((staged/'etc').exists())
+            self.assertFalse((staged/'etc').is_symlink())
+            ui_bytes = (ROOT/'recovery/polaris/recovery.fstab').read_bytes()
+            self.assertEqual((staged/'system/etc/twrp.fstab').read_bytes(), ui_bytes)
+
+            # Follow PRODUCT_COPY_FILES then the same rsync merge as the failing job.
+            recovery = tmp/'out/recovery'
+            recovery.mkdir(parents=True)
+            shutil.copytree(staged, recovery/'root')
+            source = tmp/'out/root'
+            (source/'system/etc').mkdir(parents=True)
+            (source/'etc').symlink_to('system/etc', target_is_directory=True)
+            subprocess.run(['rsync','-a',str(source),str(recovery)], check=True, capture_output=True)
+            final = recovery/'root'
+            self.assertTrue((final/'etc').is_symlink())
+            # Android's separate, five-column fstab is copied by the image recipe.
+            shutil.copy2(device/'fstab.android', final/'system/etc/recovery.fstab')
+            self.assertEqual((final/'etc/twrp.fstab').read_bytes(), ui_bytes)
+            self.assertEqual((final/'etc/recovery.fstab').read_bytes(), (device/'fstab.android').read_bytes())
+            ui = (final/'etc/twrp.fstab').read_text()
+            self.assertIn('/misc', ui)
+            self.assertIn('backup=0;flashimg=0;wipeingui=0', ui)
 
     def test_fstab_formats_agree_without_exposing_misc_to_wipe(self):
         ui = [l.split(maxsplit=3) for l in (ROOT/'recovery/polaris/recovery.fstab').read_text().splitlines() if l and not l.startswith('#')]

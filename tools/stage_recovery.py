@@ -7,24 +7,23 @@ import subprocess
 from pathlib import Path
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('android', type=Path)
-    parser.add_argument('kernel', type=Path)
-    args = parser.parse_args()
-    project = Path(__file__).resolve().parents[1]
-    common = args.android / 'device/xiaomi/sdm845-common'
-    lock = json.loads((project / 'config/recovery-sources.json').read_text())
+def stage(project, android, kernel):
+    common = android / 'device/xiaomi/sdm845-common'
+    lock = json.loads((project / 'config/recovery-sources.json').read_text(encoding='utf-8'))
     actual = subprocess.check_output(['git', '-C', str(common), 'rev-parse', 'HEAD'], text=True).strip()
     if actual != lock['common']['commit']:
         raise SystemExit('Recovery hardware source does not match lock')
-    destination = args.android / 'device/xiaomi/polaris'
+    destination = android / 'device/xiaomi/polaris'
     if destination.exists():
         raise SystemExit('Refusing to overwrite an existing polaris tree')
-    if not args.kernel.is_file():
+    if not kernel.is_file():
         raise SystemExit('Built project kernel required')
     shutil.copytree(project / 'recovery/polaris', destination)
     root = destination / 'recovery/root'
+    # Android's ramdisk owns /etc -> /system/etc. Install through its target:
+    # creating root/etc breaks rsync, but omitting the file loses the UI fstab.
+    (root / 'system/etc').mkdir(parents=True, exist_ok=True)
+    shutil.copy2(destination / 'recovery.fstab', root / 'system/etc/twrp.fstab')
     upstream = common / 'recovery/root'
     shutil.copytree(upstream / 'vendor/lib64', root / 'vendor/lib64')
     # No factory/format/dynamic-conversion scripts from the generic device tree.
@@ -34,7 +33,16 @@ def main():
         shutil.copy2(upstream / 'system/bin' / name, root / 'system/bin' / name)
     shutil.copy2(common / 'recovery/kernel_419/init.recovery.usb.rc', root / 'init.recovery.usb.rc')
     (destination / 'prebuilt').mkdir()
-    shutil.copy2(args.kernel, destination / 'prebuilt/Image.gz-dtb')
+    shutil.copy2(kernel, destination / 'prebuilt/Image.gz-dtb')
+    return destination
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('android', type=Path)
+    parser.add_argument('kernel', type=Path)
+    args = parser.parse_args()
+    stage(Path(__file__).resolve().parents[1], args.android, args.kernel)
     print('Staged static polaris recovery. Hardware and decryption remain untested.')
 
 
