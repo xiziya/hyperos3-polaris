@@ -52,6 +52,12 @@ matched the candidate. Those are separate observations from different boots.
    the snapshot script and embedded EROFS/pstore config before publishing the
    image artifact. The artifact is still explicitly UNTESTED.
 
+The first CI attempt after this change failed at the final ramdisk rsync because
+staging had created `recovery/root/etc` as a real directory. OrangeFox's locked
+image step creates that path as a symlink to its system etc tree. The staging
+directory is now left untouched; the device fstab is consumed by the normal
+OrangeFox image step, so the fix does not change the runtime layout.
+
 ## Validation and limits
 
 WSL host tests execute the exact C++ reboot guard with simulated BCB I/O. They

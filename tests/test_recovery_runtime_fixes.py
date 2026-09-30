@@ -12,6 +12,11 @@ patch = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(patch)
 
 class RecoveryRuntimeTests(unittest.TestCase):
+    def test_staging_does_not_shadow_orangefox_system_etc_symlink(self):
+        stage = (ROOT/'tools/stage_recovery.py').read_text()
+        self.assertNotIn("root / 'etc'", stage)
+        self.assertNotIn("root / \"etc\"", stage)
+
     def test_fstab_formats_agree_without_exposing_misc_to_wipe(self):
         ui = [l.split(maxsplit=3) for l in (ROOT/'recovery/polaris/recovery.fstab').read_text().splitlines() if l and not l.startswith('#')]
         android = [l.split() for l in (ROOT/'recovery/polaris/fstab.android').read_text().splitlines() if l and not l.startswith('#')]

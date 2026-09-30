@@ -25,8 +25,6 @@ def main():
         raise SystemExit('Built project kernel required')
     shutil.copytree(project / 'recovery/polaris', destination)
     root = destination / 'recovery/root'
-    (root / 'etc').mkdir(parents=True, exist_ok=True)
-    shutil.copy2(destination / 'recovery.fstab', root / 'etc/twrp.fstab')
     upstream = common / 'recovery/root'
     shutil.copytree(upstream / 'vendor/lib64', root / 'vendor/lib64')
     # No factory/format/dynamic-conversion scripts from the generic device tree.
